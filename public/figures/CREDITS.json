@@ -1,0 +1,534 @@
+[
+  {
+    "figure_id": "gladiator-spartacus",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/gladiator-spartacus.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Spartacus-Vincenzo_Vela-MAHG_1896-0007-IMG_8685-gradient.jpg",
+    "license": "CC BY-SA 3.0 fr",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Rama\" title=\"User:Rama\">Rama</a>"
+  },
+  {
+    "figure_id": "stone-astronomer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/stone-astronomer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Brigitte_d%C3%A9esse_du_M%C3%A9nez-Hom.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Moreau.henri\" title=\"User:Moreau.henri\">Moreau.henri</a>"
+  },
+  {
+    "figure_id": "boudica",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/boudica.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Boudica_depicted_in_Holinshed%E2%80%99s_Chronicles_(1577).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Raphael Holingshed"
+  },
+  {
+    "figure_id": "muhammad-v",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/muhammad-v.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Alfombra_de_algas_amarillas,_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-27,_DD_42.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q28147777\" class=\"extiw\" title=\"d:Q28147777\"><span title=\"Spanish photographer\">Diego Delso</span></a></bdi>"
+  },
+  {
+    "figure_id": "fatima-al-fihri",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/fatima-al-fihri.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Fatima_Al-Fihri_Open_University.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "Fatima Al-Fihri University's logo"
+  },
+  {
+    "figure_id": "pliny-the-elder",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/pliny-the-elder.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Pliny_the_Elder.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Mike McCune"
+  },
+  {
+    "figure_id": "pompeii-baker",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/pompeii-baker.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Terentius_Neo_and_his_wife,_fresco_(from_Pompeii).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Yair-haklai\" title=\"User:Yair-haklai\">Yair Haklai</a>"
+  },
+  {
+    "figure_id": "andrei-rublev",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/andrei-rublev.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Andrey_Rublev_-_%D0%A1%D0%B2._%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%B0_-_Google_Art_Project.jpg",
+    "license": "Public domain",
+    "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Andrei_Rublev\" class=\"extiw\" title=\"w:en:Andrei Rublev\"><span title=\"medieval Russian artist (1360s-1428)\">Andrei Rublev</span></a></bdi>"
+  },
+  {
+    "figure_id": "pharaoh-khufu",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/pharaoh-khufu.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Lepsius-Expedition-Cheops-Pyramide_(full).jpg",
+    "license": "Public domain",
+    "artist": "Johann Jakob Frey"
+  },
+  {
+    "figure_id": "hemiunu",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/hemiunu.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Statue-of-Hemiun.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Einsamer_Sch%C3%BCtze\" title=\"User:Einsamer Sch\u00fctze\">Einsamer Sch\u00fctze</a>"
+  },
+  {
+    "figure_id": "mutota",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/mutota.jpg",
+    "source": "https://en.wikipedia.org/wiki/Zimbabwe_Bird",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "zimbabwe-trader",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/zimbabwe-trader.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Amina_Lmrini.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "EcoActu Eco"
+  },
+  {
+    "figure_id": "zimbabwe-builder",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/zimbabwe-builder.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Tapiwa_Zivira.jpg",
+    "license": "Public domain",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Flowerstapiwa&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Flowerstapiwa (page does not exist)\">Flowerstapiwa</a>"
+  },
+  {
+    "figure_id": "timbuktu-scholar",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/timbuktu-scholar.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Rachid_Baba_Ahmed.png",
+    "license": "Public domain",
+    "artist": "\u00c9ditions Relly"
+  },
+  {
+    "figure_id": "timbuktu-salt-trader",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/timbuktu-salt-trader.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Painting_depicting_the_Battle_of_Camel_that_took_place_near_Basra_in_656_when_the_army_of_Mohammed%27s_widow_Aisha_marched_against_the_troops_of_the_competitor_Ali,_ancestor_of_the_Shiites._Manuscript_illustration,_ca.1808.jpg",
+    "license": "Public domain",
+    "artist": "<div class=\"fn value\">\nMirza Mohammed Rafi Bazil</div>"
+  },
+  {
+    "figure_id": "lalibela-carver",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/lalibela-carver.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Afewerk_Tekle_Villa_Alpha_no._2,_Awassa_Ethiopia,_2022-04.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Mjwaterloo\" title=\"User:Mjwaterloo\">Mjwaterloo</a>"
+  },
+  {
+    "figure_id": "hannibal-barca",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/hannibal-barca.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_Hannibal_Barca.jpg",
+    "license": "Public domain",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "carthage-sailor",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/carthage-sailor.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hanno_blue_(Hemiargus_hanno_filenus)_underside.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q54800218\" class=\"extiw\" title=\"d:Q54800218\"><span title=\"Scottish wildlife photographer\">Charles J. Sharp</span></a></bdi>"
+  },
+  {
+    "figure_id": "ahmed-kathrada",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/ahmed-kathrada.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:TreasonTrial1956.jpg",
+    "license": "Public domain",
+    "artist": "Eli Weinberg"
+  },
+  {
+    "figure_id": "elmina-guide",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/elmina-guide.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_(JFKWHP-AR6409-A).jpg",
+    "license": "Public domain",
+    "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Abbie_Rowe\" class=\"extiw\" title=\"w:en:Abbie Rowe\"><span title=\"American photographer (1905\u20131967)\">Abbie Rowe</span></a></bdi>"
+  },
+  {
+    "figure_id": "yaa-asantewaa",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/yaa-asantewaa.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Yaa_Asantewaa_Museum_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Celestinesucess\" title=\"User:Celestinesucess\">Celestinesucess</a>"
+  },
+  {
+    "figure_id": "nana-esi",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/nana-esi.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:New_York_Public_Library,_Spencer_Collection_Turk._MS._3_Siyar-i_Nab%C3%AE_fol._451r_Aisha_tells_Muhammad_about_a_locl_plague.jpg",
+    "license": "Public domain",
+    "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>"
+  },
+  {
+    "figure_id": "djenne-mason",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/djenne-mason.jpg",
+    "source": "https://en.wikipedia.org/wiki/Woodstock",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "djenne-scholar",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/djenne-scholar.jpg",
+    "source": "https://en.wikipedia.org/wiki/Mughal_painting",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "djenne-trader-woman",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/djenne-trader-woman.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Aminata_Toure.jpg",
+    "license": "CC BY 3.0",
+    "artist": "Leral Officiel Tv"
+  },
+  {
+    "figure_id": "sultan-ali-ibn-al-hasan",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/sultan-ali-ibn-al-hasan.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Abu_al-Hasan_ben_Uthman.jpg",
+    "license": "Public domain",
+    "artist": "Alif"
+  },
+  {
+    "figure_id": "kilwa-coin-maker",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/kilwa-coin-maker.jpg",
+    "source": "https://en.wikipedia.org/wiki/Kilwa_Sultanate",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "ibn-battuta-host",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/ibn-battuta-host.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ibn_Battuta,_Sayr_mulhimah_min_al-Sharq_wa-al-Gharb.png",
+    "license": "Public domain",
+    "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>"
+  },
+  {
+    "figure_id": "aretas-iv",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/aretas-iv.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Bronze_Coin_of_Aretas_IV.jpg",
+    "license": "Public domain",
+    "artist": "Original was Fulcran Vigouroux (1837 - 1915), \"Dictionnaire de la Bible.\" Uploader at Wikimedia Commons was <a href=\"https://en.wikipedia.org/wiki/en:User:Alorkezas\" class=\"extiw\" title=\"w:en:User:Alorkezas\">Alorkezas</a>"
+  },
+  {
+    "figure_id": "nabataean-water-engineer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/nabataean-water-engineer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Coin_of_Aretas_IV_and_Shaqilath.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Starnutoditopo&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Starnutoditopo (page does not exist)\">Starnutoditopo</a>"
+  },
+  {
+    "figure_id": "petra-trader",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/petra-trader.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Skyline_of_Abadeh_from_a_mountain.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:FCAMU10&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:FCAMU10 (page does not exist)\">FCAMU10</a>"
+  },
+  {
+    "figure_id": "saladin",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/saladin.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Selahaddin_Eyyubi_El_Kurdi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:12mv12&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:12mv12 (page does not exist)\">12mv12</a>"
+  },
+  {
+    "figure_id": "helena",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/helena.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Anentome_helena_01.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Llez\" title=\"User:Llez\">H. Zell</a>"
+  },
+  {
+    "figure_id": "darius-the-great",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/darius-the-great.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Darius_In_Parse.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "Derfash Kaviani (<a href=\"//commons.wikimedia.org/wiki/User:%D8%AF%D8%B1%D9%81%D8%B4_%DA%A9%D8%A7%D9%88%DB%8C%D8%A7%D9%86%DB%8C\" class=\"mw-redirect\" title=\"User:\u062f\u0631\u0641\u0634 \u06a9\u0627\u0648\u06cc\u0627\u0646\u06cc\">\u062f\u0631\u0641\u0634 \u06a9\u0627\u0648\u06cc\u0627\u0646\u06cc</a>)"
+  },
+  {
+    "figure_id": "ustad-ahmad-lahori",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/ustad-ahmad-lahori.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India_edit2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Yann\" title=\"User:Yann\">Yann</a>; edited by <a href=\"//commons.wikimedia.org/wiki/User:King_of_Hearts\" title=\"User:King of Hearts\">King of Hearts</a>"
+  },
+  {
+    "figure_id": "indus-bead-maker",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/indus-bead-maker.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MP_Priya_Dutt_and_Priya_Kapur.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Bollywood_Hungama\" class=\"extiw\" title=\"w:en:Bollywood Hungama\"><span title=\"news provider related to film industry, film reviews and box office reports\">Bollywood Hungama</span></a>\n</bdi>"
+  },
+  {
+    "figure_id": "hua-mulan",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/hua-mulan.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hua_Mulan_cosplay_at_Nanjing_A-3_(2021).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Leiem\" title=\"User:Leiem\">Leiem</a>"
+  },
+  {
+    "figure_id": "wall-builder",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/wall-builder.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Cao_Wei_Tomb,_247_AD_02.jpg",
+    "license": "CC0",
+    "artist": "Gary Todd"
+  },
+  {
+    "figure_id": "zheng-he",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/zheng-he.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Voyages_by_Zheng_He_(9834828124).jpg",
+    "license": "CC0",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/101561334@N08\">Gary Todd</a> from Xinzheng, China"
+  },
+  {
+    "figure_id": "terracotta-sculptor",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/terracotta-sculptor.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Zhang_Anda.jpg",
+    "license": "CC0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Andrej146&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Andrej146 (page does not exist)\">Andrej146</a>"
+  },
+  {
+    "figure_id": "terracotta-farmer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/terracotta-farmer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Yang_Zhifa.jpg",
+    "license": "CC BY 3.0",
+    "artist": "Lingtft"
+  },
+  {
+    "figure_id": "terracotta-general",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/terracotta-general.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:%E8%8A%B1%E9%83%BD%E7%8E%8B%E5%AD%90%E5%B1%B1%E4%B8%8B_-_panoramio.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161017055523/http://www.panoramio.com/user/5538323?with_photo_id=48809803\">jiang-wen-jie</a>"
+  },
+  {
+    "figure_id": "angkor-sculptor",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/angkor-sculptor.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Tim_Srey_Niet.png",
+    "license": "CC BY 3.0",
+    "artist": "Bugaboo.TV"
+  },
+  {
+    "figure_id": "jayavarman-vii",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/jayavarman-vii.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:JayavarmanVII-Vientiane.jpg",
+    "license": "CC BY-SA 2.5",
+    "artist": "<a href=\"https://en.wikipedia.org/wiki/fr:User:Chaoborus\" class=\"extiw\" title=\"w:fr:User:Chaoborus\">Chaoborus</a> at <a href=\"https://en.wikipedia.org/wiki/fr:\" class=\"extiw\" title=\"w:fr:\">French Wikipedia</a>"
+  },
+  {
+    "figure_id": "ashikaga-yoshimitsu",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/ashikaga-yoshimitsu.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ashikaga_Yoshimitsu_kao.jpg",
+    "license": "Public domain",
+    "artist": "\u4e38\u5c71\u53ef\u6f84"
+  },
+  {
+    "figure_id": "zen-monk",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/zen-monk.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Muso_soseki_02b.jpg",
+    "license": "Public domain",
+    "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>"
+  },
+  {
+    "figure_id": "sailendra-king",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/sailendra-king.jpg",
+    "source": "https://en.wikipedia.org/wiki/Mataram_kingdom",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "sejong-the-great",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/sejong-the-great.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Sejong_the_Great.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Ewong17&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Ewong17 (page does not exist)\">Ewong17</a>"
+  },
+  {
+    "figure_id": "jang-yeong-sil",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/jang-yeong-sil.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Jang_Yeong-sil_Science_Garden_13-11832.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Steve46814\" title=\"User:Steve46814\">Steve46814</a>"
+  },
+  {
+    "figure_id": "shin-saimdang",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/shin-saimdang.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Shin_Saimdang_Herons.jpg",
+    "license": "Public domain",
+    "artist": "Shin Saimdang; \u50b3 \u7533\u5e2b\u4efb\u5802; Korean, 1504-1551)"
+  },
+  {
+    "figure_id": "lady-sen",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/lady-sen.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Grave_of_Senhime_of_Denzuin.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "\u4e09\u4eba\u65e5"
+  },
+  {
+    "figure_id": "anangu-elder",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/anangu-elder.jpg",
+    "source": "https://en.wikipedia.org/wiki/Australian_Aboriginal_artefacts",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "anangu-tracker",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/anangu-tracker.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:People_riding_horses_in_Bromo.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Aditya Prabaswara"
+  },
+  {
+    "figure_id": "maori-navigator",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/maori-navigator.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Openluchtmuseum_Bachten_de_Kupe_02.jpg",
+    "license": "CC BY 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Donarreiskoffer\" title=\"User:Donarreiskoffer\">Donarreiskoffer</a>"
+  },
+  {
+    "figure_id": "kukulcan-priest",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/kukulcan-priest.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Kinich_Ahau_sculpture.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Salvador_alc\" title=\"User:Salvador alc\">Salvador alc</a>"
+  },
+  {
+    "figure_id": "teotihuacan-architect",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/teotihuacan-architect.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:ChessmanGuerraDeTitanes.jpg",
+    "license": "CC BY 2.0",
+    "artist": "MarioLopez2007"
+  },
+  {
+    "figure_id": "teotihuacan-trader",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/teotihuacan-trader.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:TiC_Fluid_Molten_Obsidian_Flowing.png",
+    "license": "MIT",
+    "artist": "SlimeKnights"
+  },
+  {
+    "figure_id": "puebloan-astronomer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/puebloan-astronomer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Sun_watching.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Kyesubire_Maria_Pati&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Kyesubire Maria Pati (page does not exist)\">Kyesubire Maria Pati</a>"
+  },
+  {
+    "figure_id": "pachacuti",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/pachacuti.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Pachacuti-conquest-map.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Norki156&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Norki156 (page does not exist)\">Norki156</a>"
+  },
+  {
+    "figure_id": "inca-engineer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/inca-engineer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Colegio_Mar%C3%ADa_Auxiliadora_Barranquilla_9-jul-2024.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Jdvillalobos\" title=\"User:Jdvillalobos\">Jdvillalobos</a>"
+  },
+  {
+    "figure_id": "moai-carver",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/moai-carver.jpg",
+    "source": "https://en.wikipedia.org/wiki/Hoa_Hakananai%27a",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "rapa-nui-navigator",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/rapa-nui-navigator.jpg",
+    "source": "https://en.wikipedia.org/wiki/French_Polynesia",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "rapa-nui-birdman",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/rapa-nui-birdman.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Statuette_homme_oiseau_70_2006_10_1.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "tikal-astronomer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/tikal-astronomer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Kinich_Ahau_sculpture.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Salvador_alc\" title=\"User:Salvador alc\">Salvador alc</a>"
+  },
+  {
+    "figure_id": "aztec-chinampas-farmer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/aztec-chinampas-farmer.jpg",
+    "source": "https://en.wikipedia.org/wiki/Mexico_City",
+    "license": "Wikipedia page image",
+    "artist": "Unknown"
+  },
+  {
+    "figure_id": "malintzin",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/malintzin.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hern%C3%A1n_Cort%C3%A9s_and_La_Malinche_1576_Dur%C3%A1n_Codex.jpg",
+    "license": "Public domain",
+    "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Diego_Dur%C3%A1n\" class=\"extiw\" title=\"w:en:Diego Dur\u00e1n\"><span title=\"Dominican friar (1537-1588)\">Diego Dur\u00e1n</span></a></bdi>"
+  },
+  {
+    "figure_id": "tiwanaku-farmer",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/tiwanaku-farmer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Dahlia_Sisa_Herberstein_02.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Liuthalas\" title=\"User:Liuthalas\">Liuthalas</a>"
+  },
+  {
+    "figure_id": "tiwanaku-priest",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/tiwanaku-priest.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Volcan_Thunupa,.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Jduranboger\" title=\"User:Jduranboger\">Jduranboger</a>"
+  },
+  {
+    "figure_id": "nazca-line-maker",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/nazca-line-maker.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Tupac_Shakur_1988_Yearbook.jpg",
+    "license": "Public domain",
+    "artist": "Unknown High School Photographer"
+  },
+  {
+    "figure_id": "nazca-water-finder",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/nazca-water-finder.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%A2%D0%B0%D1%88%D0%BC%D1%83%D1%85%D0%B0%D0%BC%D0%B5%D0%B4_%D0%9D%D0%B8%D1%8F%D0%B7%D0%BE%D0%B2%D0%B8%D1%87_%D0%9A%D0%B0%D1%80%D1%8B-%D0%9D%D0%B8%D1%8F%D0%B7%D0%BE%D0%B2.jpg",
+    "license": "Public domain",
+    "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>"
+  },
+  {
+    "figure_id": "ulugh-beg",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/ulugh-beg.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg,_Timurid_painting_1425-50.jpg",
+    "license": "Public domain",
+    "artist": "<div class=\"fn value\">\nUnknown artist<span style=\"display: none;\">Unknown artist</span></div>"
+  },
+  {
+    "figure_id": "silk-road-merchant",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/silk-road-merchant.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Song_Ceramic_Figure_of_Sogdian_Merchant_(9967460646).jpg",
+    "license": "CC0",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/101561334@N08\">Gary Todd</a> from Xinzheng, China"
+  },
+  {
+    "figure_id": "king-minos",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/king-minos.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mural_of_Minos_at_the_National_And_Kapodistrian_University_of_Athens_on_May_22,_2022.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:George_E._Koronaios\" title=\"User:George E. Koronaios\">George E. Koronaios</a>"
+  },
+  {
+    "figure_id": "leif-erikson",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/leif-erikson.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Statue_of_Leif_Erikson,_Saint_Paul,_MN,_looking_north.jpg",
+    "license": "CC BY 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Myotus\" title=\"User:Myotus\">Myotus</a>"
+  },
+  {
+    "figure_id": "viking-queen",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/viking-queen.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wasp_colony.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Alvesgaspar\" title=\"User:Alvesgaspar\">Alvesgaspar</a>"
+  },
+  {
+    "figure_id": "viking-shipbuilder",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/viking-shipbuilder.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Thorvald_Stauning_caricature.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "stubot"
+  }
+]

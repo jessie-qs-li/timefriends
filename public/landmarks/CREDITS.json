@@ -1,0 +1,254 @@
+[
+  {
+    "landmark_id": "hagia-sophia",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/hagia-sophia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Istanbul_July_2022-2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Alvesgaspar\" title=\"User:Alvesgaspar\">Alvesgaspar</a>"
+  },
+  {
+    "landmark_id": "kremlin",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/kremlin.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Kremlin_wall_-_Red_Square.jpg",
+    "license": "CC BY 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:%D0%AE%D1%80%D0%B8%D0%B9_%D0%94.%D0%9A.\" title=\"User:\u042e\u0440\u0438\u0439 \u0414.\u041a.\">\u042e\u0440\u0438\u0439 \u0414.\u041a.</a>"
+  },
+  {
+    "landmark_id": "viking-ship-museum",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/viking-ship-museum.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ship%27s_decoritive_timberworks_from_the_Oseberg_Find,_Viking_Ship_Museum,_Oslo.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Yair-haklai\" title=\"User:Yair-haklai\">Yair-haklai</a>"
+  },
+  {
+    "landmark_id": "pyramids-of-giza",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/pyramids-of-giza.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Sphinx_of_Giza_(%D8%A3%D8%A8%D9%88_%D8%A7%D9%84%D9%87%D9%88%D9%84).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:PetarM\" title=\"User:PetarM\">Petar Milo\u0161evi\u0107</a>"
+  },
+  {
+    "landmark_id": "valley-of-the-kings",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/valley-of-the-kings.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Thebes,_Luxor,_Egypt,_Panoramic_view_of_the_Valley_of_the_Kings.jpg",
+    "license": "CC BY 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Argenberg\" title=\"User:Argenberg\">Vyacheslav Argenberg</a>"
+  },
+  {
+    "landmark_id": "great-zimbabwe",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/great-zimbabwe.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:ASC_Leiden_-_Rietveld_Collection_-_East_Africa_1975_-_05_-_033_-_A_wall_of_the_ruins_of_Great_Zimbabwe_-_Masvingo,_Zimbabwe.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q42328204\" class=\"extiw\" title=\"d:Q42328204\"><span title=\"Dutch history and art history teacher\">Aart Rietveld</span></a></bdi>"
+  },
+  {
+    "landmark_id": "timbuktu",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/timbuktu.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Djinguereber_Mosque.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:HistoriaSalutis\" title=\"User:HistoriaSalutis\">Dr. Ond\u0159ej Havelka (cestovatel)</a>"
+  },
+  {
+    "landmark_id": "lalibela",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/lalibela.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ethiopia_-_sunset_at_Church_of_Saint_George,_Lalibela_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Snowmanstudios\" class=\"mw-redirect\" title=\"User:Snowmanstudios\">Thomas Fuhrmann</a>"
+  },
+  {
+    "landmark_id": "carthage",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/carthage.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:01996_01434_Ruins_of_Antonine_Baths_at_Carthage.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Silar&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Silar (page does not exist)\">Silar</a>"
+  },
+  {
+    "landmark_id": "robben-island",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/robben-island.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Maximum_Security_Prison,_Robben_Island_(02).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q28709819\" class=\"extiw\" title=\"d:Q28709819\"><span title=\"Bangladeshi graphic artist and writer\">Moheen Reeyad</span></a></bdi>"
+  },
+  {
+    "landmark_id": "elmina-castle",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/elmina-castle.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Castle,_Elmina_(P1100187).jpg",
+    "license": "CC BY-SA",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:MB-one\" title=\"User:MB-one\">Matti Blume</a>"
+  },
+  {
+    "landmark_id": "great-mosque-djenne",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/great-mosque-djenne.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Great_Clay_Mosque_in_Djenne,_Mali.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:HistoriaSalutis\" title=\"User:HistoriaSalutis\">Dr. Ond\u0159ej Havelka (cestovatel)</a>"
+  },
+  {
+    "landmark_id": "kilwa-kisiwani",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/kilwa-kisiwani.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ruins_of_Kilwa_Kisiwani_and_Ruins_of_Songo_Mnara-108259.jpg",
+    "license": "CC BY-SA 3.0 igo",
+    "artist": "Ron Van Oers"
+  },
+  {
+    "landmark_id": "jerusalem-old-city",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/jerusalem-old-city.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Jerusalem-2013-Temple_Mount-Dome_of_the_Rock-Detail_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Godot13\" title=\"User:Godot13\">Godot13</a>"
+  },
+  {
+    "landmark_id": "persepolis",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/persepolis.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:20101229_Gates_of_the_nations_Persepolis_Iran.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Ggia\" title=\"User:Ggia\">User:Ggia</a>"
+  },
+  {
+    "landmark_id": "taj-mahal",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/taj-mahal.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India_edit2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Yann\" title=\"User:Yann\">Yann</a>; edited by <a href=\"//commons.wikimedia.org/wiki/User:King_of_Hearts\" title=\"User:King of Hearts\">King of Hearts</a>"
+  },
+  {
+    "landmark_id": "sigiriya",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/sigiriya.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Sigiriya,_Rock_Fortress.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Tlbatt&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Tlbatt (page does not exist)\">Tlbatt</a>"
+  },
+  {
+    "landmark_id": "forbidden-city",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/forbidden-city.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hall_of_Supreme_Harmony_2010.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Sfu\" title=\"User:Sfu\">Marcin Bia\u0142ek</a>"
+  },
+  {
+    "landmark_id": "angkor-wat",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/angkor-wat.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Equinox_at_Angkor_21st_March_2012.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:%E1%9E%9F%E1%9E%BB%E1%9E%81%E1%9E%82%E1%9E%B9%E1%9E%98%E1%9E%A0%E1%9F%81%E1%9E%84\" title=\"User:\u179f\u17bb\u1781\u1782\u17b9\u1798\u17a0\u17c1\u1784\">\u179f\u17bb\u1781\u1782\u17b9\u1798\u17a0\u17c1\u1784</a>"
+  },
+  {
+    "landmark_id": "kinkaku-ji",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/kinkaku-ji.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Golden_Pavilion,_Kinkaku-ji,_Kyoto,_20240820_1523_5130.jpg",
+    "license": "CC BY 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Jakubhal\" title=\"User:Jakubhal\">Jakub Ha\u0142un</a>"
+  },
+  {
+    "landmark_id": "borobudur",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/borobudur.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Borobudur,_Java,_Indonesia,_20220817_1058_8808.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Jakubhal\" title=\"User:Jakubhal\">Jakub Ha\u0142un</a>"
+  },
+  {
+    "landmark_id": "gyeongbokgung",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/gyeongbokgung.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Water_reflection_of_Hyangwonjeong_Pavilion_at_Gyeongbokgung_Palace_in_Seoul.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>"
+  },
+  {
+    "landmark_id": "himeji-castle",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/himeji-castle.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Himeji_Castle_0804_1.jpg",
+    "license": "Public domain",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Gorgo\" title=\"User:Gorgo\">Gorgo</a>"
+  },
+  {
+    "landmark_id": "uluru",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/uluru.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Petermann_Ranges_(AU),_Uluru-Kata_Tjuta_National_Park,_Uluru,_Kuniya_Walk_--_2019_--_3636.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q34788025\" class=\"extiw\" title=\"d:Q34788025\"><span title=\"German photographer and mathematician\">Dietmar Rabich</span></a></bdi>"
+  },
+  {
+    "landmark_id": "waitangi",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/waitangi.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Sign-1330369,_Waitangi,_Northland,_New_Zealand.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Wainuio\" title=\"User:Wainuio\">Wainuio</a>"
+  },
+  {
+    "landmark_id": "chichen-itza",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/chichen-itza.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Castillo_Pyramid,_Chichen_Itza_1969.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Jeff Hart"
+  },
+  {
+    "landmark_id": "teotihuacan",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/teotihuacan.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Woman_using_selfie_stick_on_steps_of_Pyramid_of_the_Sun,_Teotihuacan.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Daniel_Case\" title=\"User:Daniel Case\">Daniel Case</a>"
+  },
+  {
+    "landmark_id": "mesa-verde",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/mesa-verde.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Canyon,_Mesa_Verde_National_Park,_Mancos,_CO_-_28221022468.jpg",
+    "license": "CC0",
+    "artist": "w_lemay"
+  },
+  {
+    "landmark_id": "independence-hall",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/independence-hall.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Tourism_at_Independence_Hall_Philadelphia.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Myotus\" title=\"User:Myotus\">Myotus</a>"
+  },
+  {
+    "landmark_id": "machu-picchu",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/machu-picchu.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Panorama_of_Machu_Picchu.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Brian Jeffery Beggerly"
+  },
+  {
+    "landmark_id": "rapa-nui",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/rapa-nui.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Easter_Island_%3F%3F%3F%3F_-_geograph.org.uk_-_2438357.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/profile/34885\">Derek Voller</a>\u00a0<span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:Easter_Island_%3F%3F%3F%3F_-_geograph.org.uk_-_2438357.jpg#P170\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png\" decoding=\"async\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>"
+  },
+  {
+    "landmark_id": "tikal",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/tikal.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Tikal_Guatemala,_des_pyramides_dans_la_jungle_(9422775571).jpg",
+    "license": "CC BY 2.0",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/96925387@N00\">Jeanne Menjoulet</a> from Paris, France"
+  },
+  {
+    "landmark_id": "gettysburg",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/gettysburg.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Eternal_Light_Peace_Memorial,_Gettysburg,_Pennsylvania_(65043).jpg",
+    "license": "Public domain",
+    "artist": "Pub. by L. E. Smith, Wholesale Distributor, Gettysburg, PA. \"Tichnor Quality Views,\" Reg. U. S. Pat. Off. Made Only by Tichnor Bros., Inc., Boston, Mass."
+  },
+  {
+    "landmark_id": "templo-mayor",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/templo-mayor.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Templo_Mayor_2015_230.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Photograph by <a href=\"//commons.wikimedia.org/wiki/User:Mike_Peel\" title=\"User:Mike Peel\">Mike Peel</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://www.mikepeel.net/\">www.mikepeel.net</a>)."
+  },
+  {
+    "landmark_id": "tiwanaku",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/tiwanaku.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Strait_of_Tiquina_Tiwanaku_1842_Boilly_and_Eyri%C3%A8s.jpg",
+    "license": "Public domain",
+    "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Alcide_d%27Orbigny\" class=\"extiw\" title=\"w:en:Alcide d'Orbigny\"><span title=\"French scientist (1802\u20131857)\">Alcide d'Orbigny</span></a></bdi>"
+  },
+  {
+    "landmark_id": "samarkand",
+    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/samarkand.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Registan_Samarkand_Uzbekistan.JPG",
+    "license": "CC BY-SA 2.0 fr",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Stomac&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Stomac (page does not exist)\">Stomac</a>"
+  }
+]

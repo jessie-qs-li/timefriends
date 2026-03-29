@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Circle, useMap, useMapEvents } from "r
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import rawLandmarks from "./data/landmarks.json";
+import ConversationButton from "./ConversationButton";
 
 // ─── Data normalization ─────────────────────────────────────────────────────
 
@@ -27,6 +28,7 @@ const LANDMARKS = rawLandmarks.landmarks.map((lm, idx) => ({
   location: lm.location,
   coords: [lm.coordinates.lat, lm.coordinates.lng],
   icon: lm.emoji,
+  image: `/landmarks/${lm.id}.jpg`,
   era: lm.era,
   color: COLOR_PALETTE[hashCode(lm.id) % COLOR_PALETTE.length],
   unlockRadius: lm.unlockRadius || 500,
@@ -37,6 +39,7 @@ const LANDMARKS = rawLandmarks.landmarks.map((lm, idx) => ({
     title: f.title,
     reign: f.reign,
     emoji: f.emoji,
+    portrait: `/figures/${f.id}.jpg`,
     color: COLOR_PALETTE[hashCode(f.id) % COLOR_PALETTE.length],
     agentId: f.agentId || null,
     traits: f.traits,
@@ -154,7 +157,7 @@ function SearchBar({ value, onChange }) {
 
 // ─── Landmark List Sidebar ──────────────────────────────────────────────────
 
-function LandmarkList({ landmarks, userPos, parentOverride, selectedId, onSelect, searchQuery }) {
+function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery }) {
   const [visibleCount, setVisibleCount] = useState(SIDEBAR_PAGE_SIZE);
   const listRef = useRef(null);
 
@@ -195,7 +198,7 @@ function LandmarkList({ landmarks, userPos, parentOverride, selectedId, onSelect
       )}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {visible.map((lm) => {
-          const isNearby = lm.distance <= lm.unlockRadius || parentOverride;
+          const isNearby = true;
           const isSelected = selectedId === lm.id;
           return (
             <div
@@ -212,8 +215,17 @@ function LandmarkList({ landmarks, userPos, parentOverride, selectedId, onSelect
                 <div style={{
                   width: 42, height: 42, borderRadius: 12, flexShrink: 0,
                   background: `${lm.color}18`, border: `1.5px solid ${lm.color}40`,
+                  overflow: "hidden", position: "relative",
                   display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22,
-                }}>{lm.icon}</div>
+                }}>
+                  <img
+                    src={lm.image}
+                    alt={lm.name}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "flex"; }}
+                  />
+                  <span style={{ display: "none", position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" }}>{lm.icon}</span>
+                </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontSize: 14, fontWeight: 600, color: "#1A1A2E", marginBottom: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{lm.name}</div>
                   <div style={{ fontSize: 11, color: "#8B8070" }}>{lm.location}</div>
@@ -246,23 +258,30 @@ function LandmarkList({ landmarks, userPos, parentOverride, selectedId, onSelect
 
 // ─── Figure Card ────────────────────────────────────────────────────────────
 
-function FigureCard({ figure, isLocked, onTalk }) {
-  const isComingSoon = !isLocked && !figure.agentId;
-  const isActive = !isLocked && !!figure.agentId;
+function FigureCard({ figure }) {
+  const isComingSoon = !figure.agentId;
 
   return (
     <div style={{
       padding: "16px", borderRadius: 14, background: "white",
       border: "1.5px solid #E8E0D4", transition: "all 0.2s ease",
-      opacity: isLocked ? 0.55 : 1,
     }}>
       <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
         <div style={{
           width: 52, height: 52, borderRadius: "50%", flexShrink: 0,
           background: `linear-gradient(135deg, ${figure.color}30, ${figure.color}60)`,
           border: `2.5px solid ${figure.color}`,
+          overflow: "hidden", position: "relative",
           display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26,
-        }}>{figure.emoji}</div>
+        }}>
+          <img
+            src={figure.portrait}
+            alt={figure.name}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "flex"; }}
+          />
+          <span style={{ display: "none", position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" }}>{figure.emoji}</span>
+        </div>
         <div style={{ flex: 1 }}>
           <div style={{ fontSize: 15, fontWeight: 700, color: "#1A1A2E" }}>{figure.name}</div>
           <div style={{ fontSize: 12, color: figure.color, fontWeight: 600, marginTop: 1 }}>{figure.title}</div>
@@ -287,68 +306,97 @@ function FigureCard({ figure, isLocked, onTalk }) {
         "{figure.preview}"
       </div>
 
-      <button
-        onClick={() => isActive && onTalk(figure)}
-        disabled={isLocked || isComingSoon}
-        style={{
+      {isComingSoon ? (
+        <button disabled style={{
           marginTop: 14, width: "100%", padding: "11px 0", borderRadius: 10,
           border: "none", fontFamily: "'DM Sans', sans-serif",
-          fontSize: 13, fontWeight: 700,
-          cursor: isActive ? "pointer" : "not-allowed",
-          background: isLocked
-            ? "#E8E0D4"
-            : isActive
-              ? `linear-gradient(135deg, ${figure.color}, ${figure.color}CC)`
-              : "#F0EBE2",
-          color: isLocked ? "#A89870" : isActive ? "white" : "#A89870",
-          transition: "all 0.2s ease",
-          boxShadow: isActive ? `0 2px 12px ${figure.color}44` : "none",
-        }}
-      >
-        {isLocked ? "🔒  Travel here to unlock" : isActive ? "🎙️  Start conversation" : "🔜  Coming soon"}
-      </button>
+          fontSize: 13, fontWeight: 700, cursor: "not-allowed",
+          background: "#F0EBE2", color: "#A89870",
+        }}>
+          🔜  Coming soon
+        </button>
+      ) : (
+        <ConversationButton figure={figure} />
+      )}
     </div>
   );
 }
 
 // ─── Landmark Detail Panel ──────────────────────────────────────────────────
 
-function LandmarkDetail({ landmark, isNearby, onTalk, onClose }) {
+function LandmarkDetail({ landmark, isNearby, onClose }) {
   if (!landmark) return null;
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      <div style={{
-        padding: "20px 20px 16px", borderBottom: "1px solid #F0EBE2",
-        background: `linear-gradient(135deg, ${landmark.color}08, ${landmark.color}15)`,
-      }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+      <div style={{ position: "relative", flexShrink: 0, borderBottom: "1px solid #F0EBE2" }}>
+        {/* Hero image */}
+        <div style={{
+          width: "100%", height: 200, overflow: "hidden",
+          background: `linear-gradient(135deg, ${landmark.color}30, ${landmark.color}60)`,
+        }}>
+          <img
+            src={landmark.image}
+            alt={landmark.name}
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            onError={(e) => {
+              e.target.style.display = "none";
+              e.target.parentElement.querySelector(".hero-fallback").style.display = "flex";
+            }}
+          />
+          <div className="hero-fallback" style={{
+            display: "none", position: "absolute", inset: 0,
+            alignItems: "center", justifyContent: "center", fontSize: 64,
+          }}>{landmark.icon}</div>
+        </div>
+
+        {/* Dark gradient overlay for text readability */}
+        <div style={{
+          position: "absolute", inset: 0,
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.45) 70%, rgba(0,0,0,0.7) 100%)",
+        }} />
+
+        {/* Top controls */}
+        <div style={{
+          position: "absolute", top: 0, left: 0, right: 0,
+          padding: "12px 16px",
+          display: "flex", alignItems: "center", justifyContent: "space-between",
+        }}>
           <button onClick={onClose} style={{
-            background: "white", border: "1px solid #E8E0D4", borderRadius: 8,
-            padding: "5px 12px", cursor: "pointer", fontSize: 12, fontWeight: 600,
-            color: "#5A5A6A", fontFamily: "'DM Sans', sans-serif",
+            background: "rgba(255,255,255,0.92)", border: "none", borderRadius: 8,
+            padding: "6px 14px", cursor: "pointer", fontSize: 12, fontWeight: 600,
+            color: "#3A3A4A", fontFamily: "'DM Sans', sans-serif",
+            backdropFilter: "blur(8px)", boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
           }}>← Back</button>
           <div style={{
-            fontSize: 11, fontWeight: 600, padding: "4px 12px", borderRadius: 99,
-            background: isNearby ? "#E8F5E9" : "#FFF3E0",
+            fontSize: 11, fontWeight: 600, padding: "5px 14px", borderRadius: 99,
+            background: isNearby ? "rgba(232,245,233,0.92)" : "rgba(255,243,224,0.92)",
             color: isNearby ? "#2E7D32" : "#E65100",
+            backdropFilter: "blur(8px)", boxShadow: "0 1px 4px rgba(0,0,0,0.1)",
           }}>
             {isNearby ? "✓ Unlocked" : "🔒 Locked — go to location"}
           </div>
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+        {/* Text overlay at bottom of image */}
+        <div style={{
+          position: "absolute", bottom: 0, left: 0, right: 0,
+          padding: "16px 20px",
+        }}>
           <div style={{
-            width: 56, height: 56, borderRadius: 16,
-            background: `linear-gradient(135deg, ${landmark.color}30, ${landmark.color}60)`,
-            border: `2px solid ${landmark.color}`,
-            display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28,
-          }}>{landmark.icon}</div>
-          <div>
-            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 22, color: "#1A1A2E" }}>{landmark.name}</div>
-            <div style={{ fontSize: 12, color: "#8B8070", marginTop: 2 }}>{landmark.location} · {landmark.era}</div>
-          </div>
+            fontFamily: "'Instrument Serif', serif", fontSize: 24, color: "white",
+            textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+            lineHeight: 1.2,
+          }}>{landmark.name}</div>
+          <div style={{
+            fontSize: 12, color: "rgba(255,255,255,0.85)", marginTop: 4,
+            textShadow: "0 1px 4px rgba(0,0,0,0.5)",
+          }}>{landmark.location} · {landmark.era}</div>
         </div>
-        <p style={{ fontSize: 13, color: "#5A5A6A", lineHeight: 1.6, marginTop: 12 }}>{landmark.description}</p>
+      </div>
+
+      {/* Description below the hero */}
+      <div style={{ padding: "14px 20px", borderBottom: "1px solid #F0EBE2", background: "#FFFCF7" }}>
+        <p style={{ fontSize: 13, color: "#5A5A6A", lineHeight: 1.6, margin: 0 }}>{landmark.description}</p>
       </div>
 
       <div style={{ flex: 1, overflowY: "auto", padding: "16px 20px" }}>
@@ -360,7 +408,7 @@ function LandmarkDetail({ landmark, isNearby, onTalk, onClose }) {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {landmark.figures.map((f) => (
-            <FigureCard key={f.id} figure={f} isLocked={!isNearby} onTalk={onTalk} />
+            <FigureCard key={f.id} figure={f} />
           ))}
         </div>
       </div>
@@ -394,30 +442,22 @@ function VisibleLandmarkMarkers({ landmarks, mapState, isNearby, selectedId, onS
 export default function TimeFriendsApp() {
   const [userPos, setUserPos] = useState(DEFAULT_USER_POS);
   const [selectedLandmarkId, setSelectedLandmarkId] = useState(null);
-  const [parentOverride, setParentOverride] = useState(false);
-  const [activeFigure, setActiveFigure] = useState(null);
   const [mapCenter, setMapCenter] = useState(null);
   const [mapZoom, setMapZoom] = useState(3);
-  const [sessionTime, setSessionTime] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
   const [mapState, setMapState] = useState({ bounds: null, zoom: 3 });
 
   const selectedLandmark = LANDMARKS.find((l) => l.id === selectedLandmarkId) || null;
 
   const isNearby = useCallback(
-    (lm) => parentOverride || haversineDistance(userPos, lm.coords) <= lm.unlockRadius,
-    [userPos, parentOverride]
+    () => true,
+    []
   );
 
   const nearbyCount = useMemo(
     () => LANDMARKS.filter((l) => isNearby(l)).length,
     [isNearby]
   );
-
-  useEffect(() => {
-    const t = setInterval(() => setSessionTime((s) => s + 1), 1000);
-    return () => clearInterval(t);
-  }, []);
 
   useEffect(() => {
     if (!navigator.geolocation) return;
@@ -427,8 +467,6 @@ export default function TimeFriendsApp() {
       { enableHighAccuracy: true }
     );
   }, []);
-
-  const formatTime = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 
   const handleSelectLandmark = (id) => {
     const lm = LANDMARKS.find((l) => l.id === id);
@@ -445,48 +483,9 @@ export default function TimeFriendsApp() {
     setMapZoom(3);
   };
 
-  const handleTalkToFigure = (figure) => {
-    if (figure.agentId) {
-      setActiveFigure(figure);
-    }
-  };
-
   const handleBoundsChange = useCallback((state) => {
     setMapState(state);
   }, []);
-
-  // ElevenLabs widget — works with any agentId from the data
-  useEffect(() => {
-    if (!activeFigure?.agentId) return;
-
-    const existingScript = document.querySelector(
-      'script[src="https://unpkg.com/@elevenlabs/convai-widget-embed"]'
-    );
-
-    const createWidget = () => {
-      const existing = document.querySelector("elevenlabs-convai");
-      if (existing) existing.remove();
-      const widget = document.createElement("elevenlabs-convai");
-      widget.setAttribute("agent-id", activeFigure.agentId);
-      document.body.appendChild(widget);
-    };
-
-    if (existingScript) {
-      createWidget();
-    } else {
-      const script = document.createElement("script");
-      script.src = "https://unpkg.com/@elevenlabs/convai-widget-embed";
-      script.async = true;
-      script.type = "text/javascript";
-      script.onload = createWidget;
-      document.body.appendChild(script);
-    }
-
-    return () => {
-      const widget = document.querySelector("elevenlabs-convai");
-      if (widget) widget.remove();
-    };
-  }, [activeFigure]);
 
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif", background: "#FAF6EF", height: "100vh", color: "#2C2C3A", display: "flex", flexDirection: "column", overflow: "hidden" }}>
@@ -500,7 +499,6 @@ export default function TimeFriendsApp() {
         .leaflet-control-attribution { font-size: 9px !important; opacity: 0.6; }
         .leaflet-control-zoom { border: 1px solid #E8E0D4 !important; border-radius: 10px !important; overflow: hidden; }
         .leaflet-control-zoom a { color: #5A5A6A !important; background: white !important; border-color: #E8E0D4 !important; }
-        elevenlabs-convai { position: fixed !important; bottom: 20px !important; right: 20px !important; z-index: 999 !important; }
       `}</style>
 
       {/* TOP BAR */}
@@ -514,49 +512,15 @@ export default function TimeFriendsApp() {
           <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: "#1A1A2E" }}>Time Friends</span>
           <div style={{ width: 1, height: 24, background: "#E8E0D4", margin: "0 6px" }} />
           <span style={{ fontSize: 12, color: "#8B8070" }}>
-            {selectedLandmark ? `${selectedLandmark.icon} ${selectedLandmark.name}` : "Explore the world"}
+            {selectedLandmark ? (
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                <img src={selectedLandmark.image} alt="" style={{ width: 20, height: 20, borderRadius: 4, objectFit: "cover" }} onError={(e) => { e.target.style.display = "none"; }} />
+                {selectedLandmark.name}
+              </span>
+            ) : "Explore the world"}
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          {activeFigure && (
-            <div style={{
-              display: "flex", alignItems: "center", gap: 8, padding: "5px 14px",
-              borderRadius: 99, background: `${activeFigure.color}15`, border: `1.5px solid ${activeFigure.color}40`,
-            }}>
-              <span style={{ fontSize: 16 }}>{activeFigure.emoji}</span>
-              <span style={{ fontSize: 12, fontWeight: 600, color: activeFigure.color }}>
-                Speaking with {activeFigure.name}
-              </span>
-              <button onClick={() => setActiveFigure(null)} style={{
-                background: "none", border: "none", cursor: "pointer", fontSize: 14, color: "#8B8070", marginLeft: 4,
-              }}>✕</button>
-            </div>
-          )}
-
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: 6, padding: "5px 14px",
-            borderRadius: 99, fontSize: 12, fontWeight: 600, background: "#E8F5E9", color: "#2E7D32",
-          }}>
-            <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#4CAF50", display: "inline-block" }} />
-            {formatTime(sessionTime)}
-          </div>
-
-          <div
-            onClick={() => setParentOverride(!parentOverride)}
-            title="Parent override: unlock all locations"
-            style={{
-              display: "flex", alignItems: "center", gap: 8, padding: "5px 14px",
-              borderRadius: 99, cursor: "pointer", fontSize: 12, fontWeight: 600,
-              background: parentOverride ? "#E3F2FD" : "#F5F0E6",
-              color: parentOverride ? "#1565C0" : "#8B8070",
-              border: `1.5px solid ${parentOverride ? "#90CAF9" : "#E8E0D4"}`,
-              transition: "all 0.2s ease", userSelect: "none",
-            }}
-          >
-            <span>{parentOverride ? "🔓" : "🔒"}</span>
-            Parent Mode
-          </div>
-
           <div style={{
             width: 34, height: 34, borderRadius: "50%", background: "#F5E6D0",
             display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16,
@@ -579,7 +543,6 @@ export default function TimeFriendsApp() {
             <LandmarkDetail
               landmark={selectedLandmark}
               isNearby={isNearby(selectedLandmark)}
-              onTalk={handleTalkToFigure}
               onClose={handleCloseLandmark}
             />
           ) : (
@@ -614,7 +577,6 @@ export default function TimeFriendsApp() {
               <LandmarkList
                 landmarks={LANDMARKS}
                 userPos={userPos}
-                parentOverride={parentOverride}
                 selectedId={selectedLandmarkId}
                 onSelect={handleSelectLandmark}
                 searchQuery={searchQuery}

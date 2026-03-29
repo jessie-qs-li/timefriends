@@ -84,20 +84,29 @@ function formatDistance(meters) {
 
 function createLandmarkIcon(emoji, color, isNearby, isSelected) {
   const size = isSelected ? 52 : 44;
+  const tri = isSelected ? 11 : 9;
   const ring = isNearby ? `box-shadow: 0 0 0 3px ${color}44, 0 0 12px ${color}66;` : "";
   const glow = isSelected ? `box-shadow: 0 0 0 4px ${color}, 0 0 20px ${color}88;` : ring;
   return L.divIcon({
     className: "",
-    iconSize: [size, size],
-    iconAnchor: [size / 2, size / 2],
-    html: `<div style="
-      width:${size}px;height:${size}px;border-radius:50%;
-      background:white;border:3px solid ${color};
-      display:flex;align-items:center;justify-content:center;
-      font-size:${isSelected ? 26 : 22}px;cursor:pointer;
-      ${glow}
-      transition:all 0.2s ease;
-    ">${emoji}</div>`,
+    iconSize: [size, size + tri],
+    iconAnchor: [size / 2, size + tri],
+    html: `<div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        width:${size}px;height:${size}px;border-radius:50%;
+        background:white;border:3px solid ${color};
+        display:flex;align-items:center;justify-content:center;
+        font-size:${isSelected ? 26 : 22}px;cursor:pointer;
+        ${glow}
+        transition:all 0.2s ease;
+      ">${emoji}</div>
+      <div style="
+        width:0;height:0;margin-top:-2px;
+        border-left:${tri - 2}px solid transparent;
+        border-right:${tri - 2}px solid transparent;
+        border-top:${tri}px solid ${color};
+      "></div>
+    </div>`,
   });
 }
 
@@ -211,7 +220,7 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
           No landmarks match "{searchQuery}"
         </div>
       )}
-      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {visible.map((lm) => {
           const isNearby = lm.distance <= 80467; // 50 miles in meters
           const isSelected = selectedId === lm.id;
@@ -219,42 +228,91 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
             <div
               key={lm.id}
               onClick={() => onSelect(lm.id)}
+              role="button"
+              tabIndex={0}
+              aria-label={`${lm.name}, ${lm.location}`}
+              aria-current={isSelected ? "true" : undefined}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  onSelect(lm.id);
+                }
+              }}
               style={{
-                padding: "14px 16px", borderRadius: 14, cursor: "pointer",
-                background: isSelected ? lm.color + "12" : "white",
-                border: `1.5px solid ${isSelected ? lm.color : "#E8E0D4"}`,
-                transition: "all 0.2s ease",
+                position: "relative",
+                height: 118,
+                borderRadius: 14,
+                overflow: "hidden",
+                cursor: "pointer",
+                border: isSelected ? `2px solid ${lm.color}` : "1.5px solid #E8E0D4",
+                boxShadow: isSelected ? `0 4px 14px ${lm.color}35` : "0 1px 3px rgba(0,0,0,0.06)",
+                transition: "border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{
+                position: "absolute", inset: 0,
+                background: `linear-gradient(145deg, ${lm.color}35, ${lm.color}55)`,
+              }} />
+              <div style={{ position: "absolute", inset: 0 }}>
+                <img
+                  src={lm.image}
+                  alt=""
+                  aria-hidden={true}
+                  style={{
+                    position: "absolute", inset: 0, width: "100%", height: "100%",
+                    objectFit: "cover", display: "block",
+                  }}
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    const fb = e.target.nextElementSibling;
+                    if (fb) fb.style.display = "flex";
+                  }}
+                />
+                <span style={{
+                  display: "none", position: "absolute", inset: 0,
+                  alignItems: "center", justifyContent: "center",
+                  fontSize: 40, background: `${lm.color}25`,
+                }}>{lm.icon}</span>
+              </div>
+              <div style={{
+                position: "absolute", inset: 0, pointerEvents: "none",
+                background: "linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.35) 42%, rgba(0,0,0,0.08) 72%, rgba(0,0,0,0) 100%)",
+              }} />
+              {isSelected && (
                 <div style={{
-                  width: 42, height: 42, borderRadius: 12, flexShrink: 0,
-                  background: `${lm.color}18`, border: `1.5px solid ${lm.color}40`,
-                  overflow: "hidden", position: "relative",
-                  display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22,
+                  position: "absolute", inset: 0, pointerEvents: "none",
+                  boxShadow: `inset 0 0 0 1px ${lm.color}55`,
+                  background: `${lm.color}14`,
+                }} />
+              )}
+              {isNearby && (
+                <div style={{
+                  position: "absolute", top: 10, right: 10, zIndex: 2,
+                  fontSize: 10, fontWeight: 700, letterSpacing: "0.02em",
+                  padding: "4px 9px", borderRadius: 99,
+                  background: "rgba(232, 245, 233, 0.95)",
+                  color: "#1B5E20",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
                 }}>
-                  <img
-                    src={lm.image}
-                    alt={lm.name}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                    onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "flex"; }}
-                  />
-                  <span style={{ display: "none", position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" }}>{lm.icon}</span>
+                  ✓ Nearby
                 </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: "#1A1A2E", marginBottom: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{lm.name}</div>
-                  <div style={{ fontSize: 11, color: "#8B8070" }}>{lm.location}</div>
-                </div>
-                {isNearby && (
-                  <div style={{ textAlign: "right", flexShrink: 0 }}>
-                    <div style={{
-                      fontSize: 11, fontWeight: 600, padding: "3px 8px", borderRadius: 99,
-                      background: "#E8F5E9", color: "#2E7D32",
-                    }}>
-                      ✓ Nearby
-                    </div>
-                  </div>
-                )}
+              )}
+              <div style={{
+                position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1,
+                padding: "12px 14px 13px",
+                display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 3,
+              }}>
+                <div style={{
+                  fontSize: 15, fontWeight: 700, color: "#FFFFFF",
+                  lineHeight: 1.25,
+                  textShadow: "0 1px 8px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.8)",
+                  whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", width: "100%",
+                }}>{lm.name}</div>
+                <div style={{
+                  fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.9)",
+                  textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+                  whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", width: "100%",
+                }}>{lm.location}</div>
               </div>
             </div>
           );
@@ -449,11 +507,12 @@ function StreetViewOverlay({ landmark, onClose }) {
       animation: "streetViewExpand 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
       transformOrigin: "center",
     }}>
-      {/* Gradient header */}
+      {/* Frosted header bar */}
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0, zIndex: 10,
-        background: "linear-gradient(180deg, rgba(0,0,0,0.72) 0%, transparent 100%)",
-        padding: "16px 16px 40px",
+        background: "rgba(10,10,10,0.72)", backdropFilter: "blur(14px)",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        padding: "16px 16px 17px",
         display: "flex", alignItems: "center", justifyContent: "space-between",
         pointerEvents: "none",
       }}>

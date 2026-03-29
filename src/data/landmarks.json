@@ -725,8 +725,8 @@
       "name": "Great Zimbabwe",
       "location": "Masvingo, Zimbabwe",
       "coordinates": {
-        "lat": -20.2674,
-        "lng": 30.9338
+        "lat": -20.2730187,
+        "lng": 30.9342951
       },
       "era": "11th–15th Century",
       "description": "The massive stone city that was the heart of a powerful southern African kingdom and trading empire.",
@@ -770,8 +770,8 @@
       "name": "Timbuktu",
       "location": "Timbuktu, Mali",
       "coordinates": {
-        "lat": 16.7735,
-        "lng": -3.0074
+        "lat": 16.7758305,
+        "lng": -3.005559
       },
       "era": "14th–16th Century",
       "description": "The legendary city of gold and learning on the edge of the Sahara, home to one of the world's great universities.",
@@ -830,8 +830,8 @@
       "name": "Rock-Hewn Churches of Lalibela",
       "location": "Lalibela, Ethiopia",
       "coordinates": {
-        "lat": 12.0319,
-        "lng": 39.0436
+        "lat": 12.0331956,
+        "lng": 39.0433851
       },
       "era": "12th–13th Century",
       "description": "Eleven medieval churches carved directly downward into solid rock — an engineering and spiritual marvel.",
@@ -950,8 +950,8 @@
       "name": "Robben Island",
       "location": "Cape Town, South Africa",
       "coordinates": {
-        "lat": -33.8076,
-        "lng": 18.3712
+        "lat": -33.8178368,
+        "lng": 18.3793783
       },
       "era": "20th Century",
       "description": "The island prison where Nelson Mandela spent 18 years, now a powerful symbol of the triumph of the human spirit.",
@@ -1010,8 +1010,8 @@
       "name": "Elmina Castle",
       "location": "Elmina, Ghana",
       "coordinates": {
-        "lat": 5.0847,
-        "lng": -1.348
+        "lat": 5.0826778,
+        "lng": -1.3481194
       },
       "era": "15th–19th Century",
       "description": "The oldest European building in sub-Saharan Africa, a site central to understanding the transatlantic slave trade.",
@@ -1910,8 +1910,8 @@
       "name": "Waitangi Treaty Grounds",
       "location": "Bay of Islands, New Zealand",
       "coordinates": {
-        "lat": -35.2677,
-        "lng": 174.0845
+        "lat": -35.2679365,
+        "lng": 174.082209
       },
       "era": "19th Century – Present",
       "description": "The place where the founding document of New Zealand was signed between the British Crown and Māori chiefs.",
@@ -2270,8 +2270,8 @@
       "name": "Rapa Nui (Easter Island)",
       "location": "Easter Island, Chile",
       "coordinates": {
-        "lat": -27.1127,
-        "lng": -109.3497
+        "lat": -27.1392326,
+        "lng": -109.4266815
       },
       "era": "10th–17th Century",
       "description": "The remote Pacific island famous for its massive stone head statues (moai), carved by Polynesian settlers.",
@@ -2631,8 +2631,11 @@
       "name": "Mohenjo-daro",
       "location": "Sindh, Pakistan",
       "coordinates": {
-        "lat": 27.3242,
-        "lng": 68.1386
+        "lat": 27.3254321,
+        "lng": 68.1333973
+      },
+      "streetView": {
+        "heading": 264
       },
       "era": "2500–1900 BC",
       "description": "One of the world's first great cities, built by the mysterious Indus Valley Civilization with advanced urban planning.",
@@ -2691,8 +2694,8 @@
       "name": "Great Mosque of Djenné",
       "location": "Djenné, Mali",
       "coordinates": {
-        "lat": 13.9054,
-        "lng": -4.5553
+        "lat": 13.905492,
+        "lng": -4.5553266
       },
       "era": "13th Century (rebuilt 1907)",
       "description": "The largest mud-brick building in the world — rebuilt annually by the entire community in an extraordinary tradition.",
@@ -2811,8 +2814,8 @@
       "name": "Tiwanaku",
       "location": "La Paz, Bolivia",
       "coordinates": {
-        "lat": -16.5544,
-        "lng": -68.6735
+        "lat": -16.5557805,
+        "lng": -68.67384
       },
       "era": "6th–11th Century",
       "description": "The ancient capital of a powerful Andean civilization at 3,850 meters above sea level, near Lake Titicaca.",
@@ -2871,8 +2874,8 @@
       "name": "Nazca Lines",
       "location": "Nazca, Peru",
       "coordinates": {
-        "lat": -14.735,
-        "lng": -75.13
+        "lat": -14.7073609,
+        "lng": -75.1028119
       },
       "era": "1st–7th Century AD",
       "description": "Giant drawings in the desert — hummingbirds, monkeys, and spiders visible only from the sky — made 2,000 years ago.",
@@ -2931,8 +2934,8 @@
       "name": "Ruins of Kilwa Kisiwani",
       "location": "Kilwa, Tanzania",
       "coordinates": {
-        "lat": -8.9573,
-        "lng": 39.5234
+        "lat": -8.9597521,
+        "lng": 39.4961472
       },
       "era": "11th–15th Century",
       "description": "The ruins of the wealthiest Swahili trading city on the East African coast, controlling gold and ivory routes.",

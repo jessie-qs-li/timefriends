@@ -34,6 +34,7 @@ const LANDMARKS = rawLandmarks.landmarks.map((lm, idx) => ({
   color: COLOR_PALETTE[hashCode(lm.id) % COLOR_PALETTE.length],
   unlockRadius: lm.unlockRadius || 500,
   description: lm.description,
+  streetView: lm.streetView || null,
   figures: lm.figures.map((f) => ({
     id: f.id,
     name: f.name,
@@ -50,6 +51,30 @@ const LANDMARKS = rawLandmarks.landmarks.map((lm, idx) => ({
 }));
 
 const TOTAL_FIGURES = LANDMARKS.reduce((s, l) => s + l.figures.length, 0);
+
+const CONTINENT_MAP = {
+  "palace-of-versailles": "Europe", "alhambra": "Europe", "edinburgh-castle": "Europe",
+  "hagia-sophia": "Europe", "kremlin": "Europe", "palace-of-knossos": "Europe",
+  "pompeii": "Europe", "stonehenge": "Europe", "the-acropolis": "Europe",
+  "the-colosseum": "Europe", "tower-of-london": "Europe", "viking-ship-museum": "Europe",
+  "angkor-wat": "Asia", "borobudur": "Asia", "forbidden-city": "Asia",
+  "great-wall-of-china": "Asia", "gyeongbokgung": "Asia", "himeji-castle": "Asia",
+  "jerusalem-old-city": "Asia", "kinkaku-ji": "Asia", "mohenjo-daro": "Asia",
+  "persepolis": "Asia", "petra": "Asia", "samarkand": "Asia", "sigiriya": "Asia",
+  "taj-mahal": "Asia", "terracotta-army": "Asia",
+  "carthage": "Africa", "elmina-castle": "Africa", "great-mosque-djenne": "Africa",
+  "great-zimbabwe": "Africa", "kilwa-kisiwani": "Africa", "lalibela": "Africa",
+  "pyramids-of-giza": "Africa", "robben-island": "Africa", "timbuktu": "Africa",
+  "valley-of-the-kings": "Africa",
+  "chichen-itza": "North America", "gettysburg": "North America",
+  "independence-hall": "North America", "mesa-verde": "North America",
+  "templo-mayor": "North America", "teotihuacan": "North America", "tikal": "North America",
+  "machu-picchu": "South America", "nazca-lines": "South America",
+  "rapa-nui": "South America", "tiwanaku": "South America",
+  "uluru": "Oceania", "waitangi": "Oceania",
+};
+
+LANDMARKS.forEach((lm) => { lm.continent = CONTINENT_MAP[lm.id] || "Other"; });
 const DEFAULT_USER_POS = [48.8566, 2.3522];
 
 /** “World map” view: centered on Valley of the Kings so Europe / Africa / Asia frame together and landmark pins stay visible. */
@@ -182,7 +207,7 @@ function SearchBar({ value, onChange }) {
 
 // ─── Landmark List Sidebar ──────────────────────────────────────────────────
 
-function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery }) {
+function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery, continentFilter }) {
   const [visibleCount, setVisibleCount] = useState(SIDEBAR_PAGE_SIZE);
   const listRef = useRef(null);
 
@@ -197,12 +222,15 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
         lm.figures.some((f) => f.name.toLowerCase().includes(q))
       );
     }
+    if (continentFilter) {
+      list = list.filter((lm) => lm.continent === continentFilter);
+    }
     return list
       .map((lm) => ({ ...lm, distance: haversineDistance(userPos, lm.coords) }))
       .sort((a, b) => a.distance - b.distance);
-  }, [landmarks, userPos, searchQuery]);
+  }, [landmarks, userPos, searchQuery, continentFilter]);
 
-  useEffect(() => setVisibleCount(SIDEBAR_PAGE_SIZE), [searchQuery]);
+  useEffect(() => setVisibleCount(SIDEBAR_PAGE_SIZE), [searchQuery, continentFilter]);
 
   const handleScroll = useCallback(() => {
     const el = listRef.current;
@@ -441,7 +469,7 @@ function LandmarkDetail({ landmark, onClose, onConversationState }) {
           padding: "16px 20px",
         }}>
           <div style={{
-            fontFamily: "'Instrument Serif', serif", fontSize: 24, color: "white",
+            fontFamily: "'Instrument Serif', serif", fontSize: 29, color: "white",
             textShadow: "0 1px 6px rgba(0,0,0,0.5)",
             lineHeight: 1.2,
           }}>{landmark.name}</div>
@@ -478,6 +506,22 @@ function LandmarkDetail({ landmark, onClose, onConversationState }) {
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
+function buildStreetViewEmbedSrc(landmark) {
+  const params = new URLSearchParams({
+    key: GOOGLE_MAPS_API_KEY,
+    fov: "90",
+  });
+  const sv = landmark.streetView;
+  if (sv?.pano) {
+    params.set("pano", sv.pano);
+  } else {
+    params.set("location", `${landmark.coords[0]},${landmark.coords[1]}`);
+  }
+  if (sv?.heading != null) params.set("heading", String(sv.heading));
+  if (sv?.pitch != null) params.set("pitch", String(sv.pitch));
+  return `https://www.google.com/maps/embed/v1/streetview?${params}`;
+}
+
 function StreetViewOverlay({ landmark, onClose }) {
   const [loaded, setLoaded] = useState(false);
 
@@ -489,13 +533,13 @@ function StreetViewOverlay({ landmark, onClose }) {
         color: "rgba(255,255,255,0.6)", gap: 14, padding: 32, textAlign: "center",
       }}>
         <span style={{ fontSize: 40 }}>{landmark.icon}</span>
-        <span style={{ fontSize: 13 }}>Add VITE_GOOGLE_MAPS_API_KEY to .env.local to enable Street View.</span>
+        <span style={{ fontSize: 13 }}>Add VITE_GOOGLE_MAPS_API_KEY to .env to enable Street View.</span>
         <button onClick={onClose} style={{ marginTop: 8, padding: "8px 20px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.3)", background: "transparent", color: "white", cursor: "pointer", fontSize: 13 }}>Close</button>
       </div>
     );
   }
 
-  const src = `https://www.google.com/maps/embed/v1/streetview?key=${GOOGLE_MAPS_API_KEY}&location=${landmark.coords[0]},${landmark.coords[1]}&fov=90&heading=0&pitch=0`;
+  const src = buildStreetViewEmbedSrc(landmark);
 
   return (
     <div style={{
@@ -503,36 +547,20 @@ function StreetViewOverlay({ landmark, onClose }) {
       animation: "streetViewExpand 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
       transformOrigin: "center",
     }}>
-      {/* Frosted header bar */}
-      <div style={{
-        position: "absolute", top: 0, left: 0, right: 0, zIndex: 10,
-        background: "rgba(10,10,10,0.72)", backdropFilter: "blur(14px)",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-        padding: "16px 16px 17px",
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        pointerEvents: "none",
-      }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontSize: 24 }}>{landmark.icon}</span>
-          <div>
-            <div style={{ color: "white", fontWeight: 600, fontSize: 15, lineHeight: 1.3 }}>{landmark.name}</div>
-            <div style={{ color: "rgba(255,255,255,0.72)", fontSize: 12 }}>{landmark.location}</div>
-          </div>
-        </div>
-        <button
-          onClick={onClose}
-          style={{
-            pointerEvents: "auto",
-            width: 36, height: 36, borderRadius: "50%",
-            background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)",
-            color: "white", fontSize: 20, lineHeight: 1, cursor: "pointer",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            backdropFilter: "blur(4px)",
-          }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.28)"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.15)"; }}
-        >×</button>
-      </div>
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        style={{
+          position: "absolute", top: 16, right: 56, zIndex: 10,
+          width: 36, height: 36, borderRadius: "50%",
+          background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)",
+          color: "white", fontSize: 20, lineHeight: 1, cursor: "pointer",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          backdropFilter: "blur(4px)",
+        }}
+        onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.28)"; }}
+        onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.15)"; }}
+      >×</button>
 
       {/* Loading shimmer */}
       {!loaded && (
@@ -591,6 +619,7 @@ export default function TimeFriendsApp() {
   const [mapCenter, setMapCenter] = useState(null);
   const [mapZoom, setMapZoom] = useState(3);
   const [searchQuery, setSearchQuery] = useState("");
+  const [continentFilter, setContinentFilter] = useState(null);
   const [mapState, setMapState] = useState({ bounds: null, zoom: 3 });
   /** When set, map is hidden and the right region shows the live conversation panel. */
   const [conversationPanel, setConversationPanel] = useState(null);
@@ -720,12 +749,31 @@ export default function TimeFriendsApp() {
                 <SearchBar value={searchQuery} onChange={setSearchQuery} />
               </div>
 
+              {/* Continent filter */}
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, padding: "10px 16px 4px" }}>
+                {["Africa", "Asia", "Europe", "North America", "South America", "Oceania"].map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setContinentFilter(continentFilter === c ? null : c)}
+                    style={{
+                      padding: "4px 10px", borderRadius: 20, fontSize: 11, fontWeight: 600,
+                      cursor: "pointer", border: "1px solid",
+                      borderColor: continentFilter === c ? "#8B6F47" : "#D6CCBB",
+                      background: continentFilter === c ? "#8B6F47" : "transparent",
+                      color: continentFilter === c ? "white" : "#7A6A54",
+                      transition: "all 0.15s",
+                    }}
+                  >{c}</button>
+                ))}
+              </div>
+
               <LandmarkList
                 landmarks={LANDMARKS}
                 userPos={userPos}
                 selectedId={selectedLandmarkId}
                 onSelect={handleSelectLandmark}
                 searchQuery={searchQuery}
+                continentFilter={continentFilter}
               />
             </>
           )}
@@ -824,11 +872,7 @@ export default function TimeFriendsApp() {
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
                   <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #2E7D32" }} />
-                  Unlocked landmark
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
-                  <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #E65100" }} />
-                  Locked — travel there
+                  Landmark
                 </div>
               </div>
             </div>

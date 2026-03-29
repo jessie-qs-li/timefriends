@@ -214,13 +214,13 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
   const visible = filtered.slice(0, visibleCount);
 
   return (
-    <div ref={listRef} onScroll={handleScroll} style={{ flex: 1, overflowY: "auto", padding: "16px" }}>
+    <div ref={listRef} onScroll={handleScroll} style={{ flex: 1, overflowY: "auto", padding: "16px", background: "#e0e5ec" }}>
       {filtered.length === 0 && (
         <div style={{ textAlign: "center", padding: "32px 16px", color: "#8B8070", fontSize: 13 }}>
           No landmarks match "{searchQuery}"
         </div>
       )}
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         {visible.map((lm) => {
           const isNearby = lm.distance <= 80467; // 50 miles in meters
           const isSelected = selectedId === lm.id;
@@ -241,12 +241,15 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
               style={{
                 position: "relative",
                 height: 118,
-                borderRadius: 14,
+                borderRadius: 18,
                 overflow: "hidden",
                 cursor: "pointer",
-                border: isSelected ? `2px solid ${lm.color}` : "1.5px solid #E8E0D4",
-                boxShadow: isSelected ? `0 4px 14px ${lm.color}35` : "0 1px 3px rgba(0,0,0,0.06)",
-                transition: "border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease",
+                border: "none",
+                background: "#e0e5ec",
+                boxShadow: isSelected
+                  ? `8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff, inset 0 0 0 2px ${lm.color}55`
+                  : "8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff",
+                transition: "box-shadow 0.2s ease, transform 0.2s ease",
               }}
             >
               <div style={{
@@ -355,7 +358,7 @@ function FigureCard({ figure, onConversationState }) {
         </div>
         <div style={{ flex: 1 }}>
           <div style={{ fontSize: 15, fontWeight: 700, color: "#1A1A2E" }}>{figure.name}</div>
-          <div style={{ fontSize: 12, color: figure.color, fontWeight: 600, marginTop: 1 }}>{figure.title}</div>
+          <div style={{ fontSize: 12, color: figure.color, fontWeight: 600, marginTop: 1 }}>{figure.title.replace(/\s*\(.*?\)\s*$/, "")}</div>
           <div style={{ fontSize: 11, color: "#8B8070", marginTop: 1 }}>{figure.reign}</div>
         </div>
       </div>
@@ -386,7 +389,7 @@ function FigureCard({ figure, onConversationState }) {
 
 // ─── Landmark Detail Panel ──────────────────────────────────────────────────
 
-function LandmarkDetail({ landmark, isNearby, onClose, onConversationState }) {
+function LandmarkDetail({ landmark, onClose, onConversationState }) {
   if (!landmark) return null;
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
@@ -429,14 +432,6 @@ function LandmarkDetail({ landmark, isNearby, onClose, onConversationState }) {
             color: "#3A3A4A", fontFamily: "'DM Sans', sans-serif",
             backdropFilter: "blur(8px)", boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
           }}>← Back</button>
-          <div style={{
-            fontSize: 11, fontWeight: 600, padding: "5px 14px", borderRadius: 99,
-            background: isNearby ? "rgba(232,245,233,0.92)" : "rgba(255,243,224,0.92)",
-            color: isNearby ? "#2E7D32" : "#E65100",
-            backdropFilter: "blur(8px)", boxShadow: "0 1px 4px rgba(0,0,0,0.1)",
-          }}>
-            {isNearby ? "✓ Unlocked" : "🔒 Locked — go to location"}
-          </div>
         </div>
 
         {/* Text overlay at bottom of image */}
@@ -673,21 +668,21 @@ export default function TimeFriendsApp() {
           <span style={{ fontSize: 20 }}>🕰️</span>
           <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: "#1A1A2E" }}>Time Friends</span>
           <div style={{ width: 1, height: 24, background: "#E8E0D4", margin: "0 6px" }} />
-          <span style={{ fontSize: 12, color: "#8B8070" }}>
-            {selectedLandmark ? (
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                <img src={selectedLandmark.image} alt="" style={{ width: 20, height: 20, borderRadius: 4, objectFit: "cover" }} onError={(e) => { e.target.style.display = "none"; }} />
-                {selectedLandmark.name}
-              </span>
-            ) : "Explore the world"}
+          <span style={{ fontSize: 15, fontWeight: 600, color: "#3A3A4A" }}>
+            {selectedLandmark ? selectedLandmark.name : "Explore the world"}
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
           <div style={{
             width: 34, height: 34, borderRadius: "50%", background: "#F5E6D0",
-            display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16,
+            display: "flex", alignItems: "center", justifyContent: "center",
             border: "2px solid #E8D4B8", cursor: "pointer",
-          }}>👧</div>
+          }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
         </div>
       </header>
 
@@ -704,7 +699,6 @@ export default function TimeFriendsApp() {
           {selectedLandmark ? (
             <LandmarkDetail
               landmark={selectedLandmark}
-              isNearby={isNearby(selectedLandmark)}
               onClose={handleCloseLandmark}
               onConversationState={setConversationPanel}
             />

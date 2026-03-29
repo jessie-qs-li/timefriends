@@ -9,7 +9,9 @@ export default function StreetViewCamera() {
   const canvasRef = useRef(null);
   const sessionRef = useRef(null);
   const mediaStreamRef = useRef(null);
+  const lensesRef = useRef([]);
   const [status, setStatus] = useState("loading"); // loading | ready | error
+  const [activeLensIdx, setActiveLensIdx] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
@@ -51,10 +53,12 @@ export default function StreetViewCamera() {
         const { lenses } = await cameraKit.lensRepository.loadLensGroups([LENS_GROUP_ID]);
         if (cancelled) return;
 
-        const lens = lenses.find((l) => l.id === TARGET_LENS_ID);
-        if (lens) {
-          await session.applyLens(lens);
-        }
+        lensesRef.current = lenses;
+
+        const startIdx = lenses.findIndex((l) => l.id === TARGET_LENS_ID);
+        const idx = startIdx >= 0 ? startIdx : 0;
+        if (lenses[idx]) await session.applyLens(lenses[idx]);
+        setActiveLensIdx(idx);
 
         setStatus("ready");
       } catch (err) {
@@ -76,21 +80,35 @@ export default function StreetViewCamera() {
     };
   }, []);
 
+  async function handleTap() {
+    const session = sessionRef.current;
+    const lenses = lensesRef.current;
+    if (!session || lenses.length === 0) return;
+
+    const nextIdx = (activeLensIdx + 1) % lenses.length;
+    await session.applyLens(lenses[nextIdx]);
+    setActiveLensIdx(nextIdx);
+  }
+
   return (
-    <div style={{
-      position: "absolute",
-      bottom: 20,
-      left: 20,
-      width: 200,
-      height: 356,
-      borderRadius: 20,
-      overflow: "hidden",
-      border: "3px solid rgba(255,255,255,0.9)",
-      boxShadow: "0 4px 24px rgba(0,0,0,0.45)",
-      zIndex: 20,
-      background: "#000",
-      animation: "bereal-pop 0.4s cubic-bezier(0.34,1.56,0.64,1) 0.3s both",
-    }}>
+    <div
+      onClick={status === "ready" ? handleTap : undefined}
+      style={{
+        position: "absolute",
+        bottom: 20,
+        left: 20,
+        width: 200,
+        height: 356,
+        borderRadius: 20,
+        overflow: "hidden",
+        border: "3px solid rgba(255,255,255,0.9)",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.45)",
+        zIndex: 20,
+        background: "#000",
+        cursor: status === "ready" ? "pointer" : "default",
+        animation: "bereal-pop 0.4s cubic-bezier(0.34,1.56,0.64,1) 0.3s both",
+      }}
+    >
       <style>{`
         @keyframes bereal-pop {
           from { opacity: 0; transform: scale(0.5); }
@@ -108,6 +126,31 @@ export default function StreetViewCamera() {
           borderRadius: 17,
         }}
       />
+
+      {/* "Tap to change filter" hint */}
+      {status === "ready" && (
+        <div style={{
+          position: "absolute",
+          bottom: 0, left: 0, right: 0,
+          padding: "18px 8px 8px",
+          background: "linear-gradient(to top, rgba(0,0,0,0.52) 0%, transparent 100%)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          pointerEvents: "none",
+          borderRadius: "0 0 17px 17px",
+        }}>
+          <span style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 10,
+            fontWeight: 500,
+            color: "rgba(255,255,255,0.82)",
+            letterSpacing: "0.03em",
+          }}>
+            tap to change filter
+          </span>
+        </div>
+      )}
 
       {/* Loading state */}
       {status === "loading" && (

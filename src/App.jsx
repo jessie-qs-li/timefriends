@@ -6,6 +6,7 @@ import rawLandmarks from "./data/landmarks.json";
 import ConversationButton, { ConversationSidePanel } from "./ConversationButton";
 import StreetViewCamera from "./StreetViewCamera";
 import ProfilePanel from "./ProfilePanel";
+import GuessModal from "./GuessModal";
 
 // ─── Data normalization ─────────────────────────────────────────────────────
 
@@ -523,8 +524,95 @@ function buildStreetViewEmbedSrc(landmark) {
   return `https://www.google.com/maps/embed/v1/streetview?${params}`;
 }
 
+async function captureOverlayScreenshot(containerEl) {
+  const stream = await navigator.mediaDevices.getDisplayMedia({
+    video: { displaySurface: "browser" },
+    preferCurrentTab: true,
+  });
+
+  const video = document.createElement("video");
+  video.srcObject = stream;
+  video.muted = true;
+
+  await new Promise((resolve) => {
+    video.onloadedmetadata = () => video.play().then(resolve);
+  });
+
+  // Let the video paint one frame
+  await new Promise((resolve) => requestAnimationFrame(resolve));
+  await new Promise((resolve) => requestAnimationFrame(resolve));
+
+  const rect = containerEl.getBoundingClientRect();
+  const scaleX = video.videoWidth / window.innerWidth;
+  const scaleY = video.videoHeight / window.innerHeight;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(rect.width * (window.devicePixelRatio || 1));
+  canvas.height = Math.round(rect.height * (window.devicePixelRatio || 1));
+  const ctx = canvas.getContext("2d");
+
+  ctx.drawImage(
+    video,
+    rect.left * scaleX, rect.top * scaleY,
+    rect.width * scaleX, rect.height * scaleY,
+    0, 0, canvas.width, canvas.height
+  );
+
+  stream.getTracks().forEach((t) => t.stop());
+  video.remove();
+
+  return canvas.toDataURL("image/jpeg", 0.92);
+}
+
+// Blur the top-left corner to hide the Google Maps landmark label
+function blurTopLeftCorner(dataUrl) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext("2d");
+
+      ctx.drawImage(img, 0, 0);
+
+      // Region covering the Google Maps name + "View on Google Maps" label
+      const blurW = Math.round(img.width * 0.26);
+      const blurH = Math.round(img.height * 0.16);
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(0, 0, blurW, blurH);
+      ctx.clip();
+      ctx.filter = "blur(18px)";
+      // Draw slightly oversized so blur doesn't leave a soft unblurred edge
+      ctx.drawImage(img, -12, -12, img.width + 24, img.height + 24);
+      ctx.restore();
+
+      resolve(canvas.toDataURL("image/jpeg", 0.92));
+    };
+    img.src = dataUrl;
+  });
+}
+
 function StreetViewOverlay({ landmark, onClose }) {
   const [loaded, setLoaded] = useState(false);
+  const [capturing, setCapturing] = useState(false);
+  const [guessShot, setGuessShot] = useState(null);
+  const overlayRef = useRef(null);
+
+  async function handleGuessChallenge() {
+    setCapturing(true);
+    try {
+      const dataUrl = await captureOverlayScreenshot(overlayRef.current);
+      const blurred = await blurTopLeftCorner(dataUrl);
+      setGuessShot(blurred);
+    } catch (err) {
+      if (err.name !== "NotAllowedError") console.error("Screenshot error:", err);
+    } finally {
+      setCapturing(false);
+    }
+  }
 
   if (!GOOGLE_MAPS_API_KEY) {
     return (
@@ -543,16 +631,19 @@ function StreetViewOverlay({ landmark, onClose }) {
   const src = buildStreetViewEmbedSrc(landmark);
 
   return (
-    <div style={{
-      position: "absolute", inset: 0, zIndex: 500, overflow: "hidden",
-      animation: "streetViewExpand 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
-      transformOrigin: "center",
-    }}>
+    <div
+      ref={overlayRef}
+      style={{
+        position: "absolute", inset: 0, zIndex: 500, overflow: "hidden",
+        animation: "streetViewExpand 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+        transformOrigin: "center",
+      }}
+    >
       {/* Close button */}
       <button
         onClick={onClose}
         style={{
-          position: "absolute", top: 16, right: 56, zIndex: 10,
+          position: "absolute", top: 10, right: 50, zIndex: 10,
           width: 36, height: 36, borderRadius: "50%",
           background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)",
           color: "white", fontSize: 20, lineHeight: 1, cursor: "pointer",
@@ -562,6 +653,36 @@ function StreetViewOverlay({ landmark, onClose }) {
         onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.28)"; }}
         onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.15)"; }}
       >×</button>
+
+      {/* Ask friends to guess button */}
+      <button
+        onClick={handleGuessChallenge}
+        disabled={capturing}
+        style={{
+          position: "absolute", top: 16, left: "50%", transform: "translateX(-50%)",
+          zIndex: 10,
+          padding: "0 16px",
+          height: 36,
+          borderRadius: 20,
+          background: capturing
+            ? "rgba(255,255,255,0.1)"
+            : "rgba(255,255,255,0.18)",
+          border: "1px solid rgba(255,255,255,0.35)",
+          color: "white",
+          fontSize: 13, fontWeight: 600, cursor: capturing ? "default" : "pointer",
+          display: "flex", alignItems: "center", gap: 6,
+          backdropFilter: "blur(8px)",
+          WebkitBackdropFilter: "blur(8px)",
+          whiteSpace: "nowrap",
+          transition: "background 0.15s",
+          fontFamily: "inherit",
+        }}
+        onMouseEnter={(e) => { if (!capturing) e.currentTarget.style.background = "rgba(255,255,255,0.28)"; }}
+        onMouseLeave={(e) => { if (!capturing) e.currentTarget.style.background = "rgba(255,255,255,0.18)"; }}
+      >
+        <span>{capturing ? "⏳" : "🌍"}</span>
+        <span>{capturing ? "Capturing…" : "Ask friends to guess"}</span>
+      </button>
 
       {/* Loading shimmer */}
       {!loaded && (
@@ -587,6 +708,14 @@ function StreetViewOverlay({ landmark, onClose }) {
 
       {/* BeReal-style camera preview */}
       <StreetViewCamera />
+
+      {/* Guess challenge modal */}
+      {guessShot && (
+        <GuessModal
+          screenshotUrl={guessShot}
+          onClose={() => setGuessShot(null)}
+        />
+      )}
     </div>
   );
 }
@@ -614,9 +743,27 @@ function VisibleLandmarkMarkers({ landmarks, mapState, isNearby, selectedId, onS
 
 // ─── Main App ───────────────────────────────────────────────────────────────
 
+const SOUNDSCAPES = {
+  "palace-of-versailles": "/soundscapes/palace_of_versailles.mp3",
+  "the-colosseum":        "/soundscapes/the_colosseum.mp3",
+  "the-acropolis":        "/soundscapes/the_acropolis.mp3",
+  "stonehenge":           "/soundscapes/stonehenge.mp3",
+  "tower-of-london":      "/soundscapes/tower_of_london.mp3",
+  "alhambra":             "/soundscapes/the_alhambra.mp3",
+  "pompeii":              "/soundscapes/pompeii.mp3",
+  "hagia-sophia":         "/soundscapes/hagia_sophia.mp3",
+  "kremlin":              "/soundscapes/the_moscow_kremlin.mp3",
+  "edinburgh-castle":     "/soundscapes/edinburgh_castle.mp3",
+  "pyramids-of-giza":     "/soundscapes/pyramids_of_giza.mp3",
+  "valley-of-the-kings":  "/soundscapes/valley_of_the_kings.mp3",
+  "great-zimbabwe":       "/soundscapes/great_zimbabwe.mp3",
+  "timbuktu":             "/soundscapes/timbuktu.mp3",
+};
+
 export default function TimeFriendsApp() {
   const [userPos, setUserPos] = useState(DEFAULT_USER_POS);
   const [selectedLandmarkId, setSelectedLandmarkId] = useState(null);
+  const soundscapeRef = useRef(null);
   const [mapCenter, setMapCenter] = useState(null);
   const [mapZoom, setMapZoom] = useState(3);
   const [searchQuery, setSearchQuery] = useState("");
@@ -670,6 +817,16 @@ export default function TimeFriendsApp() {
       setMapCenter(lm.coords);
       setMapZoom(15);
     }
+    // Play soundscape if available
+    if (soundscapeRef.current) {
+      soundscapeRef.current.pause();
+      soundscapeRef.current = null;
+    }
+    if (SOUNDSCAPES[id]) {
+      const audio = new Audio(SOUNDSCAPES[id]);
+      audio.play().catch(() => {});
+      soundscapeRef.current = audio;
+    }
     // Record visit
     const entry = { landmarkId: id, timestamp: Date.now() };
     setVisitHistory((prev) => {
@@ -684,6 +841,10 @@ export default function TimeFriendsApp() {
     setStreetViewOpen(false);
     setMapCenter([...WORLD_MAP_CENTER]);
     setMapZoom(WORLD_MAP_ZOOM);
+    if (soundscapeRef.current) {
+      soundscapeRef.current.pause();
+      soundscapeRef.current = null;
+    }
   };
 
   const handleReturnToWorldMap = () => {

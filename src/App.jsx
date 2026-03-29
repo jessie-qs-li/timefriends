@@ -4,6 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import rawLandmarks from "./data/landmarks.json";
 import ConversationButton, { ConversationSidePanel } from "./ConversationButton";
+import CameraOverlay from "./CameraOverlay";
 
 // ─── Data normalization ─────────────────────────────────────────────────────
 
@@ -451,6 +452,7 @@ export default function TimeFriendsApp() {
   const [mapState, setMapState] = useState({ bounds: null, zoom: 3 });
   /** When set, map is hidden and the right region shows the live conversation panel. */
   const [conversationPanel, setConversationPanel] = useState(null);
+  const [showCamera, setShowCamera] = useState(false);
 
   const selectedLandmark = LANDMARKS.find((l) => l.id === selectedLandmarkId) || null;
 
@@ -668,6 +670,25 @@ export default function TimeFriendsApp() {
               </div>
             )}
 
+          {/* Camera button — top-right of map */}
+          <button
+            onClick={() => setShowCamera(true)}
+            title="Open AR Camera"
+            style={{
+              position: "absolute", top: 24, right: 24, zIndex: 400,
+              width: 44, height: 44, borderRadius: "50%",
+              background: "white", border: "1px solid #E8E0D4",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+              cursor: "pointer", fontSize: 20,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#FFF8EE"; e.currentTarget.style.borderColor = "#C9A84C"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "white"; e.currentTarget.style.borderColor = "#E8E0D4"; }}
+          >
+            📷
+          </button>
+
             <div style={{
               position: "absolute", bottom: 24, left: 24, zIndex: 400,
               background: "white", borderRadius: 14, padding: "14px 18px",
@@ -682,6 +703,10 @@ export default function TimeFriendsApp() {
                 <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
                   <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #2E7D32" }} />
                   Unlocked landmark
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
+                  <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #E65100" }} />
+                  Locked — travel there
                 </div>
               </div>
             </div>
@@ -703,6 +728,8 @@ export default function TimeFriendsApp() {
           )}
         </div>
       </div>
+
+      {showCamera && <CameraOverlay onClose={() => setShowCamera(false)} />}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Circle, useMap, useMapEvents } from "r
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import rawLandmarks from "./data/landmarks.json";
-import ConversationButton from "./ConversationButton";
+import ConversationButton, { ConversationSidePanel } from "./ConversationButton";
 
 // ─── Data normalization ─────────────────────────────────────────────────────
 
@@ -49,7 +49,18 @@ const LANDMARKS = rawLandmarks.landmarks.map((lm, idx) => ({
 
 const TOTAL_FIGURES = LANDMARKS.reduce((s, l) => s + l.figures.length, 0);
 const DEFAULT_USER_POS = [48.8566, 2.3522];
+
+/** “World map” view: centered on Valley of the Kings so Europe / Africa / Asia frame together and landmark pins stay visible. */
+const VALLEY_OF_THE_KINGS_LM = LANDMARKS.find((l) => l.id === "valley-of-the-kings");
+const WORLD_MAP_CENTER = VALLEY_OF_THE_KINGS_LM
+  ? [...VALLEY_OF_THE_KINGS_LM.coords]
+  : [25.7402, 32.6014];
+/** Lower = more world visible (zoom 3 was too Americas-heavy from default center). */
+const WORLD_MAP_ZOOM = 2;
 const SIDEBAR_PAGE_SIZE = 20;
+/** Matches landmark detail column — conversation panel uses the same width. */
+const LANDMARK_PANEL_WIDTH = 380;
+const DISCOVER_SIDEBAR_WIDTH = 340;
 
 // ─── Utils ──────────────────────────────────────────────────────────────────
 
@@ -107,7 +118,10 @@ function createUserIcon() {
 function FlyTo({ center, zoom }) {
   const map = useMap();
   useEffect(() => {
-    if (center) map.flyTo(center, zoom, { duration: 1.2 });
+    if (!center) return;
+    // Quick zoom-out to world scale; slower zoom-in when focusing a landmark
+    const duration = zoom <= 5 ? 0.75 : 1.15;
+    map.flyTo(center, zoom, { duration });
   }, [center, zoom, map]);
   return null;
 }
@@ -259,7 +273,7 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
 
 // ─── Figure Card ────────────────────────────────────────────────────────────
 
-function FigureCard({ figure }) {
+function FigureCard({ figure, onConversationState }) {
   const isComingSoon = !figure.agentId;
 
   return (
@@ -290,15 +304,6 @@ function FigureCard({ figure }) {
         </div>
       </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginTop: 12 }}>
-        {figure.traits.map((t) => (
-          <span key={t} style={{
-            padding: "2px 10px", borderRadius: 99, fontSize: 11, fontWeight: 600,
-            background: "#F5F0E6", color: "#7A6F5A",
-          }}>{t}</span>
-        ))}
-      </div>
-
       <div style={{
         marginTop: 12, padding: "10px 14px", borderRadius: 10,
         background: "#FAF6EF", fontSize: 12, color: "#5A5A6A",
@@ -317,7 +322,7 @@ function FigureCard({ figure }) {
           🔜  Coming soon
         </button>
       ) : (
-        <ConversationButton figure={figure} />
+        <ConversationButton figure={figure} onConversationState={onConversationState} />
       )}
     </div>
   );
@@ -325,7 +330,7 @@ function FigureCard({ figure }) {
 
 // ─── Landmark Detail Panel ──────────────────────────────────────────────────
 
-function LandmarkDetail({ landmark, isNearby, onClose }) {
+function LandmarkDetail({ landmark, isNearby, onClose, onConversationState }) {
   if (!landmark) return null;
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
@@ -409,7 +414,7 @@ function LandmarkDetail({ landmark, isNearby, onClose }) {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {landmark.figures.map((f) => (
-            <FigureCard key={f.id} figure={f} />
+            <FigureCard key={f.id} figure={f} onConversationState={onConversationState} />
           ))}
         </div>
       </div>
@@ -447,6 +452,8 @@ export default function TimeFriendsApp() {
   const [mapZoom, setMapZoom] = useState(3);
   const [searchQuery, setSearchQuery] = useState("");
   const [mapState, setMapState] = useState({ bounds: null, zoom: 3 });
+  /** When set, map is hidden and the right region shows the live conversation panel. */
+  const [conversationPanel, setConversationPanel] = useState(null);
 
   const selectedLandmark = LANDMARKS.find((l) => l.id === selectedLandmarkId) || null;
 
@@ -480,8 +487,13 @@ export default function TimeFriendsApp() {
 
   const handleCloseLandmark = () => {
     setSelectedLandmarkId(null);
-    setMapCenter(userPos);
-    setMapZoom(3);
+    setMapCenter([...WORLD_MAP_CENTER]);
+    setMapZoom(WORLD_MAP_ZOOM);
+  };
+
+  const handleReturnToWorldMap = () => {
+    setMapCenter([...WORLD_MAP_CENTER]);
+    setMapZoom(WORLD_MAP_ZOOM);
   };
 
   const handleBoundsChange = useCallback((state) => {
@@ -535,7 +547,7 @@ export default function TimeFriendsApp() {
 
         {/* LEFT SIDEBAR */}
         <aside style={{
-          width: selectedLandmark ? 380 : 340, flexShrink: 0,
+          width: selectedLandmark ? LANDMARK_PANEL_WIDTH : DISCOVER_SIDEBAR_WIDTH, flexShrink: 0,
           borderRight: "1px solid #E8E0D4", background: "#FFFCF7",
           display: "flex", flexDirection: "column", overflow: "hidden",
           transition: "width 0.3s ease",
@@ -545,6 +557,7 @@ export default function TimeFriendsApp() {
               landmark={selectedLandmark}
               isNearby={isNearby(selectedLandmark)}
               onClose={handleCloseLandmark}
+              onConversationState={setConversationPanel}
             />
           ) : (
             <>
@@ -586,74 +599,115 @@ export default function TimeFriendsApp() {
           )}
         </aside>
 
-        {/* MAP */}
-        <div style={{ flex: 1, position: "relative" }}>
-          <MapContainer
-            center={userPos}
-            zoom={3}
-            style={{ width: "100%", height: "100%", zIndex: 1 }}
-            zoomControl={true}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
-              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-            />
-
-            <FlyTo center={mapCenter} zoom={mapZoom} />
-            <MapBoundsTracker onBoundsChange={handleBoundsChange} />
-
-            <Marker position={userPos} icon={createUserIcon()} />
-            <Circle
+        {/* MAP + optional conversation strip (same width as landmark sidebar) */}
+        <div style={{ flex: 1, display: "flex", minWidth: 0, overflow: "hidden" }}>
+          <div style={{ flex: 1, position: "relative", minWidth: 0, display: "flex", flexDirection: "column" }}>
+            <MapContainer
               center={userPos}
-              radius={800}
-              pathOptions={{ color: "#4285F4", weight: 1, fillColor: "#4285F4", fillOpacity: 0.06 }}
-            />
+              zoom={3}
+              style={{ width: "100%", height: "100%", zIndex: 1 }}
+              zoomControl={true}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+                url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+              />
 
-            <VisibleLandmarkMarkers
-              landmarks={LANDMARKS}
-              mapState={mapState}
-              isNearby={isNearby}
-              selectedId={selectedLandmarkId}
-              onSelect={handleSelectLandmark}
-            />
+              <FlyTo center={mapCenter} zoom={mapZoom} />
+              <MapBoundsTracker onBoundsChange={handleBoundsChange} />
+
+              <Marker position={userPos} icon={createUserIcon()} />
+              <Circle
+                center={userPos}
+                radius={800}
+                pathOptions={{ color: "#4285F4", weight: 1, fillColor: "#4285F4", fillOpacity: 0.06 }}
+              />
+
+              <VisibleLandmarkMarkers
+                landmarks={LANDMARKS}
+                mapState={mapState}
+                isNearby={isNearby}
+                selectedId={selectedLandmarkId}
+                onSelect={handleSelectLandmark}
+              />
+
+              {selectedLandmark && (
+                <Circle
+                  center={selectedLandmark.coords}
+                  radius={selectedLandmark.unlockRadius}
+                  pathOptions={{
+                    color: selectedLandmark.color,
+                    weight: 2,
+                    fillColor: selectedLandmark.color,
+                    fillOpacity: 0.08,
+                    dashArray: "6 4",
+                  }}
+                />
+              )}
+            </MapContainer>
 
             {selectedLandmark && (
-              <Circle
-                center={selectedLandmark.coords}
-                radius={selectedLandmark.unlockRadius}
-                pathOptions={{
-                  color: selectedLandmark.color,
-                  weight: 2,
-                  fillColor: selectedLandmark.color,
-                  fillOpacity: 0.08,
-                  dashArray: "6 4",
-                }}
-              />
+              <div style={{
+                position: "absolute", top: 16, left: "50%", transform: "translateX(-50%)", zIndex: 400,
+                pointerEvents: "auto",
+              }}>
+                <button
+                  type="button"
+                  onClick={handleReturnToWorldMap}
+                  style={{
+                    display: "inline-flex", alignItems: "center",
+                    padding: "10px 18px", borderRadius: 12,
+                    border: "1px solid #E8E0D4", background: "rgba(255,255,255,0.96)",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                    fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600,
+                    color: "#3A3A4A", cursor: "pointer",
+                    backdropFilter: "blur(8px)",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "white"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.96)"; }}
+                >
+                  Return to world map
+                </button>
+              </div>
             )}
-          </MapContainer>
 
-          {/* Map legend overlay */}
-          <div style={{
-            position: "absolute", bottom: 24, left: 24, zIndex: 400,
-            background: "white", borderRadius: 14, padding: "14px 18px",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.1)", border: "1px solid #E8E0D4",
-          }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#8B8070", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>Legend</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
-                <div style={{ width: 14, height: 14, borderRadius: "50%", background: "#4285F4", border: "2px solid white", boxShadow: "0 0 0 1px #4285F444" }} />
-                Your location
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
-                <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #2E7D32" }} />
-                Unlocked landmark
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
-                <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #E65100" }} />
-                Locked — travel there
+            <div style={{
+              position: "absolute", bottom: 24, left: 24, zIndex: 400,
+              background: "white", borderRadius: 14, padding: "14px 18px",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.1)", border: "1px solid #E8E0D4",
+            }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#8B8070", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>Legend</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
+                  <div style={{ width: 14, height: 14, borderRadius: "50%", background: "#4285F4", border: "2px solid white", boxShadow: "0 0 0 1px #4285F444" }} />
+                  Your location
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
+                  <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #2E7D32" }} />
+                  Unlocked landmark
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
+                  <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #E65100" }} />
+                  Locked — travel there
+                </div>
               </div>
             </div>
           </div>
+
+          {conversationPanel && (
+            <aside style={{
+              width: LANDMARK_PANEL_WIDTH, flexShrink: 0, height: "100%", minHeight: 0,
+              borderLeft: "1px solid #E8E0D4", background: "#FFFCF7",
+              display: "flex", flexDirection: "column", overflow: "hidden",
+            }}>
+              <ConversationSidePanel
+                figure={conversationPanel.figure}
+                mode={conversationPanel.mode}
+                sessionStatus={conversationPanel.sessionStatus}
+                onEnd={conversationPanel.endSession}
+              />
+            </aside>
+          )}
         </div>
       </div>
     </div>

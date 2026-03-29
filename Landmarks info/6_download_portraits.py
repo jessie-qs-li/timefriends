@@ -311,13 +311,61 @@ def build_query_candidates(figure_id):
     return deduped
 
 
-def search_wikimedia(query, thumb_width=400):
+STOPWORDS = frozenset({
+    "the", "and", "for", "king", "queen", "saint", "von", "sir", "lady", "master",
+    "general", "with", "from", "that", "who", "his", "her", "was", "are", "not",
+})
+
+PORTRAIT_HINTS = (
+    "portrait", "bust", "statue", "mosaic", "painting", "engrav", "photograph",
+    "miniature", "fresco", "coin", "medal", "relief", "drawing", "tomb", "mask",
+)
+
+
+def word_tokens(text):
+    return re.findall(r"[a-z0-9]{3,}", (text or "").lower())
+
+
+def score_commons_candidate(figure_id, file_title, query_used):
+    """Higher is better; <= 0 means reject (likely wrong person / random match)."""
+    t = file_title.replace("file:", "").lower()
+    name = normalize_name(FIGURE_NAMES.get(figure_id, "")).lower()
+    name_toks = [w for w in word_tokens(name) if w not in STOPWORDS]
+    if not name_toks:
+        name_toks = word_tokens(name)
+
+    curated = FIGURE_QUERIES.get(figure_id, "")
+    curated_toks = [w for w in word_tokens(curated) if w not in STOPWORDS and len(w) >= 4]
+
+    name_hits = sum(1 for w in name_toks if w in t)
+    curated_hits = sum(1 for w in curated_toks if w in t)
+    query_hits = sum(1 for w in word_tokens(query_used) if len(w) >= 4 and w not in STOPWORDS and w in t)
+
+    has_portrait_hint = any(h in t for h in PORTRAIT_HINTS)
+
+    if name_hits < 1:
+        return -1.0
+
+    # Ambiguous single short token names (e.g. "Helena", "Amina", "Wei"): require extra evidence
+    if len(name_toks) == 1 and len(name_toks[0]) <= 8:
+        if curated_hits < 2 and not (name_hits >= 1 and has_portrait_hint):
+            return -1.0
+        if curated_hits == 0 and name_hits >= 1 and not has_portrait_hint:
+            return -1.0
+
+    score = name_hits * 4.0 + curated_hits * 2.0 + query_hits * 1.0
+    if has_portrait_hint:
+        score += 0.75
+    return score
+
+
+def search_wikimedia_candidates(query, thumb_width=400, limit=10):
     params = {
         "action": "query",
         "generator": "search",
         "gsrnamespace": "6",
         "gsrsearch": query,
-        "gsrlimit": "5",
+        "gsrlimit": str(min(limit, 10)),
         "prop": "imageinfo",
         "iiprop": "url|size|mime|extmetadata",
         "iiurlwidth": str(thumb_width),
@@ -332,12 +380,13 @@ def search_wikimedia(query, thumb_width=400):
             data = json.loads(resp.read().decode("utf-8"))
     except Exception as e:
         print(f"  ✗ Search failed: {e}")
-        return None
+        return []
 
     pages = data.get("query", {}).get("pages", {})
     if not pages:
-        return None
+        return []
 
+    out = []
     for page_id, page in sorted(pages.items(), key=lambda x: x[0]):
         imageinfo = page.get("imageinfo", [{}])[0]
         mime = imageinfo.get("mime", "")
@@ -353,15 +402,26 @@ def search_wikimedia(query, thumb_width=400):
         artist = meta.get("Artist", {}).get("value", "Unknown")
 
         if thumb_url:
-            return {
+            out.append({
                 "thumb_url": thumb_url,
                 "description_url": desc_url,
                 "license": license_short,
                 "artist": artist,
                 "title": page.get("title", ""),
-            }
+            })
 
-    return None
+    return out
+
+
+def wikipedia_title_matches_figure(figure_id, page_title):
+    t = page_title.lower()
+    name = normalize_name(FIGURE_NAMES.get(figure_id, "")).lower()
+    toks = [w for w in word_tokens(name) if w not in STOPWORDS and len(w) >= 4]
+    if len(toks) >= 2:
+        return sum(1 for w in toks if w in t) >= 2
+    if len(toks) == 1:
+        return toks[0] in t and len(toks[0]) >= 5
+    return any(len(w) >= 5 and w in t for w in word_tokens(name))
 
 
 def search_wikipedia_page_image(query, thumb_width=400):
@@ -406,15 +466,27 @@ def search_wikipedia_page_image(query, thumb_width=400):
 
 
 def search_figure_image(figure_id, thumb_width=400):
-    for query in build_query_candidates(figure_id):
-        result = search_wikimedia(query, thumb_width)
-        if result:
-            return result, query, "commons"
+    best = None
+    best_score = -1.0
+    best_query = None
 
     for query in build_query_candidates(figure_id):
-        result = search_wikipedia_page_image(query, thumb_width)
-        if result:
-            return result, query, "wikipedia"
+        for cand in search_wikimedia_candidates(query, thumb_width):
+            s = score_commons_candidate(figure_id, cand["title"], query)
+            if s > best_score:
+                best_score = s
+                best = cand
+                best_query = query
+
+    if best is not None and best_score > 0:
+        return best, best_query, "commons"
+
+    curated = FIGURE_QUERIES.get(figure_id)
+    if curated:
+        for wq in (curated, f"{curated} portrait"):
+            result = search_wikipedia_page_image(wq, thumb_width)
+            if result and wikipedia_title_matches_figure(figure_id, result["title"]):
+                return result, wq, "wikipedia"
 
     return None, None, None
 
@@ -441,7 +513,7 @@ def download_image(url, filepath, max_retries=3):
     return False
 
 
-def download_all(thumb_width=400, figure_filter=None):
+def download_all(thumb_width=400, figure_filter=None, force=False):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     figure_ids = list(FIGURE_QUERIES.keys())
 
@@ -455,7 +527,7 @@ def download_all(thumb_width=400, figure_filter=None):
 
         filepath = os.path.join(OUTPUT_DIR, f"{figure_id}.jpg")
 
-        if os.path.exists(filepath) and os.path.getsize(filepath) > 1000:
+        if not force and os.path.exists(filepath) and os.path.getsize(filepath) > 1000:
             print(f"⏭ {figure_id}: already exists")
             success += 1
             results[figure_id] = {"file": filepath, "status": "cached"}
@@ -525,6 +597,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download figure portraits from Wikimedia Commons")
     parser.add_argument("--figure", help="Download for a specific figure ID only")
     parser.add_argument("--size", type=int, default=400, help="Max image width in px (default 400)")
+    parser.add_argument("--force", action="store_true", help="Re-download even if file already exists")
 
     args = parser.parse_args()
-    download_all(thumb_width=args.size, figure_filter=args.figure)
+    download_all(thumb_width=args.size, figure_filter=args.figure, force=args.force)

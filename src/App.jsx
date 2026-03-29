@@ -678,8 +678,8 @@ export default function TimeFriendsApp() {
         @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #FAF6EF; }
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-thumb { background: #D4CCBC; border-radius: 3px; }
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; }
         .leaflet-container { background: #FAF6EF; }
         .leaflet-control-attribution { font-size: 9px !important; opacity: 0.6; }
         .leaflet-control-zoom { border: 1px solid #E8E0D4 !important; border-radius: 10px !important; overflow: hidden; }

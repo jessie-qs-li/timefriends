@@ -243,7 +243,7 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery, c
   const visible = filtered.slice(0, visibleCount);
 
   return (
-    <div ref={listRef} onScroll={handleScroll} style={{ flex: 1, overflowY: "auto", padding: "16px", background: "#e0e5ec" }}>
+    <div ref={listRef} onScroll={handleScroll} style={{ flex: 1, overflowY: "auto", padding: "16px", background: "#FFFCF7" }}>
       {filtered.length === 0 && (
         <div style={{ textAlign: "center", padding: "32px 16px", color: "#8B8070", fontSize: 13 }}>
           No landmarks match "{searchQuery}"
@@ -274,7 +274,7 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery, c
                 overflow: "hidden",
                 cursor: "pointer",
                 border: "none",
-                background: "#e0e5ec",
+                background: "#FFFCF7",
                 boxShadow: isSelected
                   ? `8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff, inset 0 0 0 2px ${lm.color}55`
                   : "8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff",

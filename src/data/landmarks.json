@@ -195,7 +195,7 @@
       "figures": [
         {
           "id": "stone-builder",
-          "name": "Aelra",
+          "name": "Aelra (fictional)",
           "title": "Master Stone Builder of Stonehenge (c. 2500 BC)",
           "reign": "c. 2500 BC",
           "emoji": "🔨",
@@ -210,7 +210,7 @@
         },
         {
           "id": "stone-astronomer",
-          "name": "Brighid",
+          "name": "Brighid (fictional)",
           "title": "Keeper of the Sky Calendar (c. 2500 BC)",
           "reign": "c. 2500 BC",
           "emoji": "🌙",
@@ -750,7 +750,7 @@
         },
         {
           "id": "zimbabwe-trader",
-          "name": "Amina",
+          "name": "Amina (fictional)",
           "title": "Swahili Coast Trader at Great Zimbabwe (14th Century)",
           "reign": "14th Century",
           "emoji": "⛵",
@@ -810,7 +810,7 @@
         },
         {
           "id": "timbuktu-salt-trader",
-          "name": "Aisha",
+          "name": "Aisha (fictional)",
           "title": "Trans-Saharan Salt Trader (15th Century)",
           "reign": "15th Century",
           "emoji": "🐪",
@@ -855,7 +855,7 @@
         },
         {
           "id": "lalibela-carver",
-          "name": "Tekle",
+          "name": "Tekle (fictional)",
           "title": "Master Rock Carver of Lalibela (13th Century)",
           "reign": "13th Century",
           "emoji": "⛏️",
@@ -870,7 +870,7 @@
         },
         {
           "id": "queen-of-sheba",
-          "name": "Queen of Sheba (Makeda)",
+          "name": "Queen of Sheba / Makeda (fictional)",
           "title": "Legendary Queen of Ethiopia",
           "reign": "c. 10th Century BC",
           "emoji": "👸",
@@ -915,7 +915,7 @@
         },
         {
           "id": "dido",
-          "name": "Queen Dido (Elissa)",
+          "name": "Queen Dido / Elissa (fictional)",
           "title": "Legendary Founder of Carthage (c. 9th Century BC)",
           "reign": "c. 9th Century BC",
           "emoji": "🌊",
@@ -1020,7 +1020,7 @@
       "figures": [
         {
           "id": "elmina-guide",
-          "name": "Kwame",
+          "name": "Kwame (fictional)",
           "title": "Local Historian and Descendant of Elmina (Present Day)",
           "reign": "Present Day",
           "emoji": "🙏",
@@ -1050,7 +1050,7 @@
         },
         {
           "id": "nana-esi",
-          "name": "Nana Esi",
+          "name": "Nana Esi (fictional)",
           "title": "Fante Fisherwoman and Elder of Elmina (18th Century)",
           "reign": "18th Century",
           "emoji": "🐟",
@@ -1095,7 +1095,7 @@
         },
         {
           "id": "nabataean-water-engineer",
-          "name": "Shaqilat",
+          "name": "Shaqilat (fictional)",
           "title": "Nabataean Water Engineer (1st Century AD)",
           "reign": "1st Century AD",
           "emoji": "💧",
@@ -1110,7 +1110,7 @@
         },
         {
           "id": "petra-trader",
-          "name": "Obodas",
+          "name": "Obodas (fictional)",
           "title": "Nabataean Incense Trader (1st Century BC)",
           "reign": "1st Century BC",
           "emoji": "🐪",
@@ -1335,7 +1335,7 @@
         },
         {
           "id": "sigiriya-painter",
-          "name": "Devini",
+          "name": "Devini (fictional)",
           "title": "Court Painter of Sigiriya (5th Century AD)",
           "reign": "5th Century AD",
           "emoji": "🎨",
@@ -1350,7 +1350,7 @@
         },
         {
           "id": "sigiriya-garden-designer",
-          "name": "Ananda",
+          "name": "Ananda (fictional)",
           "title": "Royal Garden Engineer of Sigiriya (5th Century AD)",
           "reign": "5th Century AD",
           "emoji": "🌸",
@@ -1395,7 +1395,7 @@
         },
         {
           "id": "hua-mulan",
-          "name": "Hua Mulan",
+          "name": "Hua Mulan (fictional)",
           "title": "Legendary Warrior of China",
           "reign": "c. 5th–6th Century",
           "emoji": "⚔️",
@@ -1410,7 +1410,7 @@
         },
         {
           "id": "wall-builder",
-          "name": "Wei",
+          "name": "Wei (fictional)",
           "title": "Worker on the Great Wall (3rd Century BC)",
           "reign": "3rd Century BC",
           "emoji": "🧱",
@@ -1500,7 +1500,7 @@
       "figures": [
         {
           "id": "terracotta-sculptor",
-          "name": "Master Zhang",
+          "name": "Master Zhang (fictional)",
           "title": "Chief Sculptor of the Terracotta Army (3rd Century BC)",
           "reign": "3rd Century BC",
           "emoji": "🎨",
@@ -1575,7 +1575,7 @@
         },
         {
           "id": "angkor-sculptor",
-          "name": "Srey",
+          "name": "Srey (fictional)",
           "title": "Master Stone Carver of Angkor Wat (12th Century)",
           "reign": "12th Century",
           "emoji": "🪨",
@@ -1695,7 +1695,7 @@
         },
         {
           "id": "borobudur-sculptor",
-          "name": "Wira",
+          "name": "Wira (fictional)",
           "title": "Relief Sculptor of Borobudur (9th Century)",
           "reign": "9th Century",
           "emoji": "🪨",
@@ -1860,7 +1860,7 @@
       "figures": [
         {
           "id": "anangu-elder",
-          "name": "Tjilpi (Elder)",
+          "name": "Tjilpi / Elder (fictional)",
           "title": "Anangu Elder and Keeper of Tjukurpa (Present Day)",
           "reign": "Present Day",
           "emoji": "🌅",
@@ -1875,7 +1875,7 @@
         },
         {
           "id": "anangu-tracker",
-          "name": "Kunmanara",
+          "name": "Kunmanara (fictional)",
           "title": "Anangu Tracker and Desert Survivor (Present Day)",
           "reign": "Present Day",
           "emoji": "👣",
@@ -1890,7 +1890,7 @@
         },
         {
           "id": "anangu-artist",
-          "name": "Yalti",
+          "name": "Yalti (fictional)",
           "title": "Anangu Artist and Painter (Present Day)",
           "reign": "Present Day",
           "emoji": "🎨",
@@ -1950,7 +1950,7 @@
         },
         {
           "id": "maori-navigator",
-          "name": "Kupe",
+          "name": "Kupe (fictional)",
           "title": "Legendary Polynesian Navigator",
           "reign": "c. 10th Century",
           "emoji": "🌊",
@@ -1980,7 +1980,7 @@
       "figures": [
         {
           "id": "kukulcan-priest",
-          "name": "Ah Kin",
+          "name": "Ah Kin (fictional)",
           "title": "High Priest and Astronomer of Chichén Itzá (10th Century)",
           "reign": "10th Century",
           "emoji": "🌟",
@@ -2010,7 +2010,7 @@
         },
         {
           "id": "maya-ballplayer",
-          "name": "Hunahpu",
+          "name": "Hunahpu (fictional)",
           "title": "Champion Ball Player of Chichén Itzá (10th Century)",
           "reign": "10th Century",
           "emoji": "🏀",
@@ -2040,7 +2040,7 @@
       "figures": [
         {
           "id": "teotihuacan-architect",
-          "name": "Citlali",
+          "name": "Citlali (fictional)",
           "title": "Architect of the Pyramid of the Sun (2nd Century AD)",
           "reign": "2nd Century AD",
           "emoji": "🔺",
@@ -2055,7 +2055,7 @@
         },
         {
           "id": "teotihuacan-mural-painter",
-          "name": "Xochitl",
+          "name": "Xochitl (fictional)",
           "title": "Mural Painter of Teotihuacán (5th Century AD)",
           "reign": "5th Century AD",
           "emoji": "🎨",
@@ -2070,7 +2070,7 @@
         },
         {
           "id": "teotihuacan-trader",
-          "name": "Obsidian Merchant",
+          "name": "Obsidian Merchant (fictional)",
           "title": "Obsidian Trader of Teotihuacán (3rd Century AD)",
           "reign": "3rd Century AD",
           "emoji": "💎",
@@ -2100,7 +2100,7 @@
       "figures": [
         {
           "id": "ancestral-puebloan-builder",
-          "name": "Kwiiyagat",
+          "name": "Kwiiyagat (fictional)",
           "title": "Master Builder of the Cliff Dwellings (13th Century)",
           "reign": "13th Century",
           "emoji": "🏗️",
@@ -2115,7 +2115,7 @@
         },
         {
           "id": "puebloan-potter",
-          "name": "Tse'pinah",
+          "name": "Tse'pinah (fictional)",
           "title": "Potter and Artist of Mesa Verde (12th Century)",
           "reign": "12th Century",
           "emoji": "🏺",
@@ -2130,7 +2130,7 @@
         },
         {
           "id": "puebloan-astronomer",
-          "name": "Sun Watcher",
+          "name": "Sun Watcher (fictional)",
           "title": "Calendar Keeper of Mesa Verde (13th Century)",
           "reign": "13th Century",
           "emoji": "☀️",
@@ -2235,7 +2235,7 @@
         },
         {
           "id": "inca-engineer",
-          "name": "Quilla",
+          "name": "Quilla (fictional)",
           "title": "Inca Engineer and Quipu Keeper (15th Century)",
           "reign": "15th Century",
           "emoji": "🪢",
@@ -2280,7 +2280,7 @@
       "figures": [
         {
           "id": "moai-carver",
-          "name": "Ariki Tupa",
+          "name": "Ariki Tupa (fictional)",
           "title": "Master Moai Carver of Rapa Nui (15th Century)",
           "reign": "15th Century",
           "emoji": "🗿",
@@ -2295,7 +2295,7 @@
         },
         {
           "id": "rapa-nui-navigator",
-          "name": "Tu'u Ko Iho",
+          "name": "Tu'u Ko Iho (fictional)",
           "title": "Polynesian Navigator Who Settled Rapa Nui (c. 10th Century)",
           "reign": "c. 10th Century",
           "emoji": "⭐",
@@ -2310,7 +2310,7 @@
         },
         {
           "id": "rapa-nui-birdman",
-          "name": "Tangata Manu",
+          "name": "Tangata Manu (fictional)",
           "title": "Birdman Competition Champion (17th Century)",
           "reign": "17th Century",
           "emoji": "🐦",
@@ -2355,7 +2355,7 @@
         },
         {
           "id": "tikal-chocolate-maker",
-          "name": "Ixchel",
+          "name": "Ixchel (fictional)",
           "title": "Royal Chocolate Maker of Tikal (7th Century)",
           "reign": "7th Century",
           "emoji": "🫘",
@@ -2370,7 +2370,7 @@
         },
         {
           "id": "tikal-astronomer",
-          "name": "Ahau Kin",
+          "name": "Ahau Kin (fictional)",
           "title": "Maya Astronomer of Tikal (8th Century)",
           "reign": "8th Century",
           "emoji": "🌟",
@@ -2491,7 +2491,7 @@
         },
         {
           "id": "silk-road-merchant",
-          "name": "Sogdian Merchant",
+          "name": "Sogdian Merchant (fictional)",
           "title": "Silk Road Trader of Samarkand (7th Century)",
           "reign": "7th Century",
           "emoji": "🐪",
@@ -2521,7 +2521,7 @@
       "figures": [
         {
           "id": "king-minos",
-          "name": "King Minos",
+          "name": "King Minos (fictional)",
           "title": "Legendary King of Crete",
           "reign": "c. 2000 BC",
           "emoji": "🐂",
@@ -2536,7 +2536,7 @@
         },
         {
           "id": "minoan-priestess",
-          "name": "Ariadne",
+          "name": "Ariadne (fictional)",
           "title": "Minoan High Priestess (c. 1600 BC)",
           "reign": "c. 1600 BC",
           "emoji": "🐍",
@@ -2551,7 +2551,7 @@
         },
         {
           "id": "minoan-bull-leaper",
-          "name": "Icarus",
+          "name": "Icarus (fictional)",
           "title": "Bull Leaper of Knossos (c. 1500 BC)",
           "reign": "c. 1500 BC",
           "emoji": "🐂",
@@ -2611,7 +2611,7 @@
         },
         {
           "id": "viking-shipbuilder",
-          "name": "Thorvald",
+          "name": "Thorvald (fictional)",
           "title": "Viking Master Shipbuilder (10th Century)",
           "reign": "10th Century",
           "emoji": "🪓",
@@ -2644,7 +2644,7 @@
       "figures": [
         {
           "id": "indus-urban-planner",
-          "name": "The City Planner",
+          "name": "The City Planner (fictional)",
           "title": "Urban Planner of Mohenjo-daro (c. 2400 BC)",
           "reign": "c. 2400 BC",
           "emoji": "📐",
@@ -2659,7 +2659,7 @@
         },
         {
           "id": "indus-bead-maker",
-          "name": "Priya",
+          "name": "Priya (fictional)",
           "title": "Bead Maker and Artisan of Mohenjo-daro (c. 2300 BC)",
           "reign": "c. 2300 BC",
           "emoji": "📿",
@@ -2674,7 +2674,7 @@
         },
         {
           "id": "indus-seal-maker",
-          "name": "The Seal Maker",
+          "name": "The Seal Maker (fictional)",
           "title": "Seal Carver and Record Keeper (c. 2400 BC)",
           "reign": "c. 2400 BC",
           "emoji": "🔏",
@@ -2704,7 +2704,7 @@
       "figures": [
         {
           "id": "djenne-mason",
-          "name": "Barey Ton",
+          "name": "Barey Ton (fictional)",
           "title": "Master Mason of the Djenné Building Guild (Present Day)",
           "reign": "Present Day",
           "emoji": "🧱",
@@ -2719,7 +2719,7 @@
         },
         {
           "id": "djenne-scholar",
-          "name": "Alfa Sidy",
+          "name": "Alfa Sidy (fictional)",
           "title": "Scholar of the Djenné Manuscripts (16th Century)",
           "reign": "16th Century",
           "emoji": "📚",
@@ -2734,7 +2734,7 @@
         },
         {
           "id": "djenne-trader-woman",
-          "name": "Aminata",
+          "name": "Aminata (fictional)",
           "title": "Market Trader of Djenné (Present Day)",
           "reign": "Present Day",
           "emoji": "🧺",
@@ -2779,7 +2779,7 @@
         },
         {
           "id": "aztec-chinampas-farmer",
-          "name": "Tlanextli",
+          "name": "Tlanextli (fictional)",
           "title": "Chinampa Farmer of Tenochtitlán (15th Century)",
           "reign": "15th Century",
           "emoji": "🌿",
@@ -2824,7 +2824,7 @@
       "figures": [
         {
           "id": "tiwanaku-architect",
-          "name": "Khuno",
+          "name": "Khuno (fictional)",
           "title": "Master Architect of Tiwanaku (8th Century)",
           "reign": "8th Century",
           "emoji": "🏛️",
@@ -2839,7 +2839,7 @@
         },
         {
           "id": "tiwanaku-farmer",
-          "name": "Sisa",
+          "name": "Sisa (fictional)",
           "title": "Agricultural Engineer of the Raised Fields (9th Century)",
           "reign": "9th Century",
           "emoji": "🌾",
@@ -2854,7 +2854,7 @@
         },
         {
           "id": "tiwanaku-priest",
-          "name": "Thunupa",
+          "name": "Thunupa (fictional)",
           "title": "Priest of the Gateway of the Sun (9th Century)",
           "reign": "9th Century",
           "emoji": "☀️",
@@ -2884,7 +2884,7 @@
       "figures": [
         {
           "id": "nazca-line-maker",
-          "name": "Tupaq",
+          "name": "Tupaq (fictional)",
           "title": "Master Line Maker of the Nazca (3rd Century AD)",
           "reign": "3rd Century AD",
           "emoji": "📏",
@@ -2899,7 +2899,7 @@
         },
         {
           "id": "nazca-water-finder",
-          "name": "Qori",
+          "name": "Qori (fictional)",
           "title": "Water Engineer of the Nazca Aqueducts (5th Century AD)",
           "reign": "5th Century AD",
           "emoji": "💧",
@@ -2914,7 +2914,7 @@
         },
         {
           "id": "nazca-weaver",
-          "name": "Chaska",
+          "name": "Chaska (fictional)",
           "title": "Master Textile Weaver of Nazca (4th Century AD)",
           "reign": "4th Century AD",
           "emoji": "🧶",
@@ -2959,7 +2959,7 @@
         },
         {
           "id": "kilwa-coin-maker",
-          "name": "Fatima bint Khalid",
+          "name": "Fatima bint Khalid (fictional)",
           "title": "Master Coin Maker of Kilwa (13th Century)",
           "reign": "13th Century",
           "emoji": "🪙",
@@ -2974,7 +2974,7 @@
         },
         {
           "id": "ibn-battuta-host",
-          "name": "Ibn Battuta's Host",
+          "name": "Ibn Battuta's Host (fictional)",
           "title": "Kilwa Merchant and Host to the World's Greatest Traveler (14th Century)",
           "reign": "14th Century",
           "emoji": "⛵",

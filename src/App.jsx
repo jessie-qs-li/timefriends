@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import rawLandmarks from "./data/landmarks.json";
 import ConversationButton, { ConversationSidePanel } from "./ConversationButton";
 import StreetViewCamera from "./StreetViewCamera";
+import ProfilePanel from "./ProfilePanel";
 
 // ─── Data normalization ─────────────────────────────────────────────────────
 
@@ -624,6 +625,21 @@ export default function TimeFriendsApp() {
   /** When set, map is hidden and the right region shows the live conversation panel. */
   const [conversationPanel, setConversationPanel] = useState(null);
   const [streetViewOpen, setStreetViewOpen] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
+
+  const [profile, setProfile] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("tf_profile")) || { name: "", age: "", homeCountry: "" }; }
+    catch { return { name: "", age: "", homeCountry: "" }; }
+  });
+  const [visitHistory, setVisitHistory] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("tf_visits")) || []; }
+    catch { return []; }
+  });
+
+  const handleUpdateProfile = (updated) => {
+    setProfile(updated);
+    localStorage.setItem("tf_profile", JSON.stringify(updated));
+  };
 
   const selectedLandmark = LANDMARKS.find((l) => l.id === selectedLandmarkId) || null;
 
@@ -654,6 +670,13 @@ export default function TimeFriendsApp() {
       setMapCenter(lm.coords);
       setMapZoom(15);
     }
+    // Record visit
+    const entry = { landmarkId: id, timestamp: Date.now() };
+    setVisitHistory((prev) => {
+      const updated = [entry, ...prev];
+      localStorage.setItem("tf_visits", JSON.stringify(updated));
+      return updated;
+    });
   };
 
   const handleCloseLandmark = () => {
@@ -697,23 +720,43 @@ export default function TimeFriendsApp() {
         position: "relative", zIndex: 50, flexShrink: 0,
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <span style={{ fontSize: 20 }}>🕰️</span>
-          <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: "#1A1A2E" }}>Time Friends</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <img
+              src="/logo.png"
+              alt=""
+              width={32}
+              height={32}
+              style={{ display: "block", flexShrink: 0, objectFit: "contain" }}
+            />
+            <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: 24, color: "#1A1A2E", lineHeight: 1 }}>Wonder</span>
+          </div>
           <div style={{ width: 1, height: 24, background: "#E8E0D4", margin: "0 6px" }} />
           <span style={{ fontSize: 15, fontWeight: 600, color: "#3A3A4A" }}>
             {selectedLandmark ? selectedLandmark.name : "Explore the world"}
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{
-            width: 34, height: 34, borderRadius: "50%", background: "#F5E6D0",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            border: "2px solid #E8D4B8", cursor: "pointer",
-          }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
+          <div
+            onClick={() => setShowProfile(true)}
+            style={{
+              width: 34, height: 34, borderRadius: "50%", background: "#F5E6D0",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              border: "2px solid #E8D4B8", cursor: "pointer",
+              transition: "background 0.15s, border-color 0.15s",
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#EDD4B0"; e.currentTarget.style.borderColor = "#C4882D"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#F5E6D0"; e.currentTarget.style.borderColor = "#E8D4B8"; }}
+          >
+            {profile.name ? (
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#8B7355", letterSpacing: "-0.5px" }}>
+                {profile.name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
+              </span>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            )}
           </div>
         </div>
       </header>
@@ -895,6 +938,17 @@ export default function TimeFriendsApp() {
         </div>
       </div>
 
+      {showCamera && <CameraOverlay onClose={() => setShowCamera(false)} />}
+
+      {showProfile && (
+        <ProfilePanel
+          profile={profile}
+          visitHistory={visitHistory}
+          landmarks={LANDMARKS}
+          onUpdateProfile={handleUpdateProfile}
+          onClose={() => setShowProfile(false)}
+        />
+      )}
     </div>
   );
 }

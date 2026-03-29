@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
-import { bootstrapCameraKit } from "@snap/camera-kit";
+import { bootstrapCameraKit, createMediaStreamSource, Transform2D } from "@snap/camera-kit";
 
 const API_TOKEN = import.meta.env.VITE_SNAP_API_TOKEN;
 const LENS_GROUP_ID = import.meta.env.VITE_SNAP_LENS_GROUP_ID;
@@ -29,6 +29,12 @@ export default function CameraOverlay({ onClose }) {
         });
         sessionRef.current = session;
 
+        session.events.addEventListener("error", (event) => {
+          if (event.detail.error.name === "LensExecutionError") {
+            console.error("Lens execution error:", event.detail.error);
+          }
+        });
+
         const stream = await navigator.mediaDevices.getUserMedia({
           video: { facingMode: "user", width: { ideal: 1280 }, height: { ideal: 720 } },
         });
@@ -39,20 +45,25 @@ export default function CameraOverlay({ onClose }) {
           return;
         }
 
-        await session.setSource(stream);
+        const source = createMediaStreamSource(stream, {
+          transform: Transform2D.MirrorX,
+          cameraType: "front",
+        });
+
+        await session.setSource(source);
         await session.play();
 
-        // Load lenses from group
-        const group = await cameraKit.lensRepository.loadLensGroups([LENS_GROUP_ID]);
-        const available = group.flatMap((g) => g.lenses);
+        // Load all lenses from the group
+        const { lenses: groupLenses } = await cameraKit.lensRepository.loadLensGroups([LENS_GROUP_ID]);
 
         if (cancelled) return;
 
-        setLenses(available);
+        setLenses(groupLenses);
+        setActiveLensIndex(groupLenses.length > 0 ? 0 : -1);
 
-        // Apply first lens if available
-        if (available.length > 0) {
-          await session.applyLens(available[0]);
+        // Apply the first available lens
+        if (groupLenses.length > 0) {
+          await session.applyLens(groupLenses[0]);
         }
 
         setStatus("ready");

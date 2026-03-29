@@ -198,7 +198,7 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
       )}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {visible.map((lm) => {
-          const isNearby = true;
+          const isNearby = lm.distance <= 80467; // 50 miles in meters
           const isSelected = selectedId === lm.id;
           return (
             <div
@@ -231,14 +231,15 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
                   <div style={{ fontSize: 11, color: "#8B8070" }}>{lm.location}</div>
                 </div>
                 <div style={{ textAlign: "right", flexShrink: 0 }}>
-                  <div style={{
-                    fontSize: 11, fontWeight: 600, padding: "3px 8px", borderRadius: 99,
-                    background: isNearby ? "#E8F5E9" : "#FFF3E0",
-                    color: isNearby ? "#2E7D32" : "#E65100",
-                  }}>
-                    {isNearby ? "✓ Nearby" : formatDistance(lm.distance)}
-                  </div>
-                  <div style={{ fontSize: 10, color: "#A89870", marginTop: 3 }}>
+                  {isNearby && (
+                    <div style={{
+                      fontSize: 11, fontWeight: 600, padding: "3px 8px", borderRadius: 99,
+                      background: "#E8F5E9", color: "#2E7D32",
+                    }}>
+                      ✓ Nearby
+                    </div>
+                  )}
+                  <div style={{ fontSize: 10, color: "#A89870", marginTop: isNearby ? 3 : 0 }}>
                     {lm.figures.length} {lm.figures.length === 1 ? "figure" : "figures"}
                   </div>
                 </div>

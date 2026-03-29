@@ -219,9 +219,9 @@
   {
     "landmark_id": "tikal",
     "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/landmarks/tikal.jpg",
-    "source": "https://commons.wikimedia.org/wiki/File:Tikal_Guatemala,_des_pyramides_dans_la_jungle_(9422775571).jpg",
-    "license": "CC BY 2.0",
-    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/96925387@N00\">Jeanne Menjoulet</a> from Paris, France"
+    "source": "User-provided photograph (Temple of the Great Jaguar, Tikal)",
+    "license": "Project use",
+    "artist": "TimeFriends"
   },
   {
     "landmark_id": "gettysburg",

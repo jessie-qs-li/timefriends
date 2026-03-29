@@ -244,19 +244,16 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
                   <div style={{ fontSize: 14, fontWeight: 600, color: "#1A1A2E", marginBottom: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{lm.name}</div>
                   <div style={{ fontSize: 11, color: "#8B8070" }}>{lm.location}</div>
                 </div>
-                <div style={{ textAlign: "right", flexShrink: 0 }}>
-                  {isNearby && (
+                {isNearby && (
+                  <div style={{ textAlign: "right", flexShrink: 0 }}>
                     <div style={{
                       fontSize: 11, fontWeight: 600, padding: "3px 8px", borderRadius: 99,
                       background: "#E8F5E9", color: "#2E7D32",
                     }}>
                       ✓ Nearby
                     </div>
-                  )}
-                  <div style={{ fontSize: 10, color: "#A89870", marginTop: isNearby ? 3 : 0 }}>
-                    {lm.figures.length} {lm.figures.length === 1 ? "figure" : "figures"}
                   </div>
-                </div>
+                )}
               </div>
             </div>
           );
@@ -685,10 +682,6 @@ export default function TimeFriendsApp() {
                 <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
                   <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #2E7D32" }} />
                   Unlocked landmark
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "#5A5A6A" }}>
-                  <div style={{ width: 14, height: 14, borderRadius: "50%", background: "white", border: "2px solid #E65100" }} />
-                  Locked — travel there
                 </div>
               </div>
             </div>

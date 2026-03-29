@@ -938,8 +938,6 @@ export default function TimeFriendsApp() {
         </div>
       </div>
 
-      {showCamera && <CameraOverlay onClose={() => setShowCamera(false)} />}
-
       {showProfile && (
         <ProfilePanel
           profile={profile}

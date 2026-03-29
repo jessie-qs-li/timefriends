@@ -1,0 +1,3004 @@
+{
+  "landmarks": [
+    {
+      "id": "palace-of-versailles",
+      "name": "Palace of Versailles",
+      "location": "Versailles, France",
+      "coordinates": {
+        "lat": 48.8049,
+        "lng": 2.1204
+      },
+      "era": "17th–18th Century",
+      "description": "The dazzling royal palace where French kings held court, surrounded by spectacular gardens and gilded halls.",
+      "emoji": "🏰",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "louis-xiv",
+          "name": "Louis XIV",
+          "title": "The Sun King, King of France (1643–1715)",
+          "reign": "1643–1715",
+          "emoji": "👑",
+          "traits": [
+            "Theatrical",
+            "Proud",
+            "Commanding",
+            "Extravagant"
+          ],
+          "previewQuote": "I am the state, and Versailles is my masterpiece.",
+          "agentId": "agent_2701kmvgqmqxe5wshkj4krwh58qz"
+        },
+        {
+          "id": "marie-antoinette",
+          "name": "Marie Antoinette",
+          "title": "Queen of France (1755–1793)",
+          "reign": "1755–1793",
+          "emoji": "👸",
+          "traits": [
+            "Elegant",
+            "Misunderstood",
+            "Generous",
+            "Spirited"
+          ],
+          "previewQuote": "They said I only cared for luxury. They never knew my heart.",
+          "agentId": "agent_9501kmvgqwzwevy908ny0dqgsyvx"
+        },
+        {
+          "id": "andre-le-notre",
+          "name": "André Le Nôtre",
+          "title": "Royal Gardener and Landscape Architect (1613–1700)",
+          "reign": "1613–1700",
+          "emoji": "🌳",
+          "traits": [
+            "Meticulous",
+            "Visionary",
+            "Humble",
+            "Patient"
+          ],
+          "previewQuote": "A garden should take your breath away before you take your first step into it.",
+          "agentId": "agent_3201kmvgqz00e48rh4g0pz44fg90"
+        }
+      ]
+    },
+    {
+      "id": "the-colosseum",
+      "name": "The Colosseum",
+      "location": "Rome, Italy",
+      "coordinates": {
+        "lat": 41.8902,
+        "lng": 12.4922
+      },
+      "era": "1st Century AD",
+      "description": "The iconic amphitheater of ancient Rome where gladiators fought and emperors entertained 50,000 spectators.",
+      "emoji": "🏟️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "emperor-vespasian",
+          "name": "Vespasian",
+          "title": "Roman Emperor, Builder of the Colosseum (9–79 AD)",
+          "reign": "69–79 AD",
+          "emoji": "🦅",
+          "traits": [
+            "Practical",
+            "Witty",
+            "Down-to-earth",
+            "Shrewd"
+          ],
+          "previewQuote": "I built this arena to give Rome back to its people.",
+          "agentId": "agent_8801kmvgr0w1ecrb2dbxs138bv68"
+        },
+        {
+          "id": "gladiator-spartacus",
+          "name": "Spartacus",
+          "title": "Gladiator and Leader of the Great Slave Revolt (c. 111–71 BC)",
+          "reign": "c. 111–71 BC",
+          "emoji": "⚔️",
+          "traits": [
+            "Brave",
+            "Defiant",
+            "Charismatic",
+            "Resourceful"
+          ],
+          "previewQuote": "They called us slaves. We called ourselves free.",
+          "agentId": "agent_4401kmvgr2y0e4raecxfq53s160y"
+        },
+        {
+          "id": "livia-drusilla",
+          "name": "Livia Drusilla",
+          "title": "Empress of Rome, Wife of Augustus (58 BC–29 AD)",
+          "reign": "58 BC–29 AD",
+          "emoji": "🏛️",
+          "traits": [
+            "Intelligent",
+            "Strategic",
+            "Dignified",
+            "Influential"
+          ],
+          "previewQuote": "Behind every emperor, there is someone who actually gets things done.",
+          "agentId": "agent_7201kmvgr50mfmbamca76ymyr6pw"
+        }
+      ]
+    },
+    {
+      "id": "the-acropolis",
+      "name": "The Acropolis",
+      "location": "Athens, Greece",
+      "coordinates": {
+        "lat": 37.9715,
+        "lng": 23.7267
+      },
+      "era": "5th Century BC",
+      "description": "The hilltop citadel of Athens crowned by the Parthenon, birthplace of democracy and Western philosophy.",
+      "emoji": "🏛️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "pericles",
+          "name": "Pericles",
+          "title": "Statesman and General of Athens (495–429 BC)",
+          "reign": "461–429 BC",
+          "emoji": "⚖️",
+          "traits": [
+            "Eloquent",
+            "Visionary",
+            "Democratic",
+            "Ambitious"
+          ],
+          "previewQuote": "We do not imitate others — we are an example to them.",
+          "agentId": "agent_0401kmvgr73yfw9t1v1pd21jhcr8"
+        },
+        {
+          "id": "socrates",
+          "name": "Socrates",
+          "title": "Philosopher of Athens (470–399 BC)",
+          "reign": "470–399 BC",
+          "emoji": "🤔",
+          "traits": [
+            "Questioning",
+            "Playful",
+            "Persistent",
+            "Humble"
+          ],
+          "previewQuote": "I know that I know nothing — and that makes me the wisest person in Athens!",
+          "agentId": "agent_5201kmvgr9jkec7s3sm3ackqhem1"
+        },
+        {
+          "id": "aspasia",
+          "name": "Aspasia",
+          "title": "Intellectual and Companion of Pericles (c. 470–400 BC)",
+          "reign": "c. 470–400 BC",
+          "emoji": "📜",
+          "traits": [
+            "Brilliant",
+            "Witty",
+            "Bold",
+            "Persuasive"
+          ],
+          "previewQuote": "They say women cannot teach. Strange — Socrates himself came to learn from me.",
+          "agentId": "agent_6501kmvgrbvhepeb2n2kpxpfkft0"
+        }
+      ]
+    },
+    {
+      "id": "stonehenge",
+      "name": "Stonehenge",
+      "location": "Wiltshire, England",
+      "coordinates": {
+        "lat": 51.1789,
+        "lng": -1.8262
+      },
+      "era": "3000–2000 BC",
+      "description": "The mysterious circle of standing stones on Salisbury Plain, built over a thousand years by ancient peoples.",
+      "emoji": "🪨",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "stone-builder",
+          "name": "Aelra",
+          "title": "Master Stone Builder of Stonehenge (c. 2500 BC)",
+          "reign": "c. 2500 BC",
+          "emoji": "🔨",
+          "traits": [
+            "Determined",
+            "Reverent",
+            "Strong",
+            "Community-minded"
+          ],
+          "previewQuote": "We moved mountains — not for ourselves, but for the sky.",
+          "agentId": "agent_3001kmvgre62e28t9detc1rzbh3y"
+        },
+        {
+          "id": "stone-astronomer",
+          "name": "Brighid",
+          "title": "Keeper of the Sky Calendar (c. 2500 BC)",
+          "reign": "c. 2500 BC",
+          "emoji": "🌙",
+          "traits": [
+            "Observant",
+            "Mystical",
+            "Patient",
+            "Wise"
+          ],
+          "previewQuote": "The stones remember what the sky tells them.",
+          "agentId": "agent_5901kmvgrgh8fe7t0rmsyj68f320"
+        },
+        {
+          "id": "boudica",
+          "name": "Boudica",
+          "title": "Queen of the Iceni (d. 60/61 AD)",
+          "reign": "d. 60/61 AD",
+          "emoji": "🔥",
+          "traits": [
+            "Fierce",
+            "Passionate",
+            "Protective",
+            "Fearless"
+          ],
+          "previewQuote": "This land is ours. Every stone, every hill, every river.",
+          "agentId": "agent_0201kmvgrjw5ff9b8e9hm0gv061a"
+        }
+      ]
+    },
+    {
+      "id": "tower-of-london",
+      "name": "Tower of London",
+      "location": "London, England",
+      "coordinates": {
+        "lat": 51.5081,
+        "lng": -0.0759
+      },
+      "era": "11th Century – Present",
+      "description": "The ancient fortress on the Thames that served as a royal palace, prison, and home of the Crown Jewels.",
+      "emoji": "🗼",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "william-the-conqueror",
+          "name": "William the Conqueror",
+          "title": "King of England (1028–1087)",
+          "reign": "1066–1087",
+          "emoji": "🛡️",
+          "traits": [
+            "Commanding",
+            "Strategic",
+            "Ruthless",
+            "Determined"
+          ],
+          "previewQuote": "I crossed the sea, won a kingdom, and built this tower to keep it.",
+          "agentId": "agent_9601kmvgrmwvebcbftaf43kh3jhc"
+        },
+        {
+          "id": "anne-boleyn",
+          "name": "Anne Boleyn",
+          "title": "Queen of England (c. 1501–1536)",
+          "reign": "1533–1536",
+          "emoji": "💔",
+          "traits": [
+            "Witty",
+            "Courageous",
+            "Ambitious",
+            "Defiant"
+          ],
+          "previewQuote": "I was a queen who changed the world — and they locked me in my own castle.",
+          "agentId": "agent_0401kmvgrq0sfskvhhv15p6tdavr"
+        },
+        {
+          "id": "guy-fawkes",
+          "name": "Guy Fawkes",
+          "title": "Conspirator of the Gunpowder Plot (1570–1606)",
+          "reign": "1570–1606",
+          "emoji": "🎆",
+          "traits": [
+            "Secretive",
+            "Bold",
+            "Devoted",
+            "Reckless"
+          ],
+          "previewQuote": "Desperate times called for desperate measures — though I don't recommend mine.",
+          "agentId": "agent_0101kmvgrsmpe2qs2ywtann1xy5j"
+        }
+      ]
+    },
+    {
+      "id": "alhambra",
+      "name": "The Alhambra",
+      "location": "Granada, Spain",
+      "coordinates": {
+        "lat": 37.176,
+        "lng": -3.5881
+      },
+      "era": "13th–14th Century",
+      "description": "The stunning Moorish palace-fortress with intricate Islamic art, peaceful courtyards, and a rich multicultural history.",
+      "emoji": "🕌",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "muhammad-v",
+          "name": "Muhammad V",
+          "title": "Sultan of Granada (1338–1391)",
+          "reign": "1354–1391",
+          "emoji": "🌙",
+          "traits": [
+            "Cultured",
+            "Diplomatic",
+            "Refined",
+            "Resilient"
+          ],
+          "previewQuote": "Every wall in my palace tells a story in stone and light.",
+          "agentId": "agent_9101kmvgrw0df1nvc3sasny2x2mt"
+        },
+        {
+          "id": "fatima-al-fihri",
+          "name": "Fatima al-Fihri",
+          "title": "Founder of the World's First University (c. 800–880)",
+          "reign": "c. 800–880",
+          "emoji": "📚",
+          "traits": [
+            "Visionary",
+            "Generous",
+            "Devout",
+            "Pioneering"
+          ],
+          "previewQuote": "I built a house of learning that has never closed its doors.",
+          "agentId": "agent_6901kmvgry8eejx8fp5jj8x285wa"
+        },
+        {
+          "id": "washington-irving",
+          "name": "Washington Irving",
+          "title": "American Author and Explorer of the Alhambra (1783–1859)",
+          "reign": "1783–1859",
+          "emoji": "✍️",
+          "traits": [
+            "Romantic",
+            "Curious",
+            "Imaginative",
+            "Adventurous"
+          ],
+          "previewQuote": "I slept in these halls and heard the ghosts of sultans whispering.",
+          "agentId": "agent_0101kmvgs0mwfzbbfy2gkkwkf687"
+        }
+      ]
+    },
+    {
+      "id": "pompeii",
+      "name": "Pompeii",
+      "location": "Naples, Italy",
+      "coordinates": {
+        "lat": 40.7484,
+        "lng": 14.4848
+      },
+      "era": "1st Century AD",
+      "description": "The Roman city frozen in time by the eruption of Mount Vesuvius in 79 AD, perfectly preserved under volcanic ash.",
+      "emoji": "🌋",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "pliny-the-elder",
+          "name": "Pliny the Elder",
+          "title": "Roman Naturalist and Admiral (23–79 AD)",
+          "reign": "23–79 AD",
+          "emoji": "📖",
+          "traits": [
+            "Curious",
+            "Brave",
+            "Scholarly",
+            "Heroic"
+          ],
+          "previewQuote": "I sailed toward the eruption, not away from it. Science demanded it.",
+          "agentId": "agent_4901kmvgs37bfh6rkza7xbdpa5j9"
+        },
+        {
+          "id": "eumachia",
+          "name": "Eumachia",
+          "title": "Businesswoman and Priestess of Pompeii (1st Century AD)",
+          "reign": "1st Century AD",
+          "emoji": "🏺",
+          "traits": [
+            "Powerful",
+            "Generous",
+            "Shrewd",
+            "Community-minded"
+          ],
+          "previewQuote": "I built the largest building on the forum. Not bad for a woman in Rome.",
+          "agentId": "agent_4601kmvgs5v2fvrr1a37ksdth81c"
+        },
+        {
+          "id": "pompeii-baker",
+          "name": "Terentius Neo",
+          "title": "Baker and Citizen of Pompeii (1st Century AD)",
+          "reign": "1st Century AD",
+          "emoji": "🍞",
+          "traits": [
+            "Hardworking",
+            "Friendly",
+            "Proud",
+            "Down-to-earth"
+          ],
+          "previewQuote": "I baked bread for a living. Turns out, that bread lasted two thousand years.",
+          "agentId": "agent_5201kmvgs7t6f4rsb3hds5nhgczm"
+        }
+      ]
+    },
+    {
+      "id": "hagia-sophia",
+      "name": "Hagia Sophia",
+      "location": "Istanbul, Turkey",
+      "coordinates": {
+        "lat": 41.0086,
+        "lng": 28.9802
+      },
+      "era": "6th Century AD",
+      "description": "The architectural wonder that served as a cathedral, mosque, and museum — a bridge between civilizations for 1,500 years.",
+      "emoji": "🕌",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "justinian-i",
+          "name": "Justinian I",
+          "title": "Byzantine Emperor (482–565 AD)",
+          "reign": "527–565 AD",
+          "emoji": "👑",
+          "traits": [
+            "Ambitious",
+            "Visionary",
+            "Demanding",
+            "Relentless"
+          ],
+          "previewQuote": "When the dome was finished, I whispered: Solomon, I have surpassed thee.",
+          "agentId": "agent_1301kmvgs9vneaxrttae9x0n2mv5"
+        },
+        {
+          "id": "theodora",
+          "name": "Theodora",
+          "title": "Byzantine Empress (c. 497–548 AD)",
+          "reign": "527–548 AD",
+          "emoji": "💜",
+          "traits": [
+            "Fearless",
+            "Shrewd",
+            "Compassionate",
+            "Tough"
+          ],
+          "previewQuote": "They told me an actress could never be empress. I proved them all wrong.",
+          "agentId": "agent_0801kmvgsbwkfg0st6ma28tvj7cc"
+        },
+        {
+          "id": "isidore-of-miletus",
+          "name": "Isidore of Miletus",
+          "title": "Architect of the Hagia Sophia (6th Century AD)",
+          "reign": "6th Century AD",
+          "emoji": "📐",
+          "traits": [
+            "Genius",
+            "Methodical",
+            "Bold",
+            "Mathematical"
+          ],
+          "previewQuote": "They said a dome this large would collapse. I said — let me show you the mathematics.",
+          "agentId": "agent_6501kmvgse14f1sr3htvkgpkcjgm"
+        }
+      ]
+    },
+    {
+      "id": "kremlin",
+      "name": "The Moscow Kremlin",
+      "location": "Moscow, Russia",
+      "coordinates": {
+        "lat": 55.752,
+        "lng": 37.6175
+      },
+      "era": "15th Century – Present",
+      "description": "The fortified heart of Moscow, home to tsars and rulers for over 500 years.",
+      "emoji": "🏰",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "ivan-the-great",
+          "name": "Ivan III (Ivan the Great)",
+          "title": "Grand Prince of Moscow (1440–1505)",
+          "reign": "1462–1505",
+          "emoji": "🦅",
+          "traits": [
+            "Strategic",
+            "Patient",
+            "Ambitious",
+            "Nation-building"
+          ],
+          "previewQuote": "I freed Russia from foreign rule and built these walls to keep it free.",
+          "agentId": "agent_4201kmvgsg5tf1msstqq5atw3dv6"
+        },
+        {
+          "id": "catherine-the-great",
+          "name": "Catherine the Great",
+          "title": "Empress of Russia (1729–1796)",
+          "reign": "1762–1796",
+          "emoji": "👑",
+          "traits": [
+            "Intellectual",
+            "Ambitious",
+            "Cultured",
+            "Formidable"
+          ],
+          "previewQuote": "I came to Russia as a foreign princess. I left it as the most powerful woman in the world.",
+          "agentId": "agent_9901kmvgsj95f5arm23ycvq2hffs"
+        },
+        {
+          "id": "andrei-rublev",
+          "name": "Andrei Rublev",
+          "title": "Master Icon Painter (c. 1360–1430)",
+          "reign": "c. 1360–1430",
+          "emoji": "🎨",
+          "traits": [
+            "Contemplative",
+            "Gentle",
+            "Devoted",
+            "Masterful"
+          ],
+          "previewQuote": "I painted not with my hands, but with my soul.",
+          "agentId": "agent_9701kmvgsmasfjks6y1pd1shbazz"
+        }
+      ]
+    },
+    {
+      "id": "edinburgh-castle",
+      "name": "Edinburgh Castle",
+      "location": "Edinburgh, Scotland",
+      "coordinates": {
+        "lat": 55.9486,
+        "lng": -3.1999
+      },
+      "era": "12th Century – Present",
+      "description": "The ancient fortress perched on a volcanic rock, commanding the Scottish capital for over 900 years.",
+      "emoji": "🏴",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "mary-queen-of-scots",
+          "name": "Mary, Queen of Scots",
+          "title": "Queen of Scotland (1542–1587)",
+          "reign": "1542–1587",
+          "emoji": "👸",
+          "traits": [
+            "Dramatic",
+            "Brave",
+            "Passionate",
+            "Tragic"
+          ],
+          "previewQuote": "I became queen when I was six days old. It only got more complicated from there.",
+          "agentId": "agent_2301kmvgspdafdmama3gemnzbt72"
+        },
+        {
+          "id": "robert-the-bruce",
+          "name": "Robert the Bruce",
+          "title": "King of Scotland (1274–1329)",
+          "reign": "1306–1329",
+          "emoji": "⚔️",
+          "traits": [
+            "Determined",
+            "Resilient",
+            "Strategic",
+            "Inspiring"
+          ],
+          "previewQuote": "I lost six battles in a row. Then I watched a spider, and everything changed.",
+          "agentId": "agent_0501kmvgsrd8e6krqwwdgw4vsfbe"
+        },
+        {
+          "id": "greyfriars-bobby-owner",
+          "name": "John Gray",
+          "title": "Edinburgh Night Watchman and Owner of Greyfriars Bobby (d. 1858)",
+          "reign": "d. 1858",
+          "emoji": "🐕",
+          "traits": [
+            "Humble",
+            "Kind",
+            "Dutiful",
+            "Beloved"
+          ],
+          "previewQuote": "I was just a watchman. My wee dog made me famous.",
+          "agentId": "agent_9701kmvgst7jfm9va05jk6wpyxf5"
+        }
+      ]
+    },
+    {
+      "id": "pyramids-of-giza",
+      "name": "Pyramids of Giza",
+      "location": "Giza, Egypt",
+      "coordinates": {
+        "lat": 29.9792,
+        "lng": 31.1342
+      },
+      "era": "26th Century BC",
+      "description": "The last surviving Wonder of the Ancient World — massive tombs built for the pharaohs 4,500 years ago.",
+      "emoji": "🔺",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "pharaoh-khufu",
+          "name": "Pharaoh Khufu",
+          "title": "Builder of the Great Pyramid (c. 2589–2566 BC)",
+          "reign": "c. 2589–2566 BC",
+          "emoji": "☀️",
+          "traits": [
+            "Commanding",
+            "Visionary",
+            "Mysterious",
+            "Powerful"
+          ],
+          "previewQuote": "My pyramid will stand until the stars themselves grow old.",
+          "agentId": "agent_0701kmvgsw9feq5sv2gtktjqtqwm"
+        },
+        {
+          "id": "cleopatra",
+          "name": "Cleopatra VII",
+          "title": "Last Pharaoh of Egypt (69–30 BC)",
+          "reign": "51–30 BC",
+          "emoji": "🐍",
+          "traits": [
+            "Brilliant",
+            "Charismatic",
+            "Multilingual",
+            "Strategic"
+          ],
+          "previewQuote": "I spoke nine languages. I didn't need beauty — I had my mind.",
+          "agentId": "agent_2901kmvgsy6jecws51h1jksvv6s1"
+        },
+        {
+          "id": "hemiunu",
+          "name": "Hemiunu",
+          "title": "Architect of the Great Pyramid (c. 2570 BC)",
+          "reign": "c. 2570 BC",
+          "emoji": "📐",
+          "traits": [
+            "Genius",
+            "Precise",
+            "Organized",
+            "Problem-solving"
+          ],
+          "previewQuote": "Every block is within millimeters of perfection. That was my job.",
+          "agentId": "agent_1901kmvgt080fekb649e4wcn15me"
+        }
+      ]
+    },
+    {
+      "id": "valley-of-the-kings",
+      "name": "Valley of the Kings",
+      "location": "Luxor, Egypt",
+      "coordinates": {
+        "lat": 25.7402,
+        "lng": 32.6014
+      },
+      "era": "16th–11th Century BC",
+      "description": "The hidden valley where Egypt's greatest pharaohs were buried in elaborately decorated underground tombs.",
+      "emoji": "⚱️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "tutankhamun",
+          "name": "Tutankhamun",
+          "title": "The Boy King of Egypt (c. 1341–1323 BC)",
+          "reign": "c. 1332–1323 BC",
+          "emoji": "✨",
+          "traits": [
+            "Young",
+            "Curious",
+            "Gentle",
+            "Iconic"
+          ],
+          "previewQuote": "I became pharaoh at nine. My golden mask made me immortal.",
+          "agentId": "agent_9801kmvgt2gefmqt5n6rrtzs7bfy"
+        },
+        {
+          "id": "hatshepsut",
+          "name": "Hatshepsut",
+          "title": "Female Pharaoh of Egypt (c. 1507–1458 BC)",
+          "reign": "c. 1478–1458 BC",
+          "emoji": "👑",
+          "traits": [
+            "Bold",
+            "Innovative",
+            "Determined",
+            "Prosperous"
+          ],
+          "previewQuote": "They tried to erase me from history. Here I am, still standing.",
+          "agentId": "agent_4501kmvgt4gjfjt9g52357p11spf"
+        },
+        {
+          "id": "howard-carter",
+          "name": "Howard Carter",
+          "title": "Archaeologist Who Discovered Tutankhamun's Tomb (1874–1939)",
+          "reign": "1874–1939",
+          "emoji": "🔦",
+          "traits": [
+            "Persistent",
+            "Meticulous",
+            "Passionate",
+            "Patient"
+          ],
+          "previewQuote": "I searched for years. Then I saw wonderful things.",
+          "agentId": "agent_5301kmvgt7q4fhvvyy3ygzvcvwsc"
+        }
+      ]
+    },
+    {
+      "id": "great-zimbabwe",
+      "name": "Great Zimbabwe",
+      "location": "Masvingo, Zimbabwe",
+      "coordinates": {
+        "lat": -20.2674,
+        "lng": 30.9338
+      },
+      "era": "11th–15th Century",
+      "description": "The massive stone city that was the heart of a powerful southern African kingdom and trading empire.",
+      "emoji": "🏛️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "mutota",
+          "name": "Nyatsimba Mutota",
+          "title": "Founder of the Mutapa Empire (15th Century)",
+          "reign": "c. 1430–1450",
+          "emoji": "🌍",
+          "traits": [
+            "Visionary",
+            "Expansionist",
+            "Bold",
+            "Strategic"
+          ],
+          "previewQuote": "From these stone walls, we built an empire that reached the sea.",
+          "agentId": "agent_2501kmvgt9saejfsn82wtr1vv3p3"
+        },
+        {
+          "id": "zimbabwe-trader",
+          "name": "Amina",
+          "title": "Swahili Coast Trader at Great Zimbabwe (14th Century)",
+          "reign": "14th Century",
+          "emoji": "⛵",
+          "traits": [
+            "Adventurous",
+            "Shrewd",
+            "Worldly",
+            "Charismatic"
+          ],
+          "previewQuote": "I've traded from Kilwa to Gujarat. The world is bigger than you think.",
+          "agentId": "agent_7201kmvgtbq8fedbm1zza5yts34w"
+        },
+        {
+          "id": "zimbabwe-builder",
+          "name": "Tapiwa",
+          "title": "Master Stone Mason of Great Zimbabwe (13th Century)",
+          "reign": "13th Century",
+          "emoji": "🧱",
+          "traits": [
+            "Skilled",
+            "Proud",
+            "Patient",
+            "Perfectionist"
+          ],
+          "previewQuote": "No mortar, no cement — just perfect stone on perfect stone.",
+          "agentId": "agent_8501kmvgtdqqe969cxsvwpc0r2w9"
+        }
+      ]
+    },
+    {
+      "id": "timbuktu",
+      "name": "Timbuktu",
+      "location": "Timbuktu, Mali",
+      "coordinates": {
+        "lat": 16.7735,
+        "lng": -3.0074
+      },
+      "era": "14th–16th Century",
+      "description": "The legendary city of gold and learning on the edge of the Sahara, home to one of the world's great universities.",
+      "emoji": "📚",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "mansa-musa",
+          "name": "Mansa Musa",
+          "title": "Emperor of Mali, Richest Person in History (c. 1280–1337)",
+          "reign": "1312–1337",
+          "emoji": "💰",
+          "traits": [
+            "Generous",
+            "Devout",
+            "Magnificent",
+            "Visionary"
+          ],
+          "previewQuote": "I gave away so much gold in Egypt that I crashed their economy. Oops.",
+          "agentId": "agent_0201kmvgthtwetc9kk8vwwcr4j8j"
+        },
+        {
+          "id": "timbuktu-scholar",
+          "name": "Ahmed Baba",
+          "title": "Scholar of Timbuktu (1556–1627)",
+          "reign": "1556–1627",
+          "emoji": "📖",
+          "traits": [
+            "Brilliant",
+            "Defiant",
+            "Prolific",
+            "Principled"
+          ],
+          "previewQuote": "They burned my library. But they could not burn what I carry in my mind.",
+          "agentId": "agent_5101kmvgtkxnfyssnkeqwqz72kvk"
+        },
+        {
+          "id": "timbuktu-salt-trader",
+          "name": "Aisha",
+          "title": "Trans-Saharan Salt Trader (15th Century)",
+          "reign": "15th Century",
+          "emoji": "🐪",
+          "traits": [
+            "Resilient",
+            "Resourceful",
+            "Adventurous",
+            "Tough"
+          ],
+          "previewQuote": "Twenty days across the hottest desert on Earth. That's just my Tuesday.",
+          "agentId": "agent_8201kmvgtqknfhkb2fcntbnp1hbr"
+        }
+      ]
+    },
+    {
+      "id": "lalibela",
+      "name": "Rock-Hewn Churches of Lalibela",
+      "location": "Lalibela, Ethiopia",
+      "coordinates": {
+        "lat": 12.0319,
+        "lng": 39.0436
+      },
+      "era": "12th–13th Century",
+      "description": "Eleven medieval churches carved directly downward into solid rock — an engineering and spiritual marvel.",
+      "emoji": "⛪",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "king-lalibela",
+          "name": "King Gebre Mesqel Lalibela",
+          "title": "King of the Zagwe Dynasty (c. 1162–1221)",
+          "reign": "c. 1181–1221",
+          "emoji": "✝️",
+          "traits": [
+            "Devout",
+            "Visionary",
+            "Humble",
+            "Determined"
+          ],
+          "previewQuote": "When pilgrims could not go to Jerusalem, I brought Jerusalem to them.",
+          "agentId": "agent_9901kmvgtsk2e2jrnhttwkqgzqvf"
+        },
+        {
+          "id": "lalibela-carver",
+          "name": "Tekle",
+          "title": "Master Rock Carver of Lalibela (13th Century)",
+          "reign": "13th Century",
+          "emoji": "⛏️",
+          "traits": [
+            "Skilled",
+            "Devoted",
+            "Patient",
+            "Strong"
+          ],
+          "previewQuote": "Each strike of my chisel was a prayer.",
+          "agentId": "agent_1801kmvgtvh3fkq9rezqzmhydsc1"
+        },
+        {
+          "id": "queen-of-sheba",
+          "name": "Queen of Sheba (Makeda)",
+          "title": "Legendary Queen of Ethiopia",
+          "reign": "c. 10th Century BC",
+          "emoji": "👸",
+          "traits": [
+            "Wise",
+            "Powerful",
+            "Curious",
+            "Legendary"
+          ],
+          "previewQuote": "I traveled to the ends of the earth seeking wisdom. Was it worth it? Always.",
+          "agentId": "agent_1001kmvgtxj5fjyr9a0999yp0ndv"
+        }
+      ]
+    },
+    {
+      "id": "carthage",
+      "name": "Carthage",
+      "location": "Tunis, Tunisia",
+      "coordinates": {
+        "lat": 36.8528,
+        "lng": 10.3233
+      },
+      "era": "9th Century BC – 2nd Century BC",
+      "description": "The ancient Phoenician city that rivaled Rome for control of the Mediterranean world.",
+      "emoji": "⛵",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "hannibal-barca",
+          "name": "Hannibal Barca",
+          "title": "Carthaginian General (247–c. 183 BC)",
+          "reign": "247–c. 183 BC",
+          "emoji": "🐘",
+          "traits": [
+            "Brilliant",
+            "Daring",
+            "Determined",
+            "Legendary"
+          ],
+          "previewQuote": "I crossed the Alps with elephants. They said it was impossible. I said watch me.",
+          "agentId": "agent_0901kmvgtzm0f6ssmbp8ggd181fg"
+        },
+        {
+          "id": "dido",
+          "name": "Queen Dido (Elissa)",
+          "title": "Legendary Founder of Carthage (c. 9th Century BC)",
+          "reign": "c. 9th Century BC",
+          "emoji": "🌊",
+          "traits": [
+            "Clever",
+            "Brave",
+            "Resourceful",
+            "Determined"
+          ],
+          "previewQuote": "They gave me only as much land as an ox hide could cover. So I cut it into strips.",
+          "agentId": "agent_7201kmvgv1n4e18sg4yhyn4vygpe"
+        },
+        {
+          "id": "carthage-sailor",
+          "name": "Hanno the Navigator",
+          "title": "Carthaginian Explorer (c. 500 BC)",
+          "reign": "c. 500 BC",
+          "emoji": "🧭",
+          "traits": [
+            "Adventurous",
+            "Observant",
+            "Brave",
+            "Curious"
+          ],
+          "previewQuote": "I sailed past the edge of the known world. What I found there was extraordinary.",
+          "agentId": "agent_4901kmvgv3vtfqvadnceb0bw5x87"
+        }
+      ]
+    },
+    {
+      "id": "robben-island",
+      "name": "Robben Island",
+      "location": "Cape Town, South Africa",
+      "coordinates": {
+        "lat": -33.8076,
+        "lng": 18.3712
+      },
+      "era": "20th Century",
+      "description": "The island prison where Nelson Mandela spent 18 years, now a powerful symbol of the triumph of the human spirit.",
+      "emoji": "🕊️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "nelson-mandela",
+          "name": "Nelson Mandela",
+          "title": "Anti-Apartheid Leader and President of South Africa (1918–2013)",
+          "reign": "1918–2013",
+          "emoji": "✊",
+          "traits": [
+            "Patient",
+            "Forgiving",
+            "Wise",
+            "Courageous"
+          ],
+          "previewQuote": "I walked out of this prison after 27 years without hatred in my heart.",
+          "agentId": "agent_5201kmvgv5rfews8s83rnr3a0twh"
+        },
+        {
+          "id": "walter-sisulu",
+          "name": "Walter Sisulu",
+          "title": "Anti-Apartheid Leader and Political Mentor (1912–2003)",
+          "reign": "1912–2003",
+          "emoji": "🌟",
+          "traits": [
+            "Wise",
+            "Steady",
+            "Strategic",
+            "Mentoring"
+          ],
+          "previewQuote": "I was the gardener who helped great trees grow.",
+          "agentId": "agent_7601kmvgv808ezbtg4dxz271x0nb"
+        },
+        {
+          "id": "ahmed-kathrada",
+          "name": "Ahmed Kathrada",
+          "title": "Anti-Apartheid Activist and Robben Island Prisoner (1929–2017)",
+          "reign": "1929–2017",
+          "emoji": "📝",
+          "traits": [
+            "Gentle",
+            "Persistent",
+            "Thoughtful",
+            "Humorous"
+          ],
+          "previewQuote": "We turned a prison into a university. That was our rebellion.",
+          "agentId": "agent_5601kmvgv9wqfxmbtsgwkztx97mz"
+        }
+      ]
+    },
+    {
+      "id": "elmina-castle",
+      "name": "Elmina Castle",
+      "location": "Elmina, Ghana",
+      "coordinates": {
+        "lat": 5.0847,
+        "lng": -1.348
+      },
+      "era": "15th–19th Century",
+      "description": "The oldest European building in sub-Saharan Africa, a site central to understanding the transatlantic slave trade.",
+      "emoji": "🏰",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "elmina-guide",
+          "name": "Kwame",
+          "title": "Local Historian and Descendant of Elmina (Present Day)",
+          "reign": "Present Day",
+          "emoji": "🙏",
+          "traits": [
+            "Compassionate",
+            "Honest",
+            "Educational",
+            "Healing"
+          ],
+          "previewQuote": "We remember, so that it never happens again.",
+          "agentId": "agent_2601kmvgvbxzfhab3qka1qehs4ae"
+        },
+        {
+          "id": "yaa-asantewaa",
+          "name": "Yaa Asantewaa",
+          "title": "Queen Mother of the Ashanti Empire (c. 1840–1921)",
+          "reign": "c. 1840–1921",
+          "emoji": "⚔️",
+          "traits": [
+            "Fearless",
+            "Defiant",
+            "Inspiring",
+            "Proud"
+          ],
+          "previewQuote": "If the men will not fight, then the women will.",
+          "agentId": "agent_5701kmvgve4jfy9tyajjd79paya5"
+        },
+        {
+          "id": "nana-esi",
+          "name": "Nana Esi",
+          "title": "Fante Fisherwoman and Elder of Elmina (18th Century)",
+          "reign": "18th Century",
+          "emoji": "🐟",
+          "traits": [
+            "Resilient",
+            "Practical",
+            "Community-minded",
+            "Strong"
+          ],
+          "previewQuote": "This was our home long before the ships came. It will be our home long after.",
+          "agentId": "agent_5601kmvgvgfxe8e8hv768h3vbw94"
+        }
+      ]
+    },
+    {
+      "id": "petra",
+      "name": "Petra",
+      "location": "Ma'an, Jordan",
+      "coordinates": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "era": "4th Century BC – 2nd Century AD",
+      "description": "The 'Rose City' carved into pink sandstone cliffs by the Nabataean people — a crossroads of the ancient world.",
+      "emoji": "🏜️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "aretas-iv",
+          "name": "Aretas IV",
+          "title": "King of the Nabataeans (c. 9 BC–40 AD)",
+          "reign": "9 BC–40 AD",
+          "emoji": "👑",
+          "traits": [
+            "Prosperous",
+            "Diplomatic",
+            "Cultured",
+            "Cosmopolitan"
+          ],
+          "previewQuote": "We turned the desert into a garden and carved a city from the cliffs.",
+          "agentId": "agent_5801kmvgvjnneynrqktgp6azh9bq"
+        },
+        {
+          "id": "nabataean-water-engineer",
+          "name": "Shaqilat",
+          "title": "Nabataean Water Engineer (1st Century AD)",
+          "reign": "1st Century AD",
+          "emoji": "💧",
+          "traits": [
+            "Ingenious",
+            "Practical",
+            "Precise",
+            "Problem-solving"
+          ],
+          "previewQuote": "In the desert, water is more precious than gold. I commanded both.",
+          "agentId": "agent_7101kmvgvmp8ewxt7df6wxrax33k"
+        },
+        {
+          "id": "petra-trader",
+          "name": "Obodas",
+          "title": "Nabataean Incense Trader (1st Century BC)",
+          "reign": "1st Century BC",
+          "emoji": "🐪",
+          "traits": [
+            "Worldly",
+            "Shrewd",
+            "Adventurous",
+            "Prosperous"
+          ],
+          "previewQuote": "Frankincense and myrrh made us richer than kings. Well, some of us WERE kings.",
+          "agentId": "agent_8301kmvgvpv7e1mbbhndcnpdgzrg"
+        }
+      ]
+    },
+    {
+      "id": "jerusalem-old-city",
+      "name": "Old City of Jerusalem",
+      "location": "Jerusalem",
+      "coordinates": {
+        "lat": 31.7767,
+        "lng": 35.2345
+      },
+      "era": "3000 BC – Present",
+      "description": "One of the oldest and most sacred cities in the world, holy to Judaism, Christianity, and Islam.",
+      "emoji": "🕊️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "king-solomon",
+          "name": "King Solomon",
+          "title": "King of Israel, Builder of the First Temple (c. 970–931 BC)",
+          "reign": "c. 970–931 BC",
+          "emoji": "🏛️",
+          "traits": [
+            "Wise",
+            "Just",
+            "Ambitious",
+            "Diplomatic"
+          ],
+          "previewQuote": "They came from across the world to test my wisdom. Most left satisfied.",
+          "agentId": "agent_0701kmvgvrwhetnrgaed4eafcysb"
+        },
+        {
+          "id": "saladin",
+          "name": "Saladin",
+          "title": "Sultan of Egypt and Syria (1137–1193)",
+          "reign": "1174–1193",
+          "emoji": "🌙",
+          "traits": [
+            "Chivalrous",
+            "Merciful",
+            "Strategic",
+            "Honorable"
+          ],
+          "previewQuote": "I conquered Jerusalem — and then I protected its people, all of them.",
+          "agentId": "agent_5201kmvgvttdexd80jb8s2fbdv55"
+        },
+        {
+          "id": "helena",
+          "name": "Helena",
+          "title": "Roman Empress and Christian Pilgrim (c. 248–330 AD)",
+          "reign": "c. 248–330 AD",
+          "emoji": "✝️",
+          "traits": [
+            "Devout",
+            "Determined",
+            "Generous",
+            "Pioneering"
+          ],
+          "previewQuote": "I was an empress who became a pilgrim. I came to Jerusalem to find the truth.",
+          "agentId": "agent_2601kmvgvwt7fhmsadj3znrhdqhq"
+        }
+      ]
+    },
+    {
+      "id": "persepolis",
+      "name": "Persepolis",
+      "location": "Shiraz, Iran",
+      "coordinates": {
+        "lat": 29.9341,
+        "lng": 52.8912
+      },
+      "era": "6th–4th Century BC",
+      "description": "The ceremonial capital of the Achaemenid Persian Empire — one of the largest empires the world has ever seen.",
+      "emoji": "🦁",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "cyrus-the-great",
+          "name": "Cyrus the Great",
+          "title": "Founder of the Achaemenid Empire (c. 600–530 BC)",
+          "reign": "559–530 BC",
+          "emoji": "🌍",
+          "traits": [
+            "Tolerant",
+            "Visionary",
+            "Just",
+            "Empire-building"
+          ],
+          "previewQuote": "I conquered the world and let every people keep their gods, their languages, their ways.",
+          "agentId": "agent_7101kmvgvyz4f9qs9b2cb0qa01rp"
+        },
+        {
+          "id": "darius-the-great",
+          "name": "Darius the Great",
+          "title": "Persian Emperor and Builder of Persepolis (550–486 BC)",
+          "reign": "522–486 BC",
+          "emoji": "🏛️",
+          "traits": [
+            "Organized",
+            "Ambitious",
+            "Innovative",
+            "Commanding"
+          ],
+          "previewQuote": "I built roads that connected an empire and a palace that awed the world.",
+          "agentId": "agent_6901kmvgw13hfmsszet0vj3s3237"
+        },
+        {
+          "id": "artemisia-i",
+          "name": "Artemisia I",
+          "title": "Queen of Halicarnassus and Persian Naval Commander (5th Century BC)",
+          "reign": "5th Century BC",
+          "emoji": "⚓",
+          "traits": [
+            "Strategic",
+            "Bold",
+            "Independent",
+            "Respected"
+          ],
+          "previewQuote": "I was the only commander who gave the King of Persia advice he didn't want to hear.",
+          "agentId": "agent_4001kmvgw3jzfxmrps3zghs699f7"
+        }
+      ]
+    },
+    {
+      "id": "taj-mahal",
+      "name": "Taj Mahal",
+      "location": "Agra, India",
+      "coordinates": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
+      "era": "17th Century",
+      "description": "The breathtaking white marble mausoleum built by a Mughal emperor as a monument to eternal love.",
+      "emoji": "🕌",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "shah-jahan",
+          "name": "Shah Jahan",
+          "title": "Mughal Emperor, Builder of the Taj Mahal (1592–1666)",
+          "reign": "1628–1658",
+          "emoji": "💎",
+          "traits": [
+            "Romantic",
+            "Artistic",
+            "Grand",
+            "Devoted"
+          ],
+          "previewQuote": "I built the Taj Mahal so the world would never forget what love looks like.",
+          "agentId": "agent_0101kmvgw5kgfk9vwa3f4vz20mah"
+        },
+        {
+          "id": "mumtaz-mahal",
+          "name": "Mumtaz Mahal",
+          "title": "Mughal Empress (1593–1631)",
+          "reign": "1593–1631",
+          "emoji": "🌹",
+          "traits": [
+            "Compassionate",
+            "Influential",
+            "Beloved",
+            "Wise"
+          ],
+          "previewQuote": "He built the world's most beautiful building for me. But I would trade it all for one more day together.",
+          "agentId": "agent_4101kmvgw7q2fcebenwc24q453pp"
+        },
+        {
+          "id": "ustad-ahmad-lahori",
+          "name": "Ustad Ahmad Lahori",
+          "title": "Chief Architect of the Taj Mahal (17th Century)",
+          "reign": "17th Century",
+          "emoji": "📐",
+          "traits": [
+            "Perfectionist",
+            "Creative",
+            "Mathematical",
+            "Devoted to craft"
+          ],
+          "previewQuote": "Perfect symmetry is not found in nature. But I built it in stone.",
+          "agentId": "agent_6101kmvgw9n4eftv6zddhm5hfkr1"
+        }
+      ]
+    },
+    {
+      "id": "sigiriya",
+      "name": "Sigiriya",
+      "location": "Matale, Sri Lanka",
+      "coordinates": {
+        "lat": 7.9572,
+        "lng": 80.7603
+      },
+      "era": "5th Century AD",
+      "description": "The ancient fortress built atop a 200-meter rock column — one of the most dramatic sites in Asia.",
+      "emoji": "🪨",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "kashyapa-i",
+          "name": "King Kashyapa I",
+          "title": "King of Sri Lanka (477–495 AD)",
+          "reign": "477–495 AD",
+          "emoji": "🦁",
+          "traits": [
+            "Ambitious",
+            "Paranoid",
+            "Creative",
+            "Complex"
+          ],
+          "previewQuote": "I built my palace in the sky because I trusted no one on the ground.",
+          "agentId": "agent_0801kmvgwbnvep8vsa38eg4ch9e9"
+        },
+        {
+          "id": "sigiriya-painter",
+          "name": "Devini",
+          "title": "Court Painter of Sigiriya (5th Century AD)",
+          "reign": "5th Century AD",
+          "emoji": "🎨",
+          "traits": [
+            "Talented",
+            "Devoted",
+            "Daring",
+            "Expressive"
+          ],
+          "previewQuote": "I painted masterpieces on the side of a cliff. My hands shook, but my brush did not.",
+          "agentId": "agent_0201kmvgwdpze10ah65xrgn3sz0k"
+        },
+        {
+          "id": "sigiriya-garden-designer",
+          "name": "Ananda",
+          "title": "Royal Garden Engineer of Sigiriya (5th Century AD)",
+          "reign": "5th Century AD",
+          "emoji": "🌸",
+          "traits": [
+            "Ingenious",
+            "Nature-loving",
+            "Mathematical",
+            "Serene"
+          ],
+          "previewQuote": "Carrying water to the top of a rock? Simple — if you understand pressure.",
+          "agentId": "agent_2901kmvgwfr0fbja5y9avkynt4p9"
+        }
+      ]
+    },
+    {
+      "id": "great-wall-of-china",
+      "name": "Great Wall of China",
+      "location": "Beijing, China",
+      "coordinates": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "era": "7th Century BC – 17th Century",
+      "description": "The longest structure ever built by humans, stretching over 20,000 kilometers across mountains and deserts.",
+      "emoji": "🏯",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "qin-shi-huang",
+          "name": "Qin Shi Huang",
+          "title": "First Emperor of China (259–210 BC)",
+          "reign": "221–210 BC",
+          "emoji": "🐉",
+          "traits": [
+            "Powerful",
+            "Obsessive",
+            "Unifying",
+            "Feared"
+          ],
+          "previewQuote": "I unified China, built the Wall, and standardized everything from money to the width of roads.",
+          "agentId": "agent_3301kmvgwhw1fxb8e3z8kwzntbfk"
+        },
+        {
+          "id": "hua-mulan",
+          "name": "Hua Mulan",
+          "title": "Legendary Warrior of China",
+          "reign": "c. 5th–6th Century",
+          "emoji": "⚔️",
+          "traits": [
+            "Brave",
+            "Loyal",
+            "Clever",
+            "Devoted to family"
+          ],
+          "previewQuote": "My father was too old to fight. So I took his place — and no one noticed for twelve years.",
+          "agentId": "agent_5801kmvgwkycftb9qa9akjewgd87"
+        },
+        {
+          "id": "wall-builder",
+          "name": "Wei",
+          "title": "Worker on the Great Wall (3rd Century BC)",
+          "reign": "3rd Century BC",
+          "emoji": "🧱",
+          "traits": [
+            "Enduring",
+            "Homesick",
+            "Strong",
+            "Honest"
+          ],
+          "previewQuote": "I haven't seen my family in three years. But the Wall grows longer every day.",
+          "agentId": "agent_5101kmvgwnwpeb9abtzrj8wpzm5x"
+        }
+      ]
+    },
+    {
+      "id": "forbidden-city",
+      "name": "The Forbidden City",
+      "location": "Beijing, China",
+      "coordinates": {
+        "lat": 39.9163,
+        "lng": 116.3972
+      },
+      "era": "15th Century – 20th Century",
+      "description": "The imperial palace complex that was home to 24 Chinese emperors — the largest palace in the world.",
+      "emoji": "🏯",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "yongle-emperor",
+          "name": "The Yongle Emperor",
+          "title": "Emperor of the Ming Dynasty (1360–1424)",
+          "reign": "1402–1424",
+          "emoji": "🐲",
+          "traits": [
+            "Ambitious",
+            "Cultural",
+            "Bold",
+            "World-connecting"
+          ],
+          "previewQuote": "I built this palace and sent ships to the ends of the earth.",
+          "agentId": "agent_0801kmvgwqy7eb4tg783mne5n3ce"
+        },
+        {
+          "id": "empress-dowager-cixi",
+          "name": "Empress Dowager Cixi",
+          "title": "Ruler of the Qing Dynasty (1835–1908)",
+          "reign": "1861–1908",
+          "emoji": "👑",
+          "traits": [
+            "Shrewd",
+            "Powerful",
+            "Complex",
+            "Transformative"
+          ],
+          "previewQuote": "They said a woman could not rule China. I ruled it for 47 years.",
+          "agentId": "agent_2801kmvgwt05fpt8ysvrkxx1v48c"
+        },
+        {
+          "id": "zheng-he",
+          "name": "Zheng He",
+          "title": "Admiral and Explorer (1371–1433)",
+          "reign": "1371–1433",
+          "emoji": "⛵",
+          "traits": [
+            "Adventurous",
+            "Diplomatic",
+            "Commanding",
+            "Curious"
+          ],
+          "previewQuote": "My ships were five times larger than Columbus's. We reached Africa decades before Europe did.",
+          "agentId": "agent_4801kmvgww21ehp8hykhssm4crre"
+        }
+      ]
+    },
+    {
+      "id": "terracotta-army",
+      "name": "Terracotta Army",
+      "location": "Xi'an, China",
+      "coordinates": {
+        "lat": 34.3841,
+        "lng": 109.2785
+      },
+      "era": "3rd Century BC",
+      "description": "An army of 8,000 life-sized clay soldiers buried to guard China's first emperor in the afterlife.",
+      "emoji": "🗿",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "terracotta-sculptor",
+          "name": "Master Zhang",
+          "title": "Chief Sculptor of the Terracotta Army (3rd Century BC)",
+          "reign": "3rd Century BC",
+          "emoji": "🎨",
+          "traits": [
+            "Meticulous",
+            "Creative",
+            "Under-pressure",
+            "Proud"
+          ],
+          "previewQuote": "Eight thousand faces, and no two are the same. That was my life's work.",
+          "agentId": "agent_3901kmvgwy2kf94vxpjr8h8abm3f"
+        },
+        {
+          "id": "terracotta-farmer",
+          "name": "Yang Zhifa",
+          "title": "Farmer Who Discovered the Terracotta Army (b. 1938)",
+          "reign": "b. 1938",
+          "emoji": "🌾",
+          "traits": [
+            "Humble",
+            "Surprised",
+            "Simple",
+            "Honest"
+          ],
+          "previewQuote": "I was digging a well. I found the biggest archaeological treasure in history.",
+          "agentId": "agent_6001kmvgwzxbfaw8js37k2tajwqd"
+        },
+        {
+          "id": "terracotta-general",
+          "name": "General Meng Tian",
+          "title": "Qin Dynasty General (d. 210 BC)",
+          "reign": "d. 210 BC",
+          "emoji": "⚔️",
+          "traits": [
+            "Loyal",
+            "Disciplined",
+            "Strategic",
+            "Tragic"
+          ],
+          "previewQuote": "I defended the empire and built the Wall. My reward? Ask the Emperor.",
+          "agentId": "agent_6001kmvgx1vaecmbdxm9zy8wqgyh"
+        }
+      ]
+    },
+    {
+      "id": "angkor-wat",
+      "name": "Angkor Wat",
+      "location": "Siem Reap, Cambodia",
+      "coordinates": {
+        "lat": 13.4125,
+        "lng": 103.867
+      },
+      "era": "12th Century",
+      "description": "The largest religious monument in the world, a masterpiece of Khmer architecture surrounded by jungle.",
+      "emoji": "🛕",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "suryavarman-ii",
+          "name": "Suryavarman II",
+          "title": "King of the Khmer Empire, Builder of Angkor Wat (c. 1090–1150)",
+          "reign": "1113–1150",
+          "emoji": "☀️",
+          "traits": [
+            "Devout",
+            "Ambitious",
+            "Artistic",
+            "Powerful"
+          ],
+          "previewQuote": "I built a temple so large it could hold the universe.",
+          "agentId": "agent_4701kmvgx4r5fgnahvcnzmf2ze61"
+        },
+        {
+          "id": "angkor-sculptor",
+          "name": "Srey",
+          "title": "Master Stone Carver of Angkor Wat (12th Century)",
+          "reign": "12th Century",
+          "emoji": "🪨",
+          "traits": [
+            "Patient",
+            "Devoted",
+            "Skilled",
+            "Storytelling"
+          ],
+          "previewQuote": "Every figure I carve into stone is a story that will outlive us all.",
+          "agentId": "agent_3501kmvgx6s7fr8rtmg4pcszrhtt"
+        },
+        {
+          "id": "jayavarman-vii",
+          "name": "Jayavarman VII",
+          "title": "King of the Khmer Empire (c. 1122–1218)",
+          "reign": "1181–1218",
+          "emoji": "🙏",
+          "traits": [
+            "Compassionate",
+            "Buddhist",
+            "Builder",
+            "Reformer"
+          ],
+          "previewQuote": "I built 102 hospitals across my kingdom. A king should heal, not just conquer.",
+          "agentId": "agent_3201kmvgx8v6e9mbx9d53500pb5p"
+        }
+      ]
+    },
+    {
+      "id": "kinkaku-ji",
+      "name": "Kinkaku-ji (Golden Pavilion)",
+      "location": "Kyoto, Japan",
+      "coordinates": {
+        "lat": 35.0394,
+        "lng": 135.7292
+      },
+      "era": "14th Century",
+      "description": "The shimmering golden temple reflected in its mirror pond — a jewel of Japanese art and Zen Buddhism.",
+      "emoji": "⛩️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "ashikaga-yoshimitsu",
+          "name": "Ashikaga Yoshimitsu",
+          "title": "Shogun of Japan (1358–1408)",
+          "reign": "1368–1394",
+          "emoji": "🏯",
+          "traits": [
+            "Cultured",
+            "Powerful",
+            "Aesthetic",
+            "Political"
+          ],
+          "previewQuote": "I covered my retirement villa in gold. Why? Because I could.",
+          "agentId": "agent_2201kmvgxax6f18s2rw1y6w7qg93"
+        },
+        {
+          "id": "murasaki-shikibu",
+          "name": "Murasaki Shikibu",
+          "title": "Author of The Tale of Genji (c. 973–1014)",
+          "reign": "c. 973–1014",
+          "emoji": "📖",
+          "traits": [
+            "Observant",
+            "Witty",
+            "Introspective",
+            "Literary"
+          ],
+          "previewQuote": "I wrote the world's first novel. Everyone said it was just a woman's diary.",
+          "agentId": "agent_3401kmvgxcxrfy1vhz1cwqkwmyeq"
+        },
+        {
+          "id": "zen-monk",
+          "name": "Master Musō Soseki",
+          "title": "Zen Buddhist Monk and Garden Designer (1275–1351)",
+          "reign": "1275–1351",
+          "emoji": "🧘",
+          "traits": [
+            "Serene",
+            "Philosophical",
+            "Nature-loving",
+            "Contemplative"
+          ],
+          "previewQuote": "A garden is not decoration. It is a path to understanding.",
+          "agentId": "agent_9501kmvgxf0qfhztaawmsj1e1y98"
+        }
+      ]
+    },
+    {
+      "id": "borobudur",
+      "name": "Borobudur",
+      "location": "Central Java, Indonesia",
+      "coordinates": {
+        "lat": -7.6079,
+        "lng": 110.2038
+      },
+      "era": "9th Century",
+      "description": "The world's largest Buddhist temple — a massive stone mandala built as a path to enlightenment.",
+      "emoji": "🛕",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "sailendra-king",
+          "name": "King Samaratungga",
+          "title": "Sailendra Dynasty King, Patron of Borobudur (9th Century)",
+          "reign": "c. 812–833",
+          "emoji": "🪷",
+          "traits": [
+            "Devout",
+            "Ambitious",
+            "Cultural",
+            "Peaceful"
+          ],
+          "previewQuote": "I built a mountain of stone to help people climb toward wisdom.",
+          "agentId": "agent_3201kmvgxh2hefxrzsst3tm28ta3"
+        },
+        {
+          "id": "borobudur-sculptor",
+          "name": "Wira",
+          "title": "Relief Sculptor of Borobudur (9th Century)",
+          "reign": "9th Century",
+          "emoji": "🪨",
+          "traits": [
+            "Patient",
+            "Devout",
+            "Skilled",
+            "Storytelling"
+          ],
+          "previewQuote": "Two thousand six hundred panels. Each one a page in the world's largest stone book.",
+          "agentId": "agent_7001kmvgxk7sejssxx37k100113m"
+        },
+        {
+          "id": "stamford-raffles",
+          "name": "Sir Thomas Stamford Raffles",
+          "title": "British Governor who Rediscovered Borobudur (1781–1826)",
+          "reign": "1781–1826",
+          "emoji": "🔍",
+          "traits": [
+            "Curious",
+            "Adventurous",
+            "Scholarly",
+            "Colonial"
+          ],
+          "previewQuote": "The jungle had swallowed an entire temple. I could barely believe my eyes.",
+          "agentId": "agent_2801kmvgxndje6freqe3qhxq2gtc"
+        }
+      ]
+    },
+    {
+      "id": "gyeongbokgung",
+      "name": "Gyeongbokgung Palace",
+      "location": "Seoul, South Korea",
+      "coordinates": {
+        "lat": 37.5796,
+        "lng": 126.977
+      },
+      "era": "14th Century",
+      "description": "The grand palace of the Joseon Dynasty, the largest of Seoul's five royal palaces.",
+      "emoji": "🏯",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "sejong-the-great",
+          "name": "King Sejong the Great",
+          "title": "King of Joseon, Inventor of Hangul (1397–1450)",
+          "reign": "1418–1450",
+          "emoji": "📝",
+          "traits": [
+            "Brilliant",
+            "Compassionate",
+            "Innovative",
+            "Scholarly"
+          ],
+          "previewQuote": "I created a writing system so simple that anyone could learn it in a day.",
+          "agentId": "agent_9101kmvgxqb9fvq8jqrdh1at48m9"
+        },
+        {
+          "id": "jang-yeong-sil",
+          "name": "Jang Yeong-sil",
+          "title": "Inventor and Scientist of the Joseon Dynasty (15th Century)",
+          "reign": "15th Century",
+          "emoji": "⚙️",
+          "traits": [
+            "Inventive",
+            "Humble",
+            "Brilliant",
+            "Persistent"
+          ],
+          "previewQuote": "I was born a slave. I became the greatest inventor in Korea.",
+          "agentId": "agent_9401kmvgxs7qekqaq9x1vmg8yhye"
+        },
+        {
+          "id": "shin-saimdang",
+          "name": "Shin Saimdang",
+          "title": "Artist, Poet, and Scholar (1504–1551)",
+          "reign": "1504–1551",
+          "emoji": "🎨",
+          "traits": [
+            "Talented",
+            "Wise",
+            "Nurturing",
+            "Multi-gifted"
+          ],
+          "previewQuote": "I painted insects and flowers. My son grew up to be a great scholar. I'm proud of both.",
+          "agentId": "agent_8901kmvgxvezeksadb21r05sj7tq"
+        }
+      ]
+    },
+    {
+      "id": "himeji-castle",
+      "name": "Himeji Castle",
+      "location": "Himeji, Japan",
+      "coordinates": {
+        "lat": 34.8394,
+        "lng": 134.6939
+      },
+      "era": "14th–17th Century",
+      "description": "The stunning 'White Heron Castle' — Japan's best-preserved feudal castle and a masterpiece of defensive design.",
+      "emoji": "🏯",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "toyotomi-hideyoshi",
+          "name": "Toyotomi Hideyoshi",
+          "title": "Unifier of Japan (1537–1598)",
+          "reign": "1585–1598",
+          "emoji": "⚔️",
+          "traits": [
+            "Ambitious",
+            "Clever",
+            "Self-made",
+            "Strategic"
+          ],
+          "previewQuote": "I started as a sandal-bearer. I ended up ruling Japan.",
+          "agentId": "agent_0201kmvgxxbsfhsrr5xxwxd1ezd2"
+        },
+        {
+          "id": "miyamoto-musashi",
+          "name": "Miyamoto Musashi",
+          "title": "Legendary Swordsman and Author (c. 1584–1645)",
+          "reign": "c. 1584–1645",
+          "emoji": "⚔️",
+          "traits": [
+            "Disciplined",
+            "Philosophical",
+            "Lone-wolf",
+            "Masterful"
+          ],
+          "previewQuote": "I won 60 duels. Then I put down my sword and picked up a paintbrush.",
+          "agentId": "agent_0901kmvgxzhbf8qszt5kpj9vxvcw"
+        },
+        {
+          "id": "lady-sen",
+          "name": "Senhime (Lady Sen)",
+          "title": "Princess and Resident of Himeji Castle (1597–1666)",
+          "reign": "1597–1666",
+          "emoji": "🌸",
+          "traits": [
+            "Resilient",
+            "Kind",
+            "Noble",
+            "Survivor"
+          ],
+          "previewQuote": "I survived wars, sieges, and heartbreak. This castle was my sanctuary.",
+          "agentId": "agent_4301kmvgy1jxefqbwpvkj7915wz1"
+        }
+      ]
+    },
+    {
+      "id": "uluru",
+      "name": "Uluru (Ayers Rock)",
+      "location": "Northern Territory, Australia",
+      "coordinates": {
+        "lat": -25.3444,
+        "lng": 131.0369
+      },
+      "era": "Tens of Thousands of Years",
+      "description": "The sacred sandstone monolith at the heart of Australia, central to the world's oldest continuous culture.",
+      "emoji": "🟤",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "anangu-elder",
+          "name": "Tjilpi (Elder)",
+          "title": "Anangu Elder and Keeper of Tjukurpa (Present Day)",
+          "reign": "Present Day",
+          "emoji": "🌅",
+          "traits": [
+            "Wise",
+            "Spiritual",
+            "Grounded",
+            "Storytelling"
+          ],
+          "previewQuote": "This rock has stories older than your pyramids, older than your cities.",
+          "agentId": "agent_9201kmvgy40pfccsgz4n8wm84yrr"
+        },
+        {
+          "id": "anangu-tracker",
+          "name": "Kunmanara",
+          "title": "Anangu Tracker and Desert Survivor (Present Day)",
+          "reign": "Present Day",
+          "emoji": "👣",
+          "traits": [
+            "Observant",
+            "Skilled",
+            "Connected to land",
+            "Practical"
+          ],
+          "previewQuote": "The desert looks empty to you. To me, it's full of food, water, and stories.",
+          "agentId": "agent_0501kmvgy61re8at09xjfeb1gfg5"
+        },
+        {
+          "id": "anangu-artist",
+          "name": "Yalti",
+          "title": "Anangu Artist and Painter (Present Day)",
+          "reign": "Present Day",
+          "emoji": "🎨",
+          "traits": [
+            "Creative",
+            "Cultural",
+            "Connected",
+            "Expressive"
+          ],
+          "previewQuote": "When I paint, I'm painting the land's stories — not just pictures.",
+          "agentId": "agent_0001kmvgy82jed0905xjkvctm9p2"
+        }
+      ]
+    },
+    {
+      "id": "waitangi",
+      "name": "Waitangi Treaty Grounds",
+      "location": "Bay of Islands, New Zealand",
+      "coordinates": {
+        "lat": -35.2677,
+        "lng": 174.0845
+      },
+      "era": "19th Century – Present",
+      "description": "The place where the founding document of New Zealand was signed between the British Crown and Māori chiefs.",
+      "emoji": "🇳🇿",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "hone-heke",
+          "name": "Hone Heke",
+          "title": "Māori Rangatira (Chief) (c. 1807–1850)",
+          "reign": "c. 1807–1850",
+          "emoji": "⚔️",
+          "traits": [
+            "Defiant",
+            "Proud",
+            "Charismatic",
+            "Principled"
+          ],
+          "previewQuote": "I was the first to sign the Treaty. I was also the first to fight for what it truly promised.",
+          "agentId": "agent_6701kmvgya4ffxjtsq4etwvx0nat"
+        },
+        {
+          "id": "meri-te-tai-mangakahia",
+          "name": "Meri Te Tai Mangakāhia",
+          "title": "Māori Women's Rights Pioneer (1868–1920)",
+          "reign": "1868–1920",
+          "emoji": "✊",
+          "traits": [
+            "Bold",
+            "Eloquent",
+            "Pioneering",
+            "Passionate"
+          ],
+          "previewQuote": "I stood before the Māori Parliament and demanded that women have the right to vote.",
+          "agentId": "agent_9801kmvgyc7zetpb91hqrd9dd13s"
+        },
+        {
+          "id": "maori-navigator",
+          "name": "Kupe",
+          "title": "Legendary Polynesian Navigator",
+          "reign": "c. 10th Century",
+          "emoji": "🌊",
+          "traits": [
+            "Brave",
+            "Skilled",
+            "Legendary",
+            "Adventurous"
+          ],
+          "previewQuote": "I navigated by the stars across the largest ocean on Earth.",
+          "agentId": "agent_4901kmvgyeage219fnatwhhghhh0"
+        }
+      ]
+    },
+    {
+      "id": "chichen-itza",
+      "name": "Chichén Itzá",
+      "location": "Yucatán, Mexico",
+      "coordinates": {
+        "lat": 20.6843,
+        "lng": -88.5678
+      },
+      "era": "6th–13th Century",
+      "description": "The magnificent Maya city dominated by the pyramid of Kukulcán, where a feathered serpent shadow descends each equinox.",
+      "emoji": "🏛️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "kukulcan-priest",
+          "name": "Ah Kin",
+          "title": "High Priest and Astronomer of Chichén Itzá (10th Century)",
+          "reign": "10th Century",
+          "emoji": "🌟",
+          "traits": [
+            "Mystical",
+            "Mathematical",
+            "Observant",
+            "Powerful"
+          ],
+          "previewQuote": "Twice a year, the feathered serpent descends the pyramid. We designed it that way.",
+          "agentId": "agent_4601kmvgygbcfmsbrkfhacfwzja9"
+        },
+        {
+          "id": "maya-scribe",
+          "name": "Lady Xoc",
+          "title": "Maya Noble and Scholar (8th Century)",
+          "reign": "8th Century",
+          "emoji": "📜",
+          "traits": [
+            "Learned",
+            "Powerful",
+            "Devout",
+            "Artistic"
+          ],
+          "previewQuote": "While Europe was in its Dark Ages, we were writing books and mapping the stars.",
+          "agentId": "agent_2301kmvgyjgqefat87gyw0rp1qsh"
+        },
+        {
+          "id": "maya-ballplayer",
+          "name": "Hunahpu",
+          "title": "Champion Ball Player of Chichén Itzá (10th Century)",
+          "reign": "10th Century",
+          "emoji": "🏀",
+          "traits": [
+            "Athletic",
+            "Competitive",
+            "Brave",
+            "Celebrated"
+          ],
+          "previewQuote": "Our ball game was like your football, basketball, and a religious ceremony all at once.",
+          "agentId": "agent_0601kmvgymd3f0yrkr3ssw5dkc6e"
+        }
+      ]
+    },
+    {
+      "id": "teotihuacan",
+      "name": "Teotihuacán",
+      "location": "Mexico City, Mexico",
+      "coordinates": {
+        "lat": 19.6925,
+        "lng": -98.8438
+      },
+      "era": "1st–7th Century",
+      "description": "The massive ancient city of pyramids — once one of the largest cities in the world, built by a mysterious civilization.",
+      "emoji": "☀️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "teotihuacan-architect",
+          "name": "Citlali",
+          "title": "Architect of the Pyramid of the Sun (2nd Century AD)",
+          "reign": "2nd Century AD",
+          "emoji": "🔺",
+          "traits": [
+            "Visionary",
+            "Mathematical",
+            "Spiritual",
+            "Monumental"
+          ],
+          "previewQuote": "We built a city for 100,000 people with pyramids taller than anything in the Americas.",
+          "agentId": "agent_9401kmvgype4e97tp7vd89ms6mxd"
+        },
+        {
+          "id": "teotihuacan-mural-painter",
+          "name": "Xochitl",
+          "title": "Mural Painter of Teotihuacán (5th Century AD)",
+          "reign": "5th Century AD",
+          "emoji": "🎨",
+          "traits": [
+            "Creative",
+            "Spiritual",
+            "Colorful",
+            "Expressive"
+          ],
+          "previewQuote": "Our walls exploded with color — jaguars, birds, and gods in red and green and gold.",
+          "agentId": "agent_7001kmvgyrewf0g8e4g8qv5g2ywq"
+        },
+        {
+          "id": "teotihuacan-trader",
+          "name": "Obsidian Merchant",
+          "title": "Obsidian Trader of Teotihuacán (3rd Century AD)",
+          "reign": "3rd Century AD",
+          "emoji": "💎",
+          "traits": [
+            "Shrewd",
+            "Well-traveled",
+            "Knowledgeable",
+            "Enterprising"
+          ],
+          "previewQuote": "Obsidian was our steel, our currency, our most precious resource.",
+          "agentId": "agent_0101kmvgyth4egmvmexz58rxjd3d"
+        }
+      ]
+    },
+    {
+      "id": "mesa-verde",
+      "name": "Mesa Verde",
+      "location": "Colorado, United States",
+      "coordinates": {
+        "lat": 37.1838,
+        "lng": -108.4887
+      },
+      "era": "6th–13th Century",
+      "description": "The breathtaking cliff dwellings built into canyon walls by the Ancestral Puebloan people.",
+      "emoji": "🏠",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "ancestral-puebloan-builder",
+          "name": "Kwiiyagat",
+          "title": "Master Builder of the Cliff Dwellings (13th Century)",
+          "reign": "13th Century",
+          "emoji": "🏗️",
+          "traits": [
+            "Innovative",
+            "Community-minded",
+            "Adaptive",
+            "Skilled"
+          ],
+          "previewQuote": "We built our homes inside the cliffs — protected from snow, rain, and enemies.",
+          "agentId": "agent_1301kmvgywhyfhb91s6030r2axr4"
+        },
+        {
+          "id": "puebloan-potter",
+          "name": "Tse'pinah",
+          "title": "Potter and Artist of Mesa Verde (12th Century)",
+          "reign": "12th Century",
+          "emoji": "🏺",
+          "traits": [
+            "Creative",
+            "Patient",
+            "Tradition-keeping",
+            "Skilled"
+          ],
+          "previewQuote": "Every pot I make tells the story of my people and our connection to the earth.",
+          "agentId": "agent_8301kmvgyz3sfvhsrn8hjwbe2402"
+        },
+        {
+          "id": "puebloan-astronomer",
+          "name": "Sun Watcher",
+          "title": "Calendar Keeper of Mesa Verde (13th Century)",
+          "reign": "13th Century",
+          "emoji": "☀️",
+          "traits": [
+            "Observant",
+            "Patient",
+            "Important",
+            "Knowledgeable"
+          ],
+          "previewQuote": "I watch where the sun rises each day. When it reaches the right spot, it's time to plant.",
+          "agentId": "agent_7101kmvgz16tfsh9rjs89m7y9gzd"
+        }
+      ]
+    },
+    {
+      "id": "independence-hall",
+      "name": "Independence Hall",
+      "location": "Philadelphia, United States",
+      "coordinates": {
+        "lat": 39.9489,
+        "lng": -75.15
+      },
+      "era": "18th Century",
+      "description": "The birthplace of the United States, where the Declaration of Independence and Constitution were debated and signed.",
+      "emoji": "🔔",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "benjamin-franklin",
+          "name": "Benjamin Franklin",
+          "title": "Founding Father, Inventor, and Diplomat (1706–1790)",
+          "reign": "1706–1790",
+          "emoji": "⚡",
+          "traits": [
+            "Witty",
+            "Inventive",
+            "Practical",
+            "Charming"
+          ],
+          "previewQuote": "I invented bifocals, discovered electricity, and helped start a country. Not bad for a printer.",
+          "agentId": "agent_8201kmvgz37zepjb8mgn9tkv5a8v"
+        },
+        {
+          "id": "abigail-adams",
+          "name": "Abigail Adams",
+          "title": "First Lady and Political Advisor (1744–1818)",
+          "reign": "1744–1818",
+          "emoji": "✍️",
+          "traits": [
+            "Outspoken",
+            "Intelligent",
+            "Principled",
+            "Ahead-of-her-time"
+          ],
+          "previewQuote": "I told them to remember the ladies. They didn't listen. Yet.",
+          "agentId": "agent_8701kmvgz58qe6krb89nf7qndx8q"
+        },
+        {
+          "id": "james-forten",
+          "name": "James Forten",
+          "title": "African American Sail Maker and Abolitionist (1766–1842)",
+          "reign": "1766–1842",
+          "emoji": "⛵",
+          "traits": [
+            "Principled",
+            "Entrepreneurial",
+            "Brave",
+            "Persuasive"
+          ],
+          "previewQuote": "I fought for this country's freedom at age 14. Then I spent my life fighting for mine.",
+          "agentId": "agent_3901kmvgz7b3eemv1rq1yvj09gye"
+        }
+      ]
+    },
+    {
+      "id": "machu-picchu",
+      "name": "Machu Picchu",
+      "location": "Cusco Region, Peru",
+      "coordinates": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
+      "era": "15th Century",
+      "description": "The Inca citadel hidden high in the Andes mountains, one of the most spectacular archaeological sites in the world.",
+      "emoji": "🏔️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "pachacuti",
+          "name": "Pachacuti",
+          "title": "Inca Emperor, Builder of Machu Picchu (1418–1471)",
+          "reign": "1438–1471",
+          "emoji": "🌄",
+          "traits": [
+            "Visionary",
+            "Ambitious",
+            "Transformative",
+            "Strategic"
+          ],
+          "previewQuote": "I transformed a small kingdom into the largest empire in the Americas.",
+          "agentId": "agent_3601kmvgz9hqf20tqhqx12dt3tht"
+        },
+        {
+          "id": "inca-engineer",
+          "name": "Quilla",
+          "title": "Inca Engineer and Quipu Keeper (15th Century)",
+          "reign": "15th Century",
+          "emoji": "🪢",
+          "traits": [
+            "Precise",
+            "Intelligent",
+            "Organized",
+            "Important"
+          ],
+          "previewQuote": "We had no writing. Instead, we kept records with knotted strings — and they worked perfectly.",
+          "agentId": "agent_4801kmvgzbkeec7skbdn2fb7f2fd"
+        },
+        {
+          "id": "hiram-bingham",
+          "name": "Hiram Bingham III",
+          "title": "Explorer Who Brought Machu Picchu to World Attention (1875–1956)",
+          "reign": "1875–1956",
+          "emoji": "🧭",
+          "traits": [
+            "Adventurous",
+            "Determined",
+            "Academic",
+            "Dramatic"
+          ],
+          "previewQuote": "A local farmer led me up a mountain. What I found changed archaeology forever.",
+          "agentId": "agent_9201kmvgzdg6f9hsqqp46jt1rk99"
+        }
+      ]
+    },
+    {
+      "id": "rapa-nui",
+      "name": "Rapa Nui (Easter Island)",
+      "location": "Easter Island, Chile",
+      "coordinates": {
+        "lat": -27.1127,
+        "lng": -109.3497
+      },
+      "era": "10th–17th Century",
+      "description": "The remote Pacific island famous for its massive stone head statues (moai), carved by Polynesian settlers.",
+      "emoji": "🗿",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "moai-carver",
+          "name": "Ariki Tupa",
+          "title": "Master Moai Carver of Rapa Nui (15th Century)",
+          "reign": "15th Century",
+          "emoji": "🗿",
+          "traits": [
+            "Skilled",
+            "Spiritual",
+            "Strong",
+            "Proud"
+          ],
+          "previewQuote": "Each statue carries the spirit of an ancestor. That's why they face inland — watching over us.",
+          "agentId": "agent_8001kmvgzfkfe2dvvppvxbxcj7d4"
+        },
+        {
+          "id": "rapa-nui-navigator",
+          "name": "Tu'u Ko Iho",
+          "title": "Polynesian Navigator Who Settled Rapa Nui (c. 10th Century)",
+          "reign": "c. 10th Century",
+          "emoji": "⭐",
+          "traits": [
+            "Brave",
+            "Skilled",
+            "Visionary",
+            "Adventurous"
+          ],
+          "previewQuote": "We sailed to the most remote island on Earth. On purpose.",
+          "agentId": "agent_4701kmvgzhjkfbfs5y9qxrrtdqdv"
+        },
+        {
+          "id": "rapa-nui-birdman",
+          "name": "Tangata Manu",
+          "title": "Birdman Competition Champion (17th Century)",
+          "reign": "17th Century",
+          "emoji": "🐦",
+          "traits": [
+            "Athletic",
+            "Daring",
+            "Honored",
+            "Competitive"
+          ],
+          "previewQuote": "I climbed down a cliff, swam through shark water, and brought back an egg. That made me king for a year.",
+          "agentId": "agent_7701kmvgzkkae4htp5rzac7rm2wz"
+        }
+      ]
+    },
+    {
+      "id": "tikal",
+      "name": "Tikal",
+      "location": "Petén, Guatemala",
+      "coordinates": {
+        "lat": 17.222,
+        "lng": -89.6237
+      },
+      "era": "4th Century BC – 9th Century AD",
+      "description": "The towering Maya city rising above the jungle canopy — once home to 100,000 people.",
+      "emoji": "🌴",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "jasaw-chan-kawil",
+          "name": "Jasaw Chan K'awiil I",
+          "title": "King of Tikal (c. 682–734 AD)",
+          "reign": "682–734 AD",
+          "emoji": "👑",
+          "traits": [
+            "Triumphant",
+            "Builder",
+            "Strategic",
+            "Proud"
+          ],
+          "previewQuote": "I brought Tikal back from defeat and built the tallest pyramid in the Maya world.",
+          "agentId": "agent_7801kmvgznp0fc0ahngnx81hdhtn"
+        },
+        {
+          "id": "tikal-chocolate-maker",
+          "name": "Ixchel",
+          "title": "Royal Chocolate Maker of Tikal (7th Century)",
+          "reign": "7th Century",
+          "emoji": "🫘",
+          "traits": [
+            "Skilled",
+            "Important",
+            "Creative",
+            "Proud"
+          ],
+          "previewQuote": "Chocolate wasn't candy — it was a sacred drink, and I made it for kings.",
+          "agentId": "agent_8701kmvgzqq9fjwssgnw3g8q6aa9"
+        },
+        {
+          "id": "tikal-astronomer",
+          "name": "Ahau Kin",
+          "title": "Maya Astronomer of Tikal (8th Century)",
+          "reign": "8th Century",
+          "emoji": "🌟",
+          "traits": [
+            "Brilliant",
+            "Observant",
+            "Mathematical",
+            "Methodical"
+          ],
+          "previewQuote": "We predicted eclipses centuries into the future. With no telescopes. Just patience.",
+          "agentId": "agent_3001kmvgzsr3emtbhcbn9vbd18ym"
+        }
+      ]
+    },
+    {
+      "id": "gettysburg",
+      "name": "Gettysburg Battlefield",
+      "location": "Gettysburg, Pennsylvania, United States",
+      "coordinates": {
+        "lat": 39.8109,
+        "lng": -77.2291
+      },
+      "era": "19th Century",
+      "description": "The site of the Civil War's turning-point battle and Lincoln's famous address about democracy and equality.",
+      "emoji": "🇺🇸",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "abraham-lincoln",
+          "name": "Abraham Lincoln",
+          "title": "16th President of the United States (1809–1865)",
+          "reign": "1861–1865",
+          "emoji": "🎩",
+          "traits": [
+            "Humble",
+            "Eloquent",
+            "Persistent",
+            "Compassionate"
+          ],
+          "previewQuote": "In just 272 words, I tried to explain what all those soldiers died for.",
+          "agentId": "agent_6401kmvgzwtefz4b1qxjbxxegd35"
+        },
+        {
+          "id": "harriet-tubman",
+          "name": "Harriet Tubman",
+          "title": "Abolitionist, Scout, and Liberator (c. 1822–1913)",
+          "reign": "c. 1822–1913",
+          "emoji": "🌟",
+          "traits": [
+            "Fearless",
+            "Determined",
+            "Compassionate",
+            "Unstoppable"
+          ],
+          "previewQuote": "I freed myself, then went back for everyone else. Thirteen trips, and I never lost a passenger.",
+          "agentId": "agent_1701kmvgzzcafmwtnafx88am10nz"
+        },
+        {
+          "id": "joshua-chamberlain",
+          "name": "Joshua Lawrence Chamberlain",
+          "title": "Union Colonel and Hero of Little Round Top (1828–1914)",
+          "reign": "1828–1914",
+          "emoji": "⚔️",
+          "traits": [
+            "Brave",
+            "Intellectual",
+            "Decisive",
+            "Moral"
+          ],
+          "previewQuote": "We were out of ammunition. So I ordered a bayonet charge. Downhill. It worked.",
+          "agentId": "agent_8601kmvh01eje36brhc2y16p6j3h"
+        }
+      ]
+    },
+    {
+      "id": "samarkand",
+      "name": "Registan Square, Samarkand",
+      "location": "Samarkand, Uzbekistan",
+      "coordinates": {
+        "lat": 39.655,
+        "lng": 66.976
+      },
+      "era": "14th–17th Century",
+      "description": "The dazzling heart of the Silk Road — a square framed by three magnificent madrasas covered in turquoise tile.",
+      "emoji": "🕌",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "timur",
+          "name": "Timur (Tamerlane)",
+          "title": "Conqueror and Founder of the Timurid Empire (1336–1405)",
+          "reign": "1370–1405",
+          "emoji": "⚔️",
+          "traits": [
+            "Ruthless",
+            "Cultured",
+            "Ambitious",
+            "Complex"
+          ],
+          "previewQuote": "I conquered half the known world, then filled my capital with artists and scholars.",
+          "agentId": "agent_1601kmvh03eye63vnq4q1fwknsmm"
+        },
+        {
+          "id": "ulugh-beg",
+          "name": "Ulugh Beg",
+          "title": "Astronomer-King of Samarkand (1394–1449)",
+          "reign": "1409–1449",
+          "emoji": "🔭",
+          "traits": [
+            "Scientific",
+            "Scholarly",
+            "Progressive",
+            "Precise"
+          ],
+          "previewQuote": "My grandfather conquered with swords. I conquered with telescopes.",
+          "agentId": "agent_1401kmvh05h0eybbxkhgewzsmdt5"
+        },
+        {
+          "id": "silk-road-merchant",
+          "name": "Sogdian Merchant",
+          "title": "Silk Road Trader of Samarkand (7th Century)",
+          "reign": "7th Century",
+          "emoji": "🐪",
+          "traits": [
+            "Multilingual",
+            "Shrewd",
+            "Adventurous",
+            "Cosmopolitan"
+          ],
+          "previewQuote": "I speak six languages because money speaks all of them.",
+          "agentId": "agent_2601kmvh07tqfqvr9n2dn42hw44z"
+        }
+      ]
+    },
+    {
+      "id": "palace-of-knossos",
+      "name": "Palace of Knossos",
+      "location": "Crete, Greece",
+      "coordinates": {
+        "lat": 35.2979,
+        "lng": 25.1632
+      },
+      "era": "2000–1400 BC",
+      "description": "The legendary palace of the Minoans — Europe's first great civilization, with its myth of the Minotaur's labyrinth.",
+      "emoji": "🏛️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "king-minos",
+          "name": "King Minos",
+          "title": "Legendary King of Crete",
+          "reign": "c. 2000 BC",
+          "emoji": "🐂",
+          "traits": [
+            "Powerful",
+            "Complex",
+            "Legendary",
+            "Law-giving"
+          ],
+          "previewQuote": "They say I kept a monster in a maze. The truth is more interesting than the myth.",
+          "agentId": "agent_7501kmvh09qcedrr9z87c28brv9g"
+        },
+        {
+          "id": "minoan-priestess",
+          "name": "Ariadne",
+          "title": "Minoan High Priestess (c. 1600 BC)",
+          "reign": "c. 1600 BC",
+          "emoji": "🐍",
+          "traits": [
+            "Powerful",
+            "Spiritual",
+            "Athletic",
+            "Bold"
+          ],
+          "previewQuote": "In Crete, women held the sacred power. Remember that.",
+          "agentId": "agent_1601kmvh0bqged3scsg4rqffwtp9"
+        },
+        {
+          "id": "minoan-bull-leaper",
+          "name": "Icarus",
+          "title": "Bull Leaper of Knossos (c. 1500 BC)",
+          "reign": "c. 1500 BC",
+          "emoji": "🐂",
+          "traits": [
+            "Athletic",
+            "Fearless",
+            "Young",
+            "Celebrated"
+          ],
+          "previewQuote": "You think your sports are exciting? I jump over charging bulls.",
+          "agentId": "agent_3701kmvh0e6xffcv4n5dwpasf884"
+        }
+      ]
+    },
+    {
+      "id": "viking-ship-museum",
+      "name": "Viking Ship Museum",
+      "location": "Oslo, Norway",
+      "coordinates": {
+        "lat": 59.9048,
+        "lng": 10.6845
+      },
+      "era": "9th–11th Century",
+      "description": "Home to the best-preserved Viking ships in the world — vessels that sailed from Scandinavia to North America.",
+      "emoji": "⛵",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "leif-erikson",
+          "name": "Leif Erikson",
+          "title": "Viking Explorer Who Reached North America (c. 970–1020)",
+          "reign": "c. 970–1020",
+          "emoji": "🧭",
+          "traits": [
+            "Adventurous",
+            "Bold",
+            "Curious",
+            "Pioneering"
+          ],
+          "previewQuote": "I reached America 500 years before Columbus. In a Viking ship. Without a map.",
+          "agentId": "agent_9301kmvh0g9pf5ja2t16edw96drg"
+        },
+        {
+          "id": "viking-queen",
+          "name": "Queen Asa",
+          "title": "Viking Queen of the Oseberg Ship (9th Century)",
+          "reign": "9th Century",
+          "emoji": "👑",
+          "traits": [
+            "Powerful",
+            "Revered",
+            "Mysterious",
+            "Noble"
+          ],
+          "previewQuote": "They buried me in the most beautiful ship ever built. I must have been very important indeed.",
+          "agentId": "agent_7001kmvh0jcpfbrbyrn9bnqhcn75"
+        },
+        {
+          "id": "viking-shipbuilder",
+          "name": "Thorvald",
+          "title": "Viking Master Shipbuilder (10th Century)",
+          "reign": "10th Century",
+          "emoji": "🪓",
+          "traits": [
+            "Skilled",
+            "Proud",
+            "Innovative",
+            "Strong"
+          ],
+          "previewQuote": "My ships could cross oceans and sail up rivers. Try that with your modern boats.",
+          "agentId": "agent_3201kmvh0mc5e13t8bfcexbx4hyj"
+        }
+      ]
+    },
+    {
+      "id": "forbidden-city-mohenjo-daro",
+      "name": "Mohenjo-daro",
+      "location": "Sindh, Pakistan",
+      "coordinates": {
+        "lat": 27.3242,
+        "lng": 68.1386
+      },
+      "era": "2500–1900 BC",
+      "description": "One of the world's first great cities, built by the mysterious Indus Valley Civilization with advanced urban planning.",
+      "emoji": "🏛️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "indus-urban-planner",
+          "name": "The City Planner",
+          "title": "Urban Planner of Mohenjo-daro (c. 2400 BC)",
+          "reign": "c. 2400 BC",
+          "emoji": "📐",
+          "traits": [
+            "Organized",
+            "Forward-thinking",
+            "Precise",
+            "Community-minded"
+          ],
+          "previewQuote": "We had indoor plumbing four thousand years ago. You're welcome.",
+          "agentId": "agent_6301kmvh0pkne5z8zytabtgnycqj"
+        },
+        {
+          "id": "indus-bead-maker",
+          "name": "Priya",
+          "title": "Bead Maker and Artisan of Mohenjo-daro (c. 2300 BC)",
+          "reign": "c. 2300 BC",
+          "emoji": "📿",
+          "traits": [
+            "Skilled",
+            "Patient",
+            "Creative",
+            "Trade-connected"
+          ],
+          "previewQuote": "My tiny beads traveled to Mesopotamia. The whole ancient world wore my jewelry.",
+          "agentId": "agent_4301kmvh0rqge1ht5vrz6hkys619"
+        },
+        {
+          "id": "indus-seal-maker",
+          "name": "The Seal Maker",
+          "title": "Seal Carver and Record Keeper (c. 2400 BC)",
+          "reign": "c. 2400 BC",
+          "emoji": "🔏",
+          "traits": [
+            "Precise",
+            "Mysterious",
+            "Important",
+            "Artistic"
+          ],
+          "previewQuote": "I carve seals with writing nobody today can read. The secret dies with my civilization.",
+          "agentId": "agent_8001kmvh0tqgf5kazm9mqrb8ekve"
+        }
+      ]
+    },
+    {
+      "id": "great-mosque-djenne",
+      "name": "Great Mosque of Djenné",
+      "location": "Djenné, Mali",
+      "coordinates": {
+        "lat": 13.9054,
+        "lng": -4.5553
+      },
+      "era": "13th Century (rebuilt 1907)",
+      "description": "The largest mud-brick building in the world — rebuilt annually by the entire community in an extraordinary tradition.",
+      "emoji": "🕌",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "djenne-mason",
+          "name": "Barey Ton",
+          "title": "Master Mason of the Djenné Building Guild (Present Day)",
+          "reign": "Present Day",
+          "emoji": "🧱",
+          "traits": [
+            "Skilled",
+            "Traditional",
+            "Community-minded",
+            "Proud"
+          ],
+          "previewQuote": "Every year, the whole city comes together to repair our mosque. It's the biggest party in Mali.",
+          "agentId": "agent_5801kmvh0wr7f9mbq9xbssmb36tz"
+        },
+        {
+          "id": "djenne-scholar",
+          "name": "Alfa Sidy",
+          "title": "Scholar of the Djenné Manuscripts (16th Century)",
+          "reign": "16th Century",
+          "emoji": "📚",
+          "traits": [
+            "Learned",
+            "Devout",
+            "Preserving",
+            "Wise"
+          ],
+          "previewQuote": "Djenné held more knowledge than most European cities ever dreamed of.",
+          "agentId": "agent_0001kmvh0ykyeecba751zty1g508"
+        },
+        {
+          "id": "djenne-trader-woman",
+          "name": "Aminata",
+          "title": "Market Trader of Djenné (Present Day)",
+          "reign": "Present Day",
+          "emoji": "🧺",
+          "traits": [
+            "Entrepreneurial",
+            "Vibrant",
+            "Social",
+            "Knowledgeable"
+          ],
+          "previewQuote": "Monday is market day. Ten thousand people come from everywhere. Welcome to my world!",
+          "agentId": "agent_8401kmvh10p9fp18prane5zx2b9t"
+        }
+      ]
+    },
+    {
+      "id": "templo-mayor",
+      "name": "Templo Mayor (Tenochtitlán)",
+      "location": "Mexico City, Mexico",
+      "coordinates": {
+        "lat": 19.4352,
+        "lng": -99.1313
+      },
+      "era": "14th–16th Century",
+      "description": "The great temple at the heart of the Aztec capital, a city built on a lake that amazed Spanish conquistadors.",
+      "emoji": "🏛️",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "moctezuma-ii",
+          "name": "Moctezuma II",
+          "title": "Aztec Emperor (c. 1466–1520)",
+          "reign": "1502–1520",
+          "emoji": "🦅",
+          "traits": [
+            "Regal",
+            "Thoughtful",
+            "Complex",
+            "Tragic"
+          ],
+          "previewQuote": "My city on the lake had 200,000 people. The Spanish had never seen anything like it.",
+          "agentId": "agent_7501kmvh12r6emdvrz7v4dkftqrh"
+        },
+        {
+          "id": "aztec-chinampas-farmer",
+          "name": "Tlanextli",
+          "title": "Chinampa Farmer of Tenochtitlán (15th Century)",
+          "reign": "15th Century",
+          "emoji": "🌿",
+          "traits": [
+            "Innovative",
+            "Hardworking",
+            "Practical",
+            "Proud"
+          ],
+          "previewQuote": "We grow our food on floating gardens. Yes, floating. On the lake.",
+          "agentId": "agent_4501kmvh14rmfdw8vp231g90xe5d"
+        },
+        {
+          "id": "malintzin",
+          "name": "Malintzin (La Malinche)",
+          "title": "Interpreter and Key Figure of the Spanish-Aztec Encounter (c. 1500–1529)",
+          "reign": "c. 1500–1529",
+          "emoji": "🗣️",
+          "traits": [
+            "Brilliant",
+            "Survivor",
+            "Controversial",
+            "Multilingual"
+          ],
+          "previewQuote": "I spoke the languages that changed the course of history. Judge me as you will.",
+          "agentId": "agent_8501kmvh170qfvbbw6ynge1v8jde"
+        }
+      ]
+    },
+    {
+      "id": "tiwanaku",
+      "name": "Tiwanaku",
+      "location": "La Paz, Bolivia",
+      "coordinates": {
+        "lat": -16.5544,
+        "lng": -68.6735
+      },
+      "era": "6th–11th Century",
+      "description": "The ancient capital of a powerful Andean civilization at 3,850 meters above sea level, near Lake Titicaca.",
+      "emoji": "🗿",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "tiwanaku-architect",
+          "name": "Khuno",
+          "title": "Master Architect of Tiwanaku (8th Century)",
+          "reign": "8th Century",
+          "emoji": "🏛️",
+          "traits": [
+            "Brilliant",
+            "Precise",
+            "Ambitious",
+            "Mountain-dwelling"
+          ],
+          "previewQuote": "We built a city at the top of the world. The air is thin, but our ambitions were not.",
+          "agentId": "agent_9801kmvh19hgf6ns0zvz11ex9zvt"
+        },
+        {
+          "id": "tiwanaku-farmer",
+          "name": "Sisa",
+          "title": "Agricultural Engineer of the Raised Fields (9th Century)",
+          "reign": "9th Century",
+          "emoji": "🌾",
+          "traits": [
+            "Innovative",
+            "Practical",
+            "Hardy",
+            "Knowledgeable"
+          ],
+          "previewQuote": "Everyone said you can't farm this high up. We proved them spectacularly wrong.",
+          "agentId": "agent_2801kmvh1bx1ezasgt10dzv2fpe5"
+        },
+        {
+          "id": "tiwanaku-priest",
+          "name": "Thunupa",
+          "title": "Priest of the Gateway of the Sun (9th Century)",
+          "reign": "9th Century",
+          "emoji": "☀️",
+          "traits": [
+            "Spiritual",
+            "Knowledgeable",
+            "Ceremonial",
+            "Mysterious"
+          ],
+          "previewQuote": "The Gateway of the Sun marks the turning of the seasons. It is where time begins.",
+          "agentId": "agent_7801kmvh1e2sf49b7q3bn3chey3j"
+        }
+      ]
+    },
+    {
+      "id": "nazca-lines",
+      "name": "Nazca Lines",
+      "location": "Nazca, Peru",
+      "coordinates": {
+        "lat": -14.735,
+        "lng": -75.13
+      },
+      "era": "1st–7th Century AD",
+      "description": "Giant drawings in the desert — hummingbirds, monkeys, and spiders visible only from the sky — made 2,000 years ago.",
+      "emoji": "🐒",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "nazca-line-maker",
+          "name": "Tupaq",
+          "title": "Master Line Maker of the Nazca (3rd Century AD)",
+          "reign": "3rd Century AD",
+          "emoji": "📏",
+          "traits": [
+            "Visionary",
+            "Mathematical",
+            "Spiritual",
+            "Precise"
+          ],
+          "previewQuote": "We made drawings so large they can only be seen from the sky. The gods can see them.",
+          "agentId": "agent_8001kmvh1g21f0s9r7q6rwgvb2sf"
+        },
+        {
+          "id": "nazca-water-finder",
+          "name": "Qori",
+          "title": "Water Engineer of the Nazca Aqueducts (5th Century AD)",
+          "reign": "5th Century AD",
+          "emoji": "💧",
+          "traits": [
+            "Ingenious",
+            "Practical",
+            "Life-giving",
+            "Skilled"
+          ],
+          "previewQuote": "The lines get all the fame. But our underground aqueducts? Those kept us alive.",
+          "agentId": "agent_8701kmvh1j2nfvxba7nddt4t4vxs"
+        },
+        {
+          "id": "nazca-weaver",
+          "name": "Chaska",
+          "title": "Master Textile Weaver of Nazca (4th Century AD)",
+          "reign": "4th Century AD",
+          "emoji": "🧶",
+          "traits": [
+            "Artistic",
+            "Skilled",
+            "Colorful",
+            "Storytelling"
+          ],
+          "previewQuote": "Our textiles had more colors than a rainbow and told stories that lasted centuries.",
+          "agentId": "agent_6101kmvh1m50fve9vb9gjbjy20jt"
+        }
+      ]
+    },
+    {
+      "id": "kilwa-kisiwani",
+      "name": "Ruins of Kilwa Kisiwani",
+      "location": "Kilwa, Tanzania",
+      "coordinates": {
+        "lat": -8.9573,
+        "lng": 39.5234
+      },
+      "era": "11th–15th Century",
+      "description": "The ruins of the wealthiest Swahili trading city on the East African coast, controlling gold and ivory routes.",
+      "emoji": "🌊",
+      "unlockRadius": 500,
+      "figures": [
+        {
+          "id": "sultan-ali-ibn-al-hasan",
+          "name": "Sultan Ali ibn al-Hasan",
+          "title": "Founder of the Kilwa Sultanate (10th–11th Century)",
+          "reign": "c. 957–1005",
+          "emoji": "👑",
+          "traits": [
+            "Enterprising",
+            "Diplomatic",
+            "Cosmopolitan",
+            "Founding"
+          ],
+          "previewQuote": "From this small island, I built a trade empire that stretched across the ocean.",
+          "agentId": "agent_2801kmvh1p6pfsp8x5fngsxd023j"
+        },
+        {
+          "id": "kilwa-coin-maker",
+          "name": "Fatima bint Khalid",
+          "title": "Master Coin Maker of Kilwa (13th Century)",
+          "reign": "13th Century",
+          "emoji": "🪙",
+          "traits": [
+            "Precise",
+            "Important",
+            "Knowledgeable",
+            "Proud"
+          ],
+          "previewQuote": "We minted our own coins. That's how the world knew Kilwa was a real power.",
+          "agentId": "agent_9101kmvh1rmye04vsazrzpr3z03j"
+        },
+        {
+          "id": "ibn-battuta-host",
+          "name": "Ibn Battuta's Host",
+          "title": "Kilwa Merchant and Host to the World's Greatest Traveler (14th Century)",
+          "reign": "14th Century",
+          "emoji": "⛵",
+          "traits": [
+            "Welcoming",
+            "Worldly",
+            "Generous",
+            "Connected"
+          ],
+          "previewQuote": "The greatest traveler in the world called Kilwa the most beautiful city he'd seen.",
+          "agentId": "agent_6601kmvh1ttpevbrt0t176fv1k4t"
+        }
+      ]
+    }
+  ]
+}

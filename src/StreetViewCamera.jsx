@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { bootstrapCameraKit, createMediaStreamSource, Transform2D } from "@snap/camera-kit";
 
 const API_TOKEN = import.meta.env.VITE_SNAP_API_TOKEN;
+const LENS_GROUP_ID = "7b0f21c4-a3d1-4422-9c94-89ba957f7d90";
+const TARGET_LENS_ID = "a92f9841-1d83-4ecb-b44d-c3960fe3fa9c";
 
 export default function StreetViewCamera() {
   const canvasRef = useRef(null);
@@ -45,6 +47,14 @@ export default function StreetViewCamera() {
 
         await session.setSource(source);
         await session.play();
+
+        const { lenses } = await cameraKit.lensRepository.loadLensGroups([LENS_GROUP_ID]);
+        if (cancelled) return;
+
+        const lens = lenses.find((l) => l.id === TARGET_LENS_ID);
+        if (lens) {
+          await session.applyLens(lens);
+        }
 
         setStatus("ready");
       } catch (err) {

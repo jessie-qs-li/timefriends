@@ -241,7 +241,7 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
               }}
               style={{
                 position: "relative",
-                height: 118,
+                height: 150,
                 borderRadius: 18,
                 overflow: "hidden",
                 cursor: "pointer",
@@ -307,13 +307,13 @@ function LandmarkList({ landmarks, userPos, selectedId, onSelect, searchQuery })
                 display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 3,
               }}>
                 <div style={{
-                  fontSize: 15, fontWeight: 700, color: "#FFFFFF",
+                  fontSize: 18, fontWeight: 700, color: "#FFFFFF",
                   lineHeight: 1.25,
                   textShadow: "0 1px 8px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.8)",
                   whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", width: "100%",
                 }}>{lm.name}</div>
                 <div style={{
-                  fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.9)",
+                  fontSize: 14, fontWeight: 500, color: "rgba(255,255,255,0.9)",
                   textShadow: "0 1px 6px rgba(0,0,0,0.5)",
                   whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", width: "100%",
                 }}>{lm.location}</div>
@@ -711,27 +711,13 @@ export default function TimeFriendsApp() {
                 padding: "18px 20px 14px", borderBottom: "1px solid #F0EBE2",
                 background: "linear-gradient(180deg, #FAF6EF 0%, #FFFCF7 100%)",
               }}>
-                <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 22, color: "#1A1A2E", marginBottom: 4 }}>
+                <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 22, color: "#1A1A2E", marginBottom: 2 }}>
                   Discover Landmarks
                 </div>
-                <div style={{ fontSize: 13, color: "#8B8070", lineHeight: 1.5, marginBottom: 12 }}>
-                  Explore historical sites around the world. Travel to a landmark to unlock conversations with the people who lived there.
+                <div style={{ fontSize: 12, color: "#8B8070", marginBottom: 12 }}>
+                  {LANDMARKS.length} landmarks · {TOTAL_FIGURES} historical figures · {nearbyCount} nearby
                 </div>
                 <SearchBar value={searchQuery} onChange={setSearchQuery} />
-                <div style={{
-                  marginTop: 12, padding: "10px 14px", borderRadius: 10,
-                  background: "#F5F0E6", display: "flex", alignItems: "center", gap: 10,
-                }}>
-                  <span style={{ fontSize: 18 }}>📍</span>
-                  <div>
-                    <div style={{ fontSize: 12, fontWeight: 600, color: "#5A5A6A" }}>
-                      {LANDMARKS.length} landmarks · {TOTAL_FIGURES} historical figures
-                    </div>
-                    <div style={{ fontSize: 11, color: "#A89870", marginTop: 1 }}>
-                      {nearbyCount} nearby
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <LandmarkList

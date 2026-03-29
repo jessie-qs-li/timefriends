@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import rawLandmarks from "./data/landmarks.json";
 import ConversationButton, { ConversationSidePanel } from "./ConversationButton";
 import CameraOverlay from "./CameraOverlay";
+import StreetViewCamera from "./StreetViewCamera";
 
 // ─── Data normalization ─────────────────────────────────────────────────────
 
@@ -555,6 +556,9 @@ function StreetViewOverlay({ landmark, onClose }) {
         loading="eager"
         onLoad={() => setLoaded(true)}
       />
+
+      {/* BeReal-style camera preview */}
+      <StreetViewCamera />
     </div>
   );
 }

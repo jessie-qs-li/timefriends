@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@11labs/client": "^0.2.0",
+    "@google/genai": "^1.47.0",
     "@snap/camera-kit": "^1.15.1",
     "leaflet": "^1.9.4",
     "react": "^19.0.0",

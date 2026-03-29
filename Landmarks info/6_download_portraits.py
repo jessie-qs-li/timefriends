@@ -78,7 +78,6 @@ FIGURE_QUERIES = {
     # ── Great Zimbabwe ──
     "mutota":                   "Great Zimbabwe soapstone bird sculpture",
     "zimbabwe-trader":          "Swahili coast trader medieval Africa painting",
-    "zimbabwe-builder":         "Great Zimbabwe stone mason illustration",
 
     # ── Timbuktu ──
     "mansa-musa":               "Mansa Musa Catalan Atlas portrait",

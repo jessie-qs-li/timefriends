@@ -23,29 +23,29 @@ export function ConversationSidePanel({ figure, mode, sessionStatus, onEnd }) {
         }
       `}</style>
 
-      {/* Portrait: full image visible (letterboxed), no cropping */}
+      {/* Portrait: full-bleed, face-centered */}
       <div style={{
         width: "100%", flexShrink: 0,
-        background: `linear-gradient(145deg, ${figure.color}18, ${figure.color}38)`,
         borderBottom: "1px solid #F0EBE2",
       }}>
         <div style={{
-          display: "flex", alignItems: "center", justifyContent: "center",
-          padding: "12px 14px",
-          minHeight: 140,
-          maxHeight: "min(48vh, 520px)",
-          boxSizing: "border-box",
+          width: "100%",
+          height: "min(46vh, 480px)",
+          overflow: "hidden",
+          position: "relative",
+          background: `linear-gradient(145deg, ${figure.color}18, ${figure.color}38)`,
         }}>
           <img
             src={figure.portrait}
             alt={figure.name}
             style={{
               display: "block",
-              maxWidth: "100%",
-              maxHeight: "min(48vh, 520px)",
-              width: "auto",
-              height: "auto",
-              objectFit: "contain",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center 15%",
+              transform: `scale(${figure.portraitScale || 1})`,
+              transformOrigin: "center 20%",
             }}
             onError={(e) => {
               e.target.style.display = "none";
@@ -55,7 +55,7 @@ export function ConversationSidePanel({ figure, mode, sessionStatus, onEnd }) {
           />
           <div style={{
             display: "none", alignItems: "center", justifyContent: "center",
-            fontSize: 64, minHeight: 100,
+            fontSize: 64, position: "absolute", inset: 0,
           }}>{figure.emoji}</div>
         </div>
         <div style={{ padding: "14px 18px 16px", borderTop: "1px solid #F0EBE2", background: "#FFFCF7" }}>

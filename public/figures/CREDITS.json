@@ -238,13 +238,6 @@
     "artist": "Popular Graphic Arts"
   },
   {
-    "figure_id": "zimbabwe-builder",
-    "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/zimbabwe-builder.jpg",
-    "source": "https://commons.wikimedia.org/wiki/File:Tapiwa_Chitombo_is_breaking_new_ground_by_becoming_the_most_popular_DJ_in_Eastern_Highlands_Zimbabwe_among_other_veteran_Disc_Jockies_._Born_in_a_family_of_four_on_the_11th_day_of_July_at_Mutambara_Hospital_in_Chimanimani_District.jpg",
-    "license": "CC BY-SA 4.0",
-    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Dj_Uncle_Taps&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Dj Uncle Taps (page does not exist)\">Dj Uncle Taps</a>"
-  },
-  {
     "figure_id": "mansa-musa",
     "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/mansa-musa.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF_Sheet_6_Mansa_Musa_(cropped).jpg",
@@ -688,16 +681,16 @@
   {
     "figure_id": "abigail-adams",
     "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/abigail-adams.jpg",
-    "source": "https://commons.wikimedia.org/wiki/File:Abigail_Smith_Adams_wife_of_John_Adams_-_photo_of_portrait_by_Gilbert_Stuart._LCCN2014648296.jpg",
-    "license": "Public domain",
-    "artist": "Stuart, Gilbert, 1755-1828, artist"
+    "source": "User-provided replacement image",
+    "license": "User-provided",
+    "artist": ""
   },
   {
     "figure_id": "james-forten",
     "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/james-forten.jpg",
-    "source": "https://commons.wikimedia.org/wiki/File:James_Forten_(cropped).jpg",
-    "license": "Public domain",
-    "artist": "Probably by Robert Douglass Jr."
+    "source": "User-provided replacement image",
+    "license": "User-provided",
+    "artist": ""
   },
   {
     "figure_id": "pachacuti",
@@ -737,9 +730,9 @@
   {
     "figure_id": "abraham-lincoln",
     "file": "/Users/jessieli/Desktop/TimeFriends/Landmarks info/../public/figures/abraham-lincoln.jpg",
-    "source": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln,_head-and-shoulders_portrait,_traditionally_called_%22last_photograph_of_Lincoln_from_life%22_LCCN2004670393.jpg",
-    "license": "Public domain",
-    "artist": "Gardner, Alexander, 1821-1882, photographer"
+    "source": "User-provided replacement image",
+    "license": "User-provided",
+    "artist": ""
   },
   {
     "figure_id": "harriet-tubman",

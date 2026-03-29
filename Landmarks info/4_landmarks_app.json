@@ -762,21 +762,6 @@
           ],
           "previewQuote": "I've traded from Kilwa to Gujarat. The world is bigger than you think.",
           "agentId": "agent_7201kmvgtbq8fedbm1zza5yts34w"
-        },
-        {
-          "id": "zimbabwe-builder",
-          "name": "Tapiwa",
-          "title": "Master Stone Mason of Great Zimbabwe (13th Century)",
-          "reign": "13th Century",
-          "emoji": "🧱",
-          "traits": [
-            "Skilled",
-            "Proud",
-            "Patient",
-            "Perfectionist"
-          ],
-          "previewQuote": "No mortar, no cement — just perfect stone on perfect stone.",
-          "agentId": "agent_8501kmvgtdqqe969cxsvwpc0r2w9"
         }
       ]
     },

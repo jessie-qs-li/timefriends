@@ -43,6 +43,7 @@ const LANDMARKS = rawLandmarks.landmarks.map((lm, idx) => ({
     portrait: `/figures/${f.id}.jpg`,
     color: COLOR_PALETTE[hashCode(f.id) % COLOR_PALETTE.length],
     agentId: f.agentId || null,
+    portraitScale: f.portraitScale || 1,
     traits: f.traits,
     preview: f.previewQuote,
   })),

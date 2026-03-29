@@ -420,6 +420,90 @@ function LandmarkDetail({ landmark, isNearby, onClose, onConversationState }) {
   );
 }
 
+// ─── Google Maps Street View ────────────────────────────────────────────────
+
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+
+function StreetViewOverlay({ landmark, onClose }) {
+  const [loaded, setLoaded] = useState(false);
+
+  if (!GOOGLE_MAPS_API_KEY) {
+    return (
+      <div style={{
+        position: "absolute", inset: 0, zIndex: 500, background: "#1a1a1a",
+        display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+        color: "rgba(255,255,255,0.6)", gap: 14, padding: 32, textAlign: "center",
+      }}>
+        <span style={{ fontSize: 40 }}>{landmark.icon}</span>
+        <span style={{ fontSize: 13 }}>Add VITE_GOOGLE_MAPS_API_KEY to .env.local to enable Street View.</span>
+        <button onClick={onClose} style={{ marginTop: 8, padding: "8px 20px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.3)", background: "transparent", color: "white", cursor: "pointer", fontSize: 13 }}>Close</button>
+      </div>
+    );
+  }
+
+  const src = `https://www.google.com/maps/embed/v1/streetview?key=${GOOGLE_MAPS_API_KEY}&location=${landmark.coords[0]},${landmark.coords[1]}&fov=90&heading=0&pitch=0`;
+
+  return (
+    <div style={{
+      position: "absolute", inset: 0, zIndex: 500, overflow: "hidden",
+      animation: "streetViewExpand 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+      transformOrigin: "center",
+    }}>
+      {/* Gradient header */}
+      <div style={{
+        position: "absolute", top: 0, left: 0, right: 0, zIndex: 10,
+        background: "linear-gradient(180deg, rgba(0,0,0,0.72) 0%, transparent 100%)",
+        padding: "16px 16px 40px",
+        display: "flex", alignItems: "center", justifyContent: "space-between",
+        pointerEvents: "none",
+      }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <span style={{ fontSize: 24 }}>{landmark.icon}</span>
+          <div>
+            <div style={{ color: "white", fontWeight: 600, fontSize: 15, lineHeight: 1.3 }}>{landmark.name}</div>
+            <div style={{ color: "rgba(255,255,255,0.72)", fontSize: 12 }}>{landmark.location}</div>
+          </div>
+        </div>
+        <button
+          onClick={onClose}
+          style={{
+            pointerEvents: "auto",
+            width: 36, height: 36, borderRadius: "50%",
+            background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)",
+            color: "white", fontSize: 20, lineHeight: 1, cursor: "pointer",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            backdropFilter: "blur(4px)",
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.28)"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.15)"; }}
+        >×</button>
+      </div>
+
+      {/* Loading shimmer */}
+      {!loaded && (
+        <div style={{
+          position: "absolute", inset: 0, background: "#1a1a1a",
+          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+          color: "rgba(255,255,255,0.55)", gap: 14,
+        }}>
+          <span style={{ fontSize: 40 }}>{landmark.icon}</span>
+          <span style={{ fontSize: 13 }}>Loading Street View…</span>
+        </div>
+      )}
+
+      <iframe
+        key={landmark.id}
+        src={src}
+        title={`Street View — ${landmark.name}`}
+        style={{ width: "100%", height: "100%", border: "none", display: "block" }}
+        allowFullScreen
+        loading="eager"
+        onLoad={() => setLoaded(true)}
+      />
+    </div>
+  );
+}
+
 // ─── Visible markers (zoom-aware) ───────────────────────────────────────────
 
 function VisibleLandmarkMarkers({ landmarks, mapState, isNearby, selectedId, onSelect }) {
@@ -453,6 +537,7 @@ export default function TimeFriendsApp() {
   /** When set, map is hidden and the right region shows the live conversation panel. */
   const [conversationPanel, setConversationPanel] = useState(null);
   const [showCamera, setShowCamera] = useState(false);
+  const [streetViewOpen, setStreetViewOpen] = useState(false);
 
   const selectedLandmark = LANDMARKS.find((l) => l.id === selectedLandmarkId) || null;
 
@@ -478,6 +563,7 @@ export default function TimeFriendsApp() {
   const handleSelectLandmark = (id) => {
     const lm = LANDMARKS.find((l) => l.id === id);
     setSelectedLandmarkId(id);
+    setStreetViewOpen(true);
     if (lm) {
       setMapCenter(lm.coords);
       setMapZoom(15);
@@ -486,6 +572,7 @@ export default function TimeFriendsApp() {
 
   const handleCloseLandmark = () => {
     setSelectedLandmarkId(null);
+    setStreetViewOpen(false);
     setMapCenter([...WORLD_MAP_CENTER]);
     setMapZoom(WORLD_MAP_ZOOM);
   };
@@ -511,6 +598,10 @@ export default function TimeFriendsApp() {
         .leaflet-control-attribution { font-size: 9px !important; opacity: 0.6; }
         .leaflet-control-zoom { border: 1px solid #E8E0D4 !important; border-radius: 10px !important; overflow: hidden; }
         .leaflet-control-zoom a { color: #5A5A6A !important; background: white !important; border-color: #E8E0D4 !important; }
+        @keyframes streetViewExpand {
+          from { transform: scale(0.08); opacity: 0; border-radius: 50%; }
+          to   { transform: scale(1);    opacity: 1; border-radius: 0; }
+        }
       `}</style>
 
       {/* TOP BAR */}
@@ -644,6 +735,13 @@ export default function TimeFriendsApp() {
                 />
               )}
             </MapContainer>
+
+            {streetViewOpen && selectedLandmark && (
+              <StreetViewOverlay
+                landmark={selectedLandmark}
+                onClose={() => setStreetViewOpen(false)}
+              />
+            )}
 
             {selectedLandmark && (
               <div style={{

@@ -29,7 +29,7 @@ export default function StreetViewCamera() {
         });
 
         const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 } },
+          video: { facingMode: "user", width: { ideal: 720 }, height: { ideal: 1280 } },
         });
         mediaStreamRef.current = stream;
 
@@ -72,7 +72,7 @@ export default function StreetViewCamera() {
       bottom: 20,
       left: 20,
       width: 200,
-      height: 270,
+      height: 356,
       borderRadius: 20,
       overflow: "hidden",
       border: "3px solid rgba(255,255,255,0.9)",

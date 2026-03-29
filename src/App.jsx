@@ -4,7 +4,6 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import rawLandmarks from "./data/landmarks.json";
 import ConversationButton, { ConversationSidePanel } from "./ConversationButton";
-import CameraOverlay from "./CameraOverlay";
 import StreetViewCamera from "./StreetViewCamera";
 
 // ─── Data normalization ─────────────────────────────────────────────────────
@@ -63,7 +62,7 @@ const WORLD_MAP_ZOOM = 2;
 const SIDEBAR_PAGE_SIZE = 20;
 /** Matches landmark detail column — conversation panel uses the same width. */
 const LANDMARK_PANEL_WIDTH = 380;
-const DISCOVER_SIDEBAR_WIDTH = 340;
+const DISCOVER_SIDEBAR_WIDTH = 400;
 
 // ─── Utils ──────────────────────────────────────────────────────────────────
 
@@ -595,7 +594,6 @@ export default function TimeFriendsApp() {
   const [mapState, setMapState] = useState({ bounds: null, zoom: 3 });
   /** When set, map is hidden and the right region shows the live conversation panel. */
   const [conversationPanel, setConversationPanel] = useState(null);
-  const [showCamera, setShowCamera] = useState(false);
   const [streetViewOpen, setStreetViewOpen] = useState(false);
 
   const selectedLandmark = LANDMARKS.find((l) => l.id === selectedLandmarkId) || null;
@@ -826,24 +824,6 @@ export default function TimeFriendsApp() {
               </div>
             )}
 
-          {/* Camera button — top-right of map */}
-          <button
-            onClick={() => setShowCamera(true)}
-            title="Open AR Camera"
-            style={{
-              position: "absolute", top: 24, right: 24, zIndex: 400,
-              width: 44, height: 44, borderRadius: "50%",
-              background: "white", border: "1px solid #E8E0D4",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-              cursor: "pointer", fontSize: 20,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#FFF8EE"; e.currentTarget.style.borderColor = "#C9A84C"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "white"; e.currentTarget.style.borderColor = "#E8E0D4"; }}
-          >
-            📷
-          </button>
 
             <div style={{
               position: "absolute", bottom: 24, left: 24, zIndex: 400,
@@ -885,7 +865,6 @@ export default function TimeFriendsApp() {
         </div>
       </div>
 
-      {showCamera && <CameraOverlay onClose={() => setShowCamera(false)} />}
     </div>
   );
 }

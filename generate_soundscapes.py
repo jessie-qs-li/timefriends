@@ -50,7 +50,9 @@ ELEVENLABS_SOUND_URL = "https://api.elevenlabs.io/v1/sound-generation"
 DEFAULT_DURATION = 10        # seconds (ElevenLabs supports up to ~22s)
 RETRY_ATTEMPTS = 3
 RETRY_DELAY = 5              # seconds between retries
-RATE_LIMIT_DELAY = 1.5       # seconds between API calls to avoid rate limits
+RATE_LIMIT_DELAY = 5         # seconds between API calls to avoid rate limits
+GEMINI_RETRY_ATTEMPTS = 5
+GEMINI_RETRY_BASE_DELAY = 15  # seconds — free tier is 15 RPM, back off on 429
 
 
 # ─────────────────────────── LANDMARKS ───────────────────────────
@@ -151,9 +153,17 @@ Now write the soundscape prompt for {landmark['name']}:"""
 
 def generate_sound_description(model: genai.GenerativeModel, landmark: dict) -> str:
     """Call Gemini to generate a sound effects prompt for the landmark."""
-    response = model.generate_content(get_gemini_prompt(landmark))
-    description = response.text.strip()
-    return description
+    for attempt in range(1, GEMINI_RETRY_ATTEMPTS + 1):
+        try:
+            response = model.generate_content(get_gemini_prompt(landmark))
+            return response.text.strip()
+        except Exception as e:
+            if "429" in str(e) and attempt < GEMINI_RETRY_ATTEMPTS:
+                wait = GEMINI_RETRY_BASE_DELAY * attempt
+                print(f"      ⏳ Gemini rate limit — waiting {wait}s (attempt {attempt}/{GEMINI_RETRY_ATTEMPTS})")
+                time.sleep(wait)
+                continue
+            raise
 
 
 # ─────────────────────────── STEP 2: ELEVENLABS ───────────────────────────
